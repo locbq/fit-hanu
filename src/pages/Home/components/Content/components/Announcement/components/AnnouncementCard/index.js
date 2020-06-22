@@ -41,8 +41,11 @@ function AnnouncementCard({
           <Heading4>{title}</Heading4>
           <Paragraph>
             Bởi
+            {' '}
             <Link href="!#" underline="none">{user}</Link>
+            {' '}
             -
+            {' '}
             {timestamp}
           </Paragraph>
         </Grid>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heading2 } from 'components/Headings';
 import { faBullhorn } from '@fortawesome/free-solid-svg-icons';
+
 import {
   StyledGridHeader,
   StyledFAIcon,

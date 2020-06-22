@@ -1,5 +1,8 @@
 import React from 'react';
-import { Button as MuiButton, styled } from '@material-ui/core';
+import {
+  Button as MuiButton,
+  styled,
+} from '@material-ui/core';
 
 const StyledButton = styled(MuiButton)({
   margin: (props) => props.margin,

@@ -1,11 +1,14 @@
-import { styled, Grid } from '@material-ui/core';
+import {
+  styled,
+  Grid,
+} from '@material-ui/core';
 import Slider from 'react-slick';
 
-const StyledGrid = styled(Grid)({
+export const StyledGrid = styled(Grid)({
   marginTop: '60px',
 });
 
-const StyledSlider = styled(Slider)({
+export const StyledSlider = styled(Slider)({
   '& .slick-slide': {
     position: 'relative',
   },
@@ -28,16 +31,10 @@ const StyledSlider = styled(Slider)({
   },
 });
 
-const StyledGridCaption = styled(Grid)({
+export const StyledGridCaption = styled(Grid)({
   position: 'absolute',
   marginTop: '-138px',
   width: '100%',
   padding: '20px',
   background: 'rgba(0,0,0,0.2)',
 });
-
-export {
-  StyledSlider,
-  StyledGrid,
-  StyledGridCaption,
-};

@@ -6,7 +6,11 @@ import {
 } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { Heading3, Paragraph } from 'components/Headings';
+
+import {
+  Heading3,
+  Paragraph,
+} from 'components/Headings';
 import { Button } from 'components';
 
 const StyledGridCard = styled(Grid)({
@@ -46,7 +50,12 @@ function HighlightCard({
     <StyledGridCard>
       <StyledGridHeader container>
         <StyledFAIcon icon={faStar} />
-        <Heading3 transform="uppercase" color="#ffffff">{title}</Heading3>
+        <Heading3
+          transform="uppercase"
+          color="#ffffff"
+        >
+          {title}
+        </Heading3>
       </StyledGridHeader>
       <img className={classes.image} src={image} alt="card" />
       <StyledGridDescription>

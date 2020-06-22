@@ -5,6 +5,7 @@ import {
   withStyles,
 } from '@material-ui/core';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+
 import navList from './const';
 import {
   styles,

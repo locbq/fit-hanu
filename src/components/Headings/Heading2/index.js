@@ -1,5 +1,8 @@
 import React from 'react';
-import { Typography, styled } from '@material-ui/core';
+import {
+  Typography,
+  styled,
+} from '@material-ui/core';
 
 const StyledTypo = styled(Typography)({
   fontFamily: '"Montserrat", sans-serif',

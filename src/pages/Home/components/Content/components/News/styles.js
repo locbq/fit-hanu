@@ -1,12 +1,15 @@
-import { Grid, styled } from '@material-ui/core';
+import {
+  Grid,
+  styled,
+} from '@material-ui/core';
 import { Paragraph } from 'components/Headings';
 
-const StyledGridDuty = styled(Grid)({
+export const StyledGridDuty = styled(Grid)({
   borderBottom: '1px solid #eeeeee',
   paddingBottom: '20px',
 });
 
-const StyledGridTraining = styled(Grid)({
+export const StyledGridTraining = styled(Grid)({
   '&:not(:last-child)': {
     borderBottom: '1px solid #eeeeee',
     paddingBottom: '20px',
@@ -16,7 +19,7 @@ const StyledGridTraining = styled(Grid)({
   },
 });
 
-const StyledGridStudentNews = styled(Grid)({
+export const StyledGridStudentNews = styled(Grid)({
   '&:not(:last-child)': {
     borderBottom: '1px solid #eeeeee',
     paddingBottom: '20px',
@@ -26,11 +29,11 @@ const StyledGridStudentNews = styled(Grid)({
   },
 });
 
-const StyledParagraph = styled(Paragraph)({
+export const StyledParagraph = styled(Paragraph)({
   fontWeight: 'bold',
 });
 
-const styles = () => ({
+export const styles = () => ({
   timestamp: {
     color: '#5b5b5b',
     fontFamily: '"Open Sans", sans-serif',
@@ -41,11 +44,3 @@ const styles = () => ({
     fontWeight: 'bold',
   },
 });
-
-export {
-  styles,
-  StyledGridTraining,
-  StyledParagraph,
-  StyledGridDuty,
-  StyledGridStudentNews,
-};

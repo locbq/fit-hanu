@@ -12,7 +12,6 @@ function HomeView() {
       <Highlight />
       <Content />
     </>
-
   );
 }
 

@@ -7,11 +7,20 @@ function ContentView() {
   return (
     <Section>
       <Container fixed>
-        <Grid container spacing={3}>
-          <Grid item lg={4}>
+        <Grid
+          container
+          spacing={3}
+        >
+          <Grid
+            item
+            lg={4}
+          >
             <News />
           </Grid>
-          <Grid item lg={8}>
+          <Grid
+            item
+            lg={8}
+          >
             <Announcement />
           </Grid>
         </Grid>
