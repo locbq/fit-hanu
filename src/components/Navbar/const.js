@@ -1,36 +1,36 @@
 const navList = [
   {
-    navItem: 'Khoa CNTT',
+    navItem: 'Faculty of IT',
     dropdownList: [
-      'Giới thiệu',
-      'Mục tiêu đào tạo',
-      'Tầm nhìn',
-      'Cơ cấu tổ chức',
-      'Hoạt động tiêu biểu',
+      'About Us',
+      'Our Objectives',
+      'Our Visions',
+      'Our Staffs',
+      'Featured Activities',
     ],
     url: '/about',
   },
   {
-    navItem: 'Tuyển sinh',
+    navItem: 'Admission',
     dropdownList: [
-      'Tại sao nên chọn FIT',
-      'Thông tin tuyển sinh',
-      'Số liệu tuyển sinh các năm',
+      'Why FIT?',
+      'Admission Information',
+      'Annual Stastistics',
     ],
     url: '/admission',
   },
   {
-    navItem: 'Đào tạo',
+    navItem: 'Programs',
     dropdownList: [
-      'Kế hoạch xét tốt nghiệp',
+      'Graduation plan',
     ],
     url: '/graduation',
   },
   {
-    navItem: 'Sinh viên',
+    navItem: 'Students',
     dropdownList: [
-      'Hoạt động sinh viên',
-      'Gương mặt sinh viên tiêu biểu',
+      'Student activities',
+      'Honorary students',
     ],
     url: '/student',
   },
