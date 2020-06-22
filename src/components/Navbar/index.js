@@ -1,4 +1,3 @@
-/* eslint-disable no-undefined */
 import React from 'react';
 import {
   Link,
@@ -12,6 +11,7 @@ import {
   StyledAppBar,
   StyledContainer,
   StyledGridNav,
+  StyledNavBrand,
   StyledNavLink,
   StyledFAIcon,
   StyledGridHover,
@@ -23,6 +23,11 @@ function Navbar({ classes }) {
     <StyledAppBar>
       <StyledContainer fixed>
         <StyledGridNav container>
+          <StyledNavBrand to="/">
+            <span>FIT</span>
+            {' '}
+            HANU
+          </StyledNavBrand>
           {navList.map((nav) => (
             <StyledGridHover>
               <StyledNavLink to={nav.url}>
@@ -30,7 +35,10 @@ function Navbar({ classes }) {
                 {' '}
                 <StyledFAIcon icon={faCaretDown} />
               </StyledNavLink>
-              <StyledGridDropdown container direction="column">
+              <StyledGridDropdown
+                container
+                direction="column"
+              >
                 {nav.dropdownList.map((dropdown) => (
                   <Link href="!#">
                     {dropdown}
@@ -39,8 +47,11 @@ function Navbar({ classes }) {
               </StyledGridDropdown>
             </StyledGridHover>
           ))}
-          <StyledNavLink to="/login" className={classes.loginNav}>
-            Đăng nhập
+          <StyledNavLink
+            to="/login"
+            className={classes.loginNav}
+          >
+            Login
           </StyledNavLink>
         </StyledGridNav>
       </StyledContainer>
