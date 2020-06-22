@@ -4,23 +4,42 @@ import {
   AppBar,
   Grid,
 } from '@material-ui/core';
-import { NavLink } from 'react-router-dom';
+
+import {
+  NavLink,
+  Link,
+} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const StyledAppBar = styled(AppBar)({
+export const StyledAppBar = styled(AppBar)({
   height: '60px',
   background: '#231d1f',
 });
 
-const StyledContainer = styled(Container)({
+export const StyledContainer = styled(Container)({
   height: '100%',
 });
 
-const StyledGridNav = styled(Grid)({
+export const StyledGridNav = styled(Grid)({
   height: '100%',
 });
 
-const StyledNavLink = styled(NavLink)({
+export const StyledNavBrand = styled(Link)({
+  fontFamily: '"Montserrat", sans-serif',
+  color: '#ffffff',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  textDecoration: 'none',
+  fontSize: '26px',
+  fontWeight: 'bold',
+  padding: '0px 10px',
+  '& span': {
+    color: '#fd8b4b',
+  },
+});
+
+export const StyledNavLink = styled(NavLink)({
   height: '100%',
   display: 'flex',
   alignItems: 'center',
@@ -37,18 +56,18 @@ const StyledNavLink = styled(NavLink)({
   },
 });
 
-const StyledFAIcon = styled(FontAwesomeIcon)({
+export const StyledFAIcon = styled(FontAwesomeIcon)({
   marginLeft: '5px',
 });
 
-const StyledGridHover = styled(Grid)({
+export const StyledGridHover = styled(Grid)({
   height: '100%',
   '&:hover > div': {
     display: 'flex',
   },
 });
 
-const StyledGridDropdown = styled(Grid)({
+export const StyledGridDropdown = styled(Grid)({
   position: 'absolute',
   display: 'none',
   width: '250px',
@@ -67,19 +86,8 @@ const StyledGridDropdown = styled(Grid)({
   },
 });
 
-const styles = () => ({
+export const styles = () => ({
   loginNav: {
     marginLeft: 'auto',
   },
 });
-
-export {
-  styles,
-  StyledAppBar,
-  StyledContainer,
-  StyledGridNav,
-  StyledNavLink,
-  StyledFAIcon,
-  StyledGridHover,
-  StyledGridDropdown,
-};
