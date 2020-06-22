@@ -1,8 +1,19 @@
 import React from 'react';
+import { Grid } from '@material-ui/core';
+
+import { Section } from 'components';
+import {
+  StyledGrid,
+  StyledGridBanner,
+} from './styles';
 
 function Login() {
   return (
-    <h1>Login</h1>
+    <Section padding="60px 0px 0px 0px">
+      <StyledGrid container>
+        <StyledGridBanner item lg={6} />
+      </StyledGrid>
+    </Section>
   );
 }
 
