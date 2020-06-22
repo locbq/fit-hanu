@@ -33,7 +33,7 @@ export const StyledNavBrand = styled(Link)({
   textDecoration: 'none',
   fontSize: '26px',
   fontWeight: 'bold',
-  padding: '0px 10px',
+  padding: '0px 15px 0px 0px',
   '& span': {
     color: '#fd8b4b',
   },
@@ -48,6 +48,7 @@ export const StyledNavLink = styled(NavLink)({
   textDecoration: 'none',
   color: '#fd8b4b',
   textTransform: 'uppercase',
+  padding: '0px 5px',
   fontFamily: '"Open Sans", sans-serif',
   '&:hover': {
     background: '#fd8b4b',
