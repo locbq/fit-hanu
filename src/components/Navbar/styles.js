@@ -36,6 +36,14 @@ export const StyledNavBrand = styled(Link)({
   padding: '0px 15px 0px 0px',
   '& span': {
     color: '#fd8b4b',
+    transition: '0.25s ease-in-out',
+  },
+  transition: '0.25s ease-in-out',
+  '&:hover': {
+    color: '#fd8b4b',
+    '& span': {
+      color: '#ffffff',
+    },
   },
 });
 
