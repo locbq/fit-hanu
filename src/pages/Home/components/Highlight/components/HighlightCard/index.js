@@ -61,10 +61,7 @@ function HighlightCard({
       <StyledGridDescription>
         <Paragraph>{description}</Paragraph>
       </StyledGridDescription>
-      <Button
-        text="Read more"
-        margin="0px 20px 20px auto"
-      />
+      <Button margin="0px 20px 20px auto">Read more</Button>
     </StyledGridCard>
   );
 }

@@ -22,7 +22,7 @@ const StyledButton = styled(MuiButton)({
 });
 
 function Button({
-  text = '',
+  children,
   margin = '',
   ...props
 }) {
@@ -31,7 +31,7 @@ function Button({
       margin={margin}
       {...props}
     >
-      {text}
+      {children}
     </StyledButton>
   );
 }
