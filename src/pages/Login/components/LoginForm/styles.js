@@ -19,7 +19,6 @@ export const StyledInput = styled(InputBase)({
   fontFamily: '"Open Sans", sans-serif',
   padding: '12px 14px',
   border: '2px solid #cccccc',
-  borderRadius: '4px',
 });
 
 export const StyledGridField = styled(Grid)({
