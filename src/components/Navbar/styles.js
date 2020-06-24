@@ -99,4 +99,8 @@ export const styles = () => ({
   loginNav: {
     marginLeft: 'auto',
   },
+  active: {
+    background: '#fd8b4b',
+    color: '#ffffff',
+  },
 });

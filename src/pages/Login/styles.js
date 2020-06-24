@@ -12,5 +12,10 @@ export const StyledGrid = styled(Grid)({
 export const StyledGridBanner = styled(Grid)({
   backgroundImage: `url(${fit10years})`,
   backgroundSize: 'cover',
+  backgroundPosition: 'center',
   height: '100%',
+});
+
+export const StyledGridForm = styled(Grid)({
+  padding: '100px',
 });
