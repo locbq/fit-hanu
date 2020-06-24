@@ -86,11 +86,11 @@ export const StyledGridDropdown = styled(Grid)({
     color: '#fd8b4b',
     textDecoration: 'none',
     fontFamily: '"Open Sans", sans-serif',
+    transition: '0.25s ease-in-out',
     '&:hover': {
       background: '#fd8b4b',
       color: '#ffffff',
       textDecoration: 'none',
-      transition: '0.25s ease-in-out',
     },
   },
 });
@@ -102,5 +102,9 @@ export const styles = () => ({
   active: {
     background: '#fd8b4b',
     color: '#ffffff',
+  },
+  activeDropdown: {
+    background: '#fd8b4b',
+    color: '#ffffff !important',
   },
 });

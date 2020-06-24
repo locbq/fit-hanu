@@ -8,7 +8,7 @@ import {
 
 import {
   Home,
-  About,
+  FacultyIT,
   Admission,
   Graduation,
   Student,
@@ -26,8 +26,8 @@ function App() {
           component={Home}
         />
         <Route
-          path="/about"
-          component={About}
+          path="/faculty-it"
+          component={FacultyIT}
 
         />
         <Route path="/admission" component={Admission} />

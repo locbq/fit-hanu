@@ -1,9 +1,7 @@
 import React from 'react';
-import {
-  Link,
-  withStyles,
-} from '@material-ui/core';
+import { withStyles } from '@material-ui/core';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 import navList from './const';
 import {
@@ -43,9 +41,12 @@ function Navbar({ classes }) {
                 direction="column"
               >
                 {nav.dropdownList.map((dropdown) => (
-                  <Link href="!#">
-                    {dropdown}
-                  </Link>
+                  <NavLink
+                    to={`${nav.url}${dropdown.url}`}
+                    activeClassName={classes.activeDropdown}
+                  >
+                    {dropdown.title}
+                  </NavLink>
                 ))}
               </StyledGridDropdown>
             </StyledGridHover>

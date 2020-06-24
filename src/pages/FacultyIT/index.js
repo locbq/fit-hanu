@@ -1,9 +1,9 @@
 import React from 'react';
 
-function About() {
+function FacultyIT() {
   return (
     <h1>About</h1>
   );
 }
 
-export default About;
+export default FacultyIT;
