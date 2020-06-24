@@ -30,7 +30,10 @@ function Navbar({ classes }) {
           </StyledNavBrand>
           {navList.map((nav) => (
             <StyledGridHover>
-              <StyledNavLink to={nav.url}>
+              <StyledNavLink
+                to={nav.url}
+                activeClassName={classes.active}
+              >
                 {nav.navItem}
                 {' '}
                 <StyledFAIcon icon={faCaretDown} />
@@ -50,6 +53,7 @@ function Navbar({ classes }) {
           <StyledNavLink
             to="/login"
             className={classes.loginNav}
+            activeClassName={classes.active}
           >
             Login
           </StyledNavLink>
