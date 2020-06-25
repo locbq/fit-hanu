@@ -58,7 +58,7 @@ function OurObjectives() {
               </Paragraph>
 
               <Heading3
-                margin="12px 0px"
+                margin="24px 0px 12px 0px"
                 transform="capitalize"
               >
                 Specific objective
@@ -71,7 +71,7 @@ function OurObjectives() {
               </Paragraph>
 
               <Heading3
-                margin="12px 0px"
+                margin="24px 0px 12px 0px"
                 transform="capitalize"
               >
                 Students after graduation can work at these positions

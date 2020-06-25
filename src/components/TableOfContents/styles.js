@@ -37,3 +37,9 @@ export const StyledList = styled(List)({
 export const StyledListItem = styled(ListItem)({
   display: 'list-item',
 });
+
+export const styles = () => ({
+  active: {
+    color: '#fd8b4b',
+  },
+});
