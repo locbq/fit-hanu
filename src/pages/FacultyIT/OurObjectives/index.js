@@ -1,7 +1,10 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 
-import { Section, BreadCrumb } from 'components';
+import {
+  Section,
+  BreadCrumb,
+} from 'components';
 
 function OurObjectives() {
   return (

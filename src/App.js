@@ -8,7 +8,6 @@ import {
 
 import {
   Home,
-  FacultyIT,
   AboutUs,
   OurObjectives,
   Admission,
@@ -29,11 +28,6 @@ function App() {
           exact
           path="/"
           component={Home}
-        />
-        <Route
-          exact
-          path="/faculty-of-it"
-          component={FacultyIT}
         />
         <Route
           path="/faculty-of-it/about-us"
