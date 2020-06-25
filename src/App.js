@@ -15,8 +15,6 @@ import {
   Student,
   Login,
 } from './pages';
-// import AboutUs from './pages/FacultyIT/AboutUs';
-// import OurObjectives from './pages/FacultyIT/OurObjectives';
 
 function App() {
   console.log(AboutUs);
@@ -30,16 +28,18 @@ function App() {
           component={Home}
         />
         <Route
-          path="/faculty-of-it"
-          component={AboutUs}
-        />
-        <Route
-          path="/faculty-of-it/about-us"
+          exact
+          path="/faculty-of-IT"
           component={AboutUs}
         />
         <Route
           exact
-          path="/faculty-of-it/our-objectives"
+          path="/faculty-of-IT/about-us"
+          component={AboutUs}
+        />
+        <Route
+          exact
+          path="/faculty-of-IT/our-objectives"
           component={OurObjectives}
         />
         <Route path="/admission" component={Admission} />

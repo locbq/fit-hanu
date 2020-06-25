@@ -1,6 +1,10 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Grid, Link, withStyles } from '@material-ui/core';
+import {
+  Grid,
+  Link,
+  withStyles,
+} from '@material-ui/core';
 import imgBasicComputer from 'assets/img/home/basic-computer-training.jpg';
 import { Heading4, Paragraph } from 'components/Headings';
 import { NewsCard } from './components';

@@ -27,7 +27,7 @@ function Navbar({ classes }) {
             HANU
           </StyledNavBrand>
           {navList.map((nav) => (
-            <StyledGridHover>
+            <StyledGridHover key={nav.title}>
               <StyledNavLink
                 to={nav.url}
                 activeClassName={classes.active}
@@ -42,6 +42,7 @@ function Navbar({ classes }) {
               >
                 {nav.dropdownList.map((dropdown) => (
                   <NavLink
+                    key={dropdown.title}
                     to={`${nav.url}${dropdown.url}`}
                     activeClassName={classes.activeDropdown}
                   >

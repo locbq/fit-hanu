@@ -7,6 +7,7 @@ import { Heading4, Paragraph } from 'components/Headings';
 const StyledGridCard = styled(Grid)({
   border: '1px solid #eeeeee',
   marginBottom: '20px',
+  background: '#ffffff',
 });
 
 const StyledGridHeader = styled(Grid)({

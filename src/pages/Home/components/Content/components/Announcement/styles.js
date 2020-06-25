@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const StyledGridAnnouncement = styled(Grid)({
   border: '1px solid rgba(0,0,0,.125)',
+  background: '#ffffff',
 });
 
 export const StyledGridHeader = styled(Grid)({
