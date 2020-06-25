@@ -10,6 +10,7 @@ import {
   Home,
   AboutUs,
   OurObjectives,
+  OurVisions,
   Admission,
   Graduation,
   Student,
@@ -41,6 +42,11 @@ function App() {
           exact
           path="/faculty-of-IT/our-objectives"
           component={OurObjectives}
+        />
+        <Route
+          exact
+          path="/faculty-of-IT/our-visions"
+          component={OurVisions}
         />
         <Route path="/admission" component={Admission} />
         <Route path="/graduation" component={Graduation} />
