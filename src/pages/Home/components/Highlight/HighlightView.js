@@ -10,7 +10,7 @@ import highlights from './const';
 
 function HighlightView() {
   return (
-    <Section>
+    <Section backgroundcolor="#fafafa">
       <Container fixed>
         <Grid
           container

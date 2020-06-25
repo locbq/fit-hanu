@@ -1,11 +1,18 @@
 import React from 'react';
-import { Grid, Container } from '@material-ui/core';
+import {
+  Grid,
+  Container,
+} from '@material-ui/core';
+
 import { Section } from 'components';
-import { Announcement, News } from './components';
+import {
+  Announcement,
+  News,
+} from './components';
 
 function ContentView() {
   return (
-    <Section>
+    <Section backgroundcolor="#fafafa">
       <Container fixed>
         <Grid
           container

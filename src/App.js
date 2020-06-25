@@ -8,7 +8,10 @@ import {
 
 import {
   Home,
-  About,
+  AboutUs,
+  OurObjectives,
+  OurVisions,
+  OurStaff,
   Admission,
   Graduation,
   Student,
@@ -16,6 +19,7 @@ import {
 } from './pages';
 
 function App() {
+  console.log(AboutUs);
   return (
     <Router>
       <Navbar />
@@ -26,9 +30,29 @@ function App() {
           component={Home}
         />
         <Route
-          path="/about"
-          component={About}
-
+          exact
+          path="/faculty-of-IT"
+          component={AboutUs}
+        />
+        <Route
+          exact
+          path="/faculty-of-IT/about-us"
+          component={AboutUs}
+        />
+        <Route
+          exact
+          path="/faculty-of-IT/our-objectives"
+          component={OurObjectives}
+        />
+        <Route
+          exact
+          path="/faculty-of-IT/our-visions"
+          component={OurVisions}
+        />
+        <Route
+          exact
+          path="/faculty-of-IT/our-staff"
+          component={OurStaff}
         />
         <Route path="/admission" component={Admission} />
         <Route path="/graduation" component={Graduation} />

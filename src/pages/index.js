@@ -1,5 +1,8 @@
 export { default as Home } from './Home';
-export { default as About } from './About';
+export { default as AboutUs } from './FacultyIT/AboutUs';
+export { default as OurObjectives } from './FacultyIT/OurObjectives';
+export { default as OurVisions } from './FacultyIT/OurVisions';
+export { default as OurStaff } from './FacultyIT/OurStaff';
 export { default as Admission } from './Admission';
 export { default as Graduation } from './Graduation';
 export { default as Student } from './Student';

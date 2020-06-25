@@ -2,35 +2,64 @@ const navList = [
   {
     navItem: 'Faculty of IT',
     dropdownList: [
-      'About Us',
-      'Our Objectives',
-      'Our Visions',
-      'Our Staffs',
-      'Featured Activities',
+      {
+        title: 'About Us',
+        url: '/about-us',
+      },
+      {
+        title: 'Our Objectives',
+        url: '/our-objectives',
+      },
+      {
+        title: 'Our Visions',
+        url: '/our-visions',
+      },
+      {
+        title: 'Our Staff',
+        url: '/our-staff',
+      },
     ],
-    url: '/about',
+    url: '/faculty-of-IT',
   },
   {
     navItem: 'Admission',
     dropdownList: [
-      'Why FIT?',
-      'Admission Information',
-      'Annual Stastistics',
+      {
+        title: 'Why FIT?',
+        url: '/why-fit',
+      },
+      {
+        title: 'Admission Information',
+        url: '/admission-information',
+      },
+      {
+        title: 'Annual Stastistics',
+        url: '/annual-statistics',
+      },
     ],
     url: '/admission',
   },
   {
     navItem: 'Programs',
     dropdownList: [
-      'Graduation plan',
+      {
+        title: 'Graduation plan',
+        url: '/graduation-plan',
+      },
     ],
     url: '/graduation',
   },
   {
     navItem: 'Students',
     dropdownList: [
-      'Student activities',
-      'Honorary students',
+      {
+        title: 'Student activities',
+        url: '/student-activites',
+      },
+      {
+        title: 'Honorary students',
+        url: '/honorary-students',
+      },
     ],
     url: '/student',
   },

@@ -33,5 +33,6 @@ module.exports = {
     'no-console': 'off',
     "import/prefer-default-export": "off",
     "import/no-unresolved": [2, {commonjs: true, amd: true}],
+    'max-len': 0
   }
 };
