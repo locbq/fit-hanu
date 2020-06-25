@@ -15,8 +15,4 @@ export const contentList = [
     title: 'Our Staff',
     url: '/faculty-of-IT/our-staff',
   },
-  {
-    title: 'Featured Activities',
-    url: '/faculty-of-IT/featured-activities',
-  },
 ];

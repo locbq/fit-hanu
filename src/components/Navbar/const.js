@@ -18,10 +18,6 @@ const navList = [
         title: 'Our Staff',
         url: '/our-staff',
       },
-      {
-        title: 'Featured Activities',
-        url: '/featured-activities',
-      },
     ],
     url: '/faculty-of-IT',
   },
