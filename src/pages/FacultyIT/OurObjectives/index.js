@@ -3,15 +3,15 @@ import { Container } from '@material-ui/core';
 
 import { Section, BreadCrumb } from 'components';
 
-function AboutUs() {
+function OurObjectives() {
   return (
     <Section>
       <BreadCrumb />
       <Container fixed>
-        <h1>AboutUs</h1>
+        <h1>OurObjectives</h1>
       </Container>
     </Section>
   );
 }
 
-export default AboutUs;
+export default OurObjectives;

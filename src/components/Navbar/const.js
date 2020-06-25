@@ -23,7 +23,7 @@ const navList = [
         url: '/featured-activities',
       },
     ],
-    url: '/faculty-it',
+    url: '/faculty-of-IT',
   },
   {
     navItem: 'Admission',
