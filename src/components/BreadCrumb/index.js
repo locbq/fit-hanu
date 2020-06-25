@@ -26,23 +26,20 @@ const StyledParagraphLast = withStyles((theme) => ({
   },
 }))(Paragraph);
 
-const StyledParagraph = withStyles((theme) => ({
+const StyledParagraph = withStyles(() => ({
   root: {
-    color: (props) => props.textcolor,
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '12px',
-    },
+    color: '#333333',
   },
 
 }))(Paragraph);
 
 const StyledLink = styled(Link)({
-  color: (props) => props.textcolor,
   textDecoration: 'none',
   textTransform: 'capitalize',
   fontFamily: '"Montserrat", sans-serif',
+  color: '#333333',
   '&:hover': {
-    color: '#FF6F00',
+    color: '#fd8b4b',
     transition: '0.25s ease-in-out',
   },
 });
@@ -55,7 +52,7 @@ const StyledBreadcrumbs = withStyles({
 
 const BreadCrumb = ({
   classes,
-  margin = '60px 0px',
+  margin = '30px 0px',
   ...props
 }) => {
   const location = useLocation();

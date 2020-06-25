@@ -30,6 +30,10 @@ function App() {
           component={Home}
         />
         <Route
+          path="/faculty-of-it"
+          component={AboutUs}
+        />
+        <Route
           path="/faculty-of-it/about-us"
           component={AboutUs}
         />
