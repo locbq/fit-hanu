@@ -11,6 +11,7 @@ import {
   AboutUs,
   OurObjectives,
   OurVisions,
+  OurStaff,
   Admission,
   Graduation,
   Student,
@@ -47,6 +48,11 @@ function App() {
           exact
           path="/faculty-of-IT/our-visions"
           component={OurVisions}
+        />
+        <Route
+          exact
+          path="/faculty-of-IT/our-staff"
+          component={OurStaff}
         />
         <Route path="/admission" component={Admission} />
         <Route path="/graduation" component={Graduation} />
