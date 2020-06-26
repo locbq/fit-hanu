@@ -26,14 +26,14 @@ const navList = [
     dropdownList: [
       {
         title: 'Why FIT?',
-        url: '/why-fit',
+        url: '/why-FIT',
       },
       {
         title: 'Admission Information',
         url: '/admission-information',
       },
       {
-        title: 'Annual Stastistics',
+        title: 'Annual Statistics',
         url: '/annual-statistics',
       },
     ],

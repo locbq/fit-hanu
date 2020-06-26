@@ -38,6 +38,8 @@ function OurStaff() {
             item
             lg={8}
             md={8}
+            sm={12}
+            xs={12}
           >
             <StyledGridContent>
               <StyledGridHeader>
@@ -108,6 +110,8 @@ function OurStaff() {
             item
             lg={4}
             md={4}
+            sm={12}
+            xs={12}
           >
             <TableOfContents links={contentList} />
           </Grid>
