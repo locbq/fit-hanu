@@ -12,7 +12,9 @@ import {
   OurObjectives,
   OurVisions,
   OurStaff,
-  Admission,
+  WhyFIT,
+  AdmissionInformation,
+  AnnualStatistics,
   Graduation,
   Student,
   Login,
@@ -54,7 +56,26 @@ function App() {
           path="/faculty-of-IT/our-staff"
           component={OurStaff}
         />
-        <Route path="/admission" component={Admission} />
+        <Route
+          exact
+          path="/admission"
+          component={WhyFIT}
+        />
+        <Route
+          exact
+          path="/admission/why-FIT"
+          component={WhyFIT}
+        />
+        <Route
+          exact
+          path="/admission/admission-information"
+          component={AdmissionInformation}
+        />
+        <Route
+          exact
+          path="/admission/annual-statistics"
+          component={AnnualStatistics}
+        />
         <Route path="/graduation" component={Graduation} />
         <Route path="/student" component={Student} />
         <Route path="/login" component={Login} />
