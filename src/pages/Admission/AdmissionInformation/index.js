@@ -12,26 +12,40 @@ import {
 import {
   Heading2,
 } from 'components/Headings';
+import { contentList } from './const';
+import {
+  StyledGridContent,
+  Divider,
+  StyledGridHeader,
+} from './styles';
 
 function AdmissionInformation() {
   return (
     <Section backgroundcolor="#fafafa">
       <BreadCrumb />
       <Container fixed>
-        <Grid container>
+        <Grid
+          container
+          spacing={3}
+        >
           <Grid
             item
             lg={8}
             md={8}
           >
-            <Heading2 margin="0px 0px 15px 0px">Admission Information</Heading2>
+            <StyledGridContent>
+              <StyledGridHeader>
+                <Heading2 margin="0px 0px 15px 0px">Admission Information</Heading2>
+                <Divider />
+              </StyledGridHeader>
+            </StyledGridContent>
           </Grid>
           <Grid
             item
             lg={4}
             md={4}
           >
-            <TableOfContents />
+            <TableOfContents links={contentList} />
           </Grid>
         </Grid>
       </Container>
