@@ -56,6 +56,7 @@ function App() {
           path="/faculty-of-IT/our-staff"
           component={OurStaff}
         />
+
         <Route
           exact
           path="/admission"
@@ -76,6 +77,7 @@ function App() {
           path="/admission/annual-statistics"
           component={AnnualStatistics}
         />
+
         <Route path="/graduation" component={Graduation} />
         <Route path="/student" component={Student} />
         <Route path="/login" component={Login} />
