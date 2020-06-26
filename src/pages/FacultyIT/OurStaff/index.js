@@ -87,8 +87,8 @@ function OurStaff() {
                   />
                   <StaffCard
                     image={avatarImage}
-                    title="Administrative Assistant"
-                    name="Administrative Assistant Name"
+                    title="Study Assistant"
+                    name="Study Assistant Name"
                     office="Room 210 Building C"
                     phone="123-456-789"
                   />
