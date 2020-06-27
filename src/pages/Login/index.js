@@ -10,7 +10,7 @@ import { LoginForm } from './components';
 
 function Login() {
   return (
-    <Section padding="60px 0px 0px 0px">
+    <Section>
       <StyledGrid container>
         <StyledGridBanner
           item
