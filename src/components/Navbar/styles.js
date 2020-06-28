@@ -3,6 +3,7 @@ import {
   Container,
   AppBar,
   Grid,
+  Button,
 } from '@material-ui/core';
 
 import {
@@ -47,6 +48,13 @@ export const StyledNavBrand = styled(Link)({
   },
 });
 
+export const StyledGridNavLinks = styled(Grid)(({ theme }) => ({
+  display: 'flex',
+  [theme.breakpoints.down('sm')]: {
+    display: 'none',
+  },
+}));
+
 export const StyledNavLink = styled(NavLink)({
   height: '100%',
   display: 'flex',
@@ -64,6 +72,27 @@ export const StyledNavLink = styled(NavLink)({
     transition: '0.25s ease-in-out',
   },
 });
+
+export const StyledNavLinkLogin = styled(NavLink)(({ theme }) => ({
+  height: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '125px',
+  textDecoration: 'none',
+  color: '#fd8b4b',
+  textTransform: 'uppercase',
+  padding: '0px 5px',
+  fontFamily: '"Open Sans", sans-serif',
+  '&:hover': {
+    background: '#fd8b4b',
+    color: '#ffffff',
+    transition: '0.25s ease-in-out',
+  },
+  [theme.breakpoints.down('sm')]: {
+    display: 'none',
+  },
+}));
 
 export const StyledFAIcon = styled(FontAwesomeIcon)({
   marginLeft: '5px',
@@ -94,6 +123,16 @@ export const StyledGridDropdown = styled(Grid)({
     },
   },
 });
+
+export const StyledButtonCollapsedMenu = styled(Button)(({ theme }) => ({
+  display: 'none',
+  [theme.breakpoints.down('sm')]: {
+    display: 'block',
+    marginLeft: 'auto',
+    color: '#ffffff',
+    fontSize: '20px',
+  },
+}));
 
 export const styles = () => ({
   loginNav: {
