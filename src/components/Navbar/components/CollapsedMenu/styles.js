@@ -4,7 +4,7 @@ import {
 } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 
-import { Heading3 } from 'components/Headings';
+import { Heading4 } from 'components/Headings';
 
 export const StyledGridMenu = styled(Grid)({
   background: '#231d1f',
@@ -22,6 +22,10 @@ export const StyledNavLink = styled(NavLink)({
   textDecoration: 'none',
 });
 
-export const StyledHeading3 = styled(Heading3)({
+export const StyledHeading4 = styled(Heading4)({
   textTransform: 'uppercase',
+  padding: '15px 25px 15px 15px',
+  display: 'flex',
+  justifyContent: 'space-between',
+  borderBottom: '1px solid rgba(196,196,196, 0.2)',
 });

@@ -126,7 +126,7 @@ export const StyledGridDropdown = styled(Grid)({
 
 export const StyledButtonCollapsedMenu = styled(Button)(({ theme }) => ({
   display: 'none',
-  padding:'0px',
+  padding: '0px',
   [theme.breakpoints.down('sm')]: {
     display: 'block',
     marginLeft: 'auto',
