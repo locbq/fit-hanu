@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core';
 import {
   faCaretDown,
@@ -22,10 +22,18 @@ import {
   StyledGridDropdown,
   StyledButtonCollapsedMenu,
 } from './styles';
+import CollapsedMenu from './components/CollapsedMenu';
 
 function Navbar({ classes }) {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleClickShowMenu = (event) => {
+    event.preventDefault();
+    setShowMenu(!showMenu);
+  };
   return (
     <StyledAppBar>
+      <CollapsedMenu showmenu={showMenu.toString()} />
       <StyledContainer fixed>
         <StyledGridNav container>
           <StyledNavBrand to="/">
@@ -68,7 +76,7 @@ function Navbar({ classes }) {
           >
             Login
           </StyledNavLinkLogin>
-          <StyledButtonCollapsedMenu>
+          <StyledButtonCollapsedMenu onClick={handleClickShowMenu}>
             <FontAwesomeIcon icon={faBars} />
           </StyledButtonCollapsedMenu>
         </StyledGridNav>
