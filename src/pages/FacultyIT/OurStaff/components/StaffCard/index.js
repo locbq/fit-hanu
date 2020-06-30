@@ -38,6 +38,8 @@ function StaffCard({
         item
         lg={4}
         md={4}
+        sm={4}
+        xs={4}
       >
         <Image src={image} alt="avatar" />
       </Grid>
@@ -45,6 +47,8 @@ function StaffCard({
         item
         lg={8}
         md={8}
+        sm={8}
+        xs={8}
       >
         <Heading4 margin="0px 0px 10px 0px">{title}</Heading4>
         <Paragraph margin="0px 0px 5px 0px">{name}</Paragraph>
