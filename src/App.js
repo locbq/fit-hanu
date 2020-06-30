@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Navbar,
   Footer,
+  ScrollRestoration,
 } from 'components';
 import {
   BrowserRouter as Router,
@@ -34,6 +35,7 @@ const StyledContent = styled(Grid)({
 function App() {
   return (
     <Router>
+      <ScrollRestoration />
       <Navbar />
       <StyledContent>
         <Switch>

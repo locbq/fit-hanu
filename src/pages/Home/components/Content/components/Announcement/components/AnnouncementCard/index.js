@@ -22,11 +22,14 @@ const StyledGridContent = styled(Grid)({
   padding: '20px',
 });
 
-const StyledFAIcon = styled(FontAwesomeIcon)({
+const StyledFAIcon = styled(FontAwesomeIcon)(({ theme }) => ({
   fontSize: '40px',
   marginRight: '15px',
   color: '#231d1f',
-});
+  [theme.breakpoints.down('sm')]: {
+    display: 'none',
+  },
+}));
 
 function AnnouncementCard({
   title = '',
@@ -41,7 +44,7 @@ function AnnouncementCard({
         <Grid>
           <Heading4>{title}</Heading4>
           <Paragraph>
-            Bởi
+            By
             {' '}
             <Link href="!#" underline="none">{user}</Link>
             {' '}
