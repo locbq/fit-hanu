@@ -5,6 +5,7 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 import {
   styles,
+  StyledGridMenuContainer,
   StyledGridMenu,
   StyledNavLink,
   StyledNavLinkDropdown,
@@ -33,89 +34,103 @@ function CollapsedMenu({
   const handleClickShowFaculty = (event) => {
     event.preventDefault();
     setShowFaculty(!showFaculty);
+    setShowAdmission(false);
+    setShowPrograms(false);
+    setShowStudents(false);
   };
 
   const handleClickShowAdmission = (event) => {
     event.preventDefault();
     setShowAdmission(!showAdmisson);
+    setShowFaculty(false);
+    setShowPrograms(false);
+    setShowStudents(false);
   };
   const handleClickShowPrograms = (event) => {
     event.preventDefault();
     setShowPrograms(!showPrograms);
+    setShowFaculty(false);
+    setShowAdmission(false);
+    setShowStudents(false);
   };
   const handleClickShowStudents = (event) => {
     event.preventDefault();
     setShowStudents(!showStudents);
+    setShowFaculty(false);
+    setShowAdmission(false);
+    setShowPrograms(false);
   };
 
   return (
-    <StyledGridMenu {...props}>
-      <StyledNavLink
-        exact
-        to="/"
-        activeClassName={classes.active}
-        onMouseUp={handleClickShowMenu}
-      >
-        <StyledHeading4>Home</StyledHeading4>
-      </StyledNavLink>
-
-      <StyledHeading4 onClick={handleClickShowFaculty}>
-        <StyledNavLinkDropdown
-          to="/faculty-of-IT"
+    <StyledGridMenuContainer {...props}>
+      <StyledGridMenu>
+        <StyledNavLink
+          exact
+          to="/"
           activeClassName={classes.active}
+          onMouseUp={handleClickShowMenu}
         >
-          Faculty Of IT
-        </StyledNavLinkDropdown>
-        <FontAwesomeIcon icon={faCaretDown} />
-      </StyledHeading4>
+          <StyledHeading4>Home</StyledHeading4>
+        </StyledNavLink>
 
-      {showFaculty ? <FacultyDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
+        <StyledHeading4 onClick={handleClickShowFaculty}>
+          <StyledNavLinkDropdown
+            to="/faculty-of-IT"
+            activeClassName={classes.active}
+          >
+            Faculty Of IT
+          </StyledNavLinkDropdown>
+          <FontAwesomeIcon icon={faCaretDown} />
+        </StyledHeading4>
 
-      <StyledHeading4 onClick={handleClickShowAdmission}>
-        <StyledNavLinkDropdown
-          to="/admission"
+        {showFaculty ? <FacultyDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
+
+        <StyledHeading4 onClick={handleClickShowAdmission}>
+          <StyledNavLinkDropdown
+            to="/admission"
+            activeClassName={classes.active}
+          >
+            Admission
+          </StyledNavLinkDropdown>
+          <FontAwesomeIcon icon={faCaretDown} />
+        </StyledHeading4>
+
+        {showAdmisson ? <AdmissionDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
+
+        <StyledHeading4 onClick={handleClickShowPrograms}>
+          <StyledNavLinkDropdown
+            to="/graduation"
+            activeClassName={classes.active}
+          >
+            Programs
+          </StyledNavLinkDropdown>
+          <FontAwesomeIcon icon={faCaretDown} />
+        </StyledHeading4>
+
+        {showPrograms ? <ProgramsDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
+
+        <StyledHeading4 onClick={handleClickShowStudents}>
+          <StyledNavLinkDropdown
+            to="/students"
+            activeClassName={classes.active}
+          >
+            Students
+          </StyledNavLinkDropdown>
+          <FontAwesomeIcon icon={faCaretDown} />
+        </StyledHeading4>
+
+        {showStudents ? <StudentsDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
+        <StyledNavLink
+          exact
+          to="/login"
           activeClassName={classes.active}
+          onMouseUp={handleClickShowMenu}
         >
-          Admission
-        </StyledNavLinkDropdown>
-        <FontAwesomeIcon icon={faCaretDown} />
-      </StyledHeading4>
+          <StyledHeading4>Login</StyledHeading4>
+        </StyledNavLink>
 
-      {showAdmisson ? <AdmissionDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
-
-      <StyledHeading4 onClick={handleClickShowPrograms}>
-        <StyledNavLinkDropdown
-          to="/graduation"
-          activeClassName={classes.active}
-        >
-          Programs
-        </StyledNavLinkDropdown>
-        <FontAwesomeIcon icon={faCaretDown} />
-      </StyledHeading4>
-
-      {showPrograms ? <ProgramsDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
-
-      <StyledHeading4 onClick={handleClickShowStudents}>
-        <StyledNavLinkDropdown
-          to="/students"
-          activeClassName={classes.active}
-        >
-          Students
-        </StyledNavLinkDropdown>
-        <FontAwesomeIcon icon={faCaretDown} />
-      </StyledHeading4>
-
-      {showStudents ? <StudentsDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
-      <StyledNavLink
-        exact
-        to="/login"
-        activeClassName={classes.active}
-        onMouseUp={handleClickShowMenu}
-      >
-        <StyledHeading4>Login</StyledHeading4>
-      </StyledNavLink>
-
-    </StyledGridMenu>
+      </StyledGridMenu>
+    </StyledGridMenuContainer>
   );
 }
 

@@ -11,9 +11,9 @@ import { Link } from 'react-router-dom';
 
 import { Paragraph } from 'components/Headings';
 
-const StyledGrid = styled(Grid)({
-  margin: (props) => props.margin,
-});
+const StyledGrid = styled(Grid)(({ theme }) => ({
+  margin: '30px 0px',
+}));
 
 const StyledParagraphLast = withStyles(() => ({
   root: {
@@ -49,7 +49,6 @@ const StyledBreadcrumbs = withStyles({
 
 const BreadCrumb = ({
   classes,
-  margin = '30px 0px',
   ...props
 }) => {
   const location = useLocation();
@@ -59,10 +58,7 @@ const BreadCrumb = ({
 
   return (
     <Container fixed>
-      <StyledGrid
-        margin={margin}
-        {...props}
-      >
+      <StyledGrid {...props}>
         <StyledBreadcrumbs
           aria-label="breadcrumb"
           separator="|"
@@ -97,7 +93,6 @@ const BreadCrumb = ({
         </StyledBreadcrumbs>
       </StyledGrid>
     </Container>
-
   );
 };
 
