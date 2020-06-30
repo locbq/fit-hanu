@@ -13,14 +13,17 @@ import {
 import {
   FacultyDropdownMenu,
   AdmissionDropdownMenu,
+  ProgramsDropdownMenu,
 } from './components';
 
 function CollapsedMenu({
   classes,
   showFaculty,
   showAdmisson,
+  showPrograms,
   setShowFaculty,
   setShowAdmission,
+  setShowPrograms,
   handleClickShowMenu,
   ...props
 }) {
@@ -32,6 +35,10 @@ function CollapsedMenu({
   const handleClickShowAdmission = (event) => {
     event.preventDefault();
     setShowAdmission(!showAdmisson);
+  };
+  const handleClickShowPrograms = (event) => {
+    event.preventDefault();
+    setShowPrograms(!showPrograms);
   };
 
   return (
@@ -69,15 +76,18 @@ function CollapsedMenu({
 
       {showAdmisson ? <AdmissionDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
 
-      <StyledNavLink
-        to="/programs"
-        activeClassName={classes.active}
-      >
-        <StyledHeading4>
+      <StyledHeading4 onClick={handleClickShowPrograms}>
+        <StyledNavLinkDropdown
+          to="/graduation"
+          activeClassName={classes.active}
+        >
           Programs
-          <FontAwesomeIcon icon={faCaretDown} />
-        </StyledHeading4>
-      </StyledNavLink>
+        </StyledNavLinkDropdown>
+        <FontAwesomeIcon icon={faCaretDown} />
+      </StyledHeading4>
+
+      {showPrograms ? <ProgramsDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
+
       <StyledNavLink
         to="/students"
         activeClassName={classes.active}

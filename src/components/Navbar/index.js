@@ -29,6 +29,7 @@ function Navbar({ classes }) {
 
   const [showFaculty, setShowFaculty] = useState(false);
   const [showAdmisson, setShowAdmission] = useState(false);
+  const [showPrograms, setShowPrograms] = useState(false);
 
   const handleClickShowMenu = (event) => {
     event.preventDefault();
@@ -41,8 +42,10 @@ function Navbar({ classes }) {
         <CollapsedMenu
           showFaculty={showFaculty}
           showAdmisson={showAdmisson}
+          showPrograms={showPrograms}
           setShowFaculty={setShowFaculty}
           setShowAdmission={setShowAdmission}
+          setShowPrograms={setShowPrograms}
           handleClickShowMenu={handleClickShowMenu}
         />
       ) : null}
