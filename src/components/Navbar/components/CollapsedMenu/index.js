@@ -10,15 +10,25 @@ import {
   StyledNavLinkDropdown,
   StyledHeading4,
 } from './styles';
-import { AdmissionDropdownMenu } from './components';
+import {
+  FacultyDropdownMenu,
+  AdmissionDropdownMenu,
+} from './components';
 
 function CollapsedMenu({
   classes,
+  showFaculty,
   showAdmisson,
+  setShowFaculty,
   setShowAdmission,
   handleClickShowMenu,
   ...props
 }) {
+  const handleClickShowFaculty = (event) => {
+    event.preventDefault();
+    setShowFaculty(!showFaculty);
+  };
+
   const handleClickShowAdmission = (event) => {
     event.preventDefault();
     setShowAdmission(!showAdmisson);
@@ -35,16 +45,17 @@ function CollapsedMenu({
         <StyledHeading4>Home</StyledHeading4>
       </StyledNavLink>
 
-      <StyledHeading4>
+      <StyledHeading4 onClick={handleClickShowFaculty}>
         <StyledNavLinkDropdown
           to="/faculty-of-IT"
           activeClassName={classes.active}
-          onMouseUp={handleClickShowMenu}
         >
           Faculty Of IT
         </StyledNavLinkDropdown>
         <FontAwesomeIcon icon={faCaretDown} />
       </StyledHeading4>
+
+      {showFaculty ? <FacultyDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
 
       <StyledHeading4 onClick={handleClickShowAdmission}>
         <StyledNavLinkDropdown
@@ -56,7 +67,7 @@ function CollapsedMenu({
         <FontAwesomeIcon icon={faCaretDown} />
       </StyledHeading4>
 
-      {showAdmisson ? (<AdmissionDropdownMenu handleClickShowMenu={handleClickShowMenu} />) : null}
+      {showAdmisson ? <AdmissionDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
 
       <StyledNavLink
         to="/programs"

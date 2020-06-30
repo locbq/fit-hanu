@@ -27,6 +27,7 @@ import CollapsedMenu from './components/CollapsedMenu';
 function Navbar({ classes }) {
   const [showMenu, setShowMenu] = useState(false);
 
+  const [showFaculty, setShowFaculty] = useState(false);
   const [showAdmisson, setShowAdmission] = useState(false);
 
   const handleClickShowMenu = (event) => {
@@ -38,7 +39,9 @@ function Navbar({ classes }) {
     <StyledAppBar>
       {showMenu ? (
         <CollapsedMenu
+          showFaculty={showFaculty}
           showAdmisson={showAdmisson}
+          setShowFaculty={setShowFaculty}
           setShowAdmission={setShowAdmission}
           handleClickShowMenu={handleClickShowMenu}
         />
