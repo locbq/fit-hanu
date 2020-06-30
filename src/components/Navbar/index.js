@@ -27,13 +27,22 @@ import CollapsedMenu from './components/CollapsedMenu';
 function Navbar({ classes }) {
   const [showMenu, setShowMenu] = useState(false);
 
+  const [showAdmisson, setShowAdmission] = useState(false);
+
   const handleClickShowMenu = (event) => {
     event.preventDefault();
     setShowMenu(!showMenu);
   };
+
   return (
     <StyledAppBar>
-      <CollapsedMenu showmenu={showMenu.toString()} />
+      {showMenu ? (
+        <CollapsedMenu
+          showAdmisson={showAdmisson}
+          setShowAdmission={setShowAdmission}
+          handleClickShowMenu={handleClickShowMenu}
+        />
+      ) : null}
       <StyledContainer fixed>
         <StyledGridNav container>
           <StyledNavBrand to="/">

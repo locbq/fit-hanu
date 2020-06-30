@@ -10,9 +10,7 @@ export const StyledGridMenu = styled(Grid)({
   background: '#231d1f',
   position: 'fixed',
   width: '100%',
-  height: (props) => (props.showmenu === 'false' ? '0' : '100%'),
-  visibility: (props) => (props.showmenu === 'false' ? 'hidden' : 'visible'),
-  transition: '0.15s linear',
+  height: '100%',
   marginTop: '60px',
   zIndex: '1',
 });
@@ -22,10 +20,25 @@ export const StyledNavLink = styled(NavLink)({
   textDecoration: 'none',
 });
 
+export const StyledNavLinkDropdown = styled(NavLink)({
+  color: '#ffffff',
+  textDecoration: 'none',
+  pointerEvents: 'none',
+});
+
 export const StyledHeading4 = styled(Heading4)({
   textTransform: 'uppercase',
   padding: '15px 25px 15px 15px',
   display: 'flex',
   justifyContent: 'space-between',
   borderBottom: '1px solid rgba(196,196,196, 0.2)',
+});
+
+export const styles = () => ({
+  active: {
+    color: '#fd8b4b',
+    '& + svg': {
+      color: '#fd8b4b',
+    },
+  },
 });
