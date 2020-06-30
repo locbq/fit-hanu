@@ -15,14 +15,11 @@ const StyledGrid = styled(Grid)({
   margin: (props) => props.margin,
 });
 
-const StyledParagraphLast = withStyles((theme) => ({
+const StyledParagraphLast = withStyles(() => ({
   root: {
     color: '#fd8b4b',
     textTransform: 'capitalize',
     fontWeight: 'bold',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '12px',
-    },
   },
 }))(Paragraph);
 
