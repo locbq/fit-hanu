@@ -6,13 +6,17 @@ import { NavLink } from 'react-router-dom';
 
 import { Heading4 } from 'components/Headings';
 
-export const StyledGridMenu = styled(Grid)({
+export const StyledGridMenuContainer = styled(Grid)({
   background: '#231d1f',
   position: 'fixed',
   width: '100%',
   height: '100%',
+  overflowY: 'scroll',
+  zIndex: 2,
+});
+
+export const StyledGridMenu = styled(Grid)({
   marginTop: '60px',
-  zIndex: '1',
 });
 
 export const StyledNavLink = styled(NavLink)({
@@ -32,6 +36,9 @@ export const StyledHeading4 = styled(Heading4)({
   display: 'flex',
   justifyContent: 'space-between',
   borderBottom: '1px solid rgba(196,196,196, 0.2)',
+  '& svg': {
+    color: '#ffffff',
+  },
 });
 
 export const styles = () => ({

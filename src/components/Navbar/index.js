@@ -43,7 +43,7 @@ function Navbar({ classes }) {
   };
 
   return (
-    <StyledAppBar>
+    <>
       {showMenu ? (
         <CollapsedMenu
           showFaculty={showFaculty}
@@ -57,57 +57,59 @@ function Navbar({ classes }) {
           handleClickShowMenu={handleClickShowMenu}
         />
       ) : null}
-      <StyledContainer fixed>
-        <StyledGridNav container>
-          <StyledNavBrand
-            to="/"
-            onMouseUp={handleClickCloseMenu}
-          >
-            <span>FIT</span>
-            {' '}
-            HANU
-          </StyledNavBrand>
-          <StyledGridNavLinks>
-            {navList.map((nav) => (
-              <StyledGridHover key={nav.title}>
-                <StyledNavLink
-                  to={nav.url}
-                  activeClassName={classes.active}
-                >
-                  {nav.navItem}
-                  {' '}
-                  <StyledFAIcon icon={faCaretDown} />
-                </StyledNavLink>
-                <StyledGridDropdown
-                  container
-                  direction="column"
-                >
-                  {nav.dropdownList.map((dropdown) => (
-                    <NavLink
-                      key={dropdown.title}
-                      to={`${nav.url}${dropdown.url}`}
-                      activeClassName={classes.activeDropdown}
-                    >
-                      {dropdown.title}
-                    </NavLink>
-                  ))}
-                </StyledGridDropdown>
-              </StyledGridHover>
-            ))}
-          </StyledGridNavLinks>
-          <StyledNavLinkLogin
-            to="/login"
-            className={classes.loginNav}
-            activeClassName={classes.active}
-          >
-            Login
-          </StyledNavLinkLogin>
-          <StyledButtonCollapsedMenu onClick={handleClickShowMenu}>
-            <FontAwesomeIcon icon={faBars} />
-          </StyledButtonCollapsedMenu>
-        </StyledGridNav>
-      </StyledContainer>
-    </StyledAppBar>
+      <StyledAppBar>
+        <StyledContainer fixed>
+          <StyledGridNav container>
+            <StyledNavBrand
+              to="/"
+              onMouseUp={handleClickCloseMenu}
+            >
+              <span>FIT</span>
+              {' '}
+              HANU
+            </StyledNavBrand>
+            <StyledGridNavLinks>
+              {navList.map((nav) => (
+                <StyledGridHover key={nav.title}>
+                  <StyledNavLink
+                    to={nav.url}
+                    activeClassName={classes.active}
+                  >
+                    {nav.navItem}
+                    {' '}
+                    <StyledFAIcon icon={faCaretDown} />
+                  </StyledNavLink>
+                  <StyledGridDropdown
+                    container
+                    direction="column"
+                  >
+                    {nav.dropdownList.map((dropdown) => (
+                      <NavLink
+                        key={dropdown.title}
+                        to={`${nav.url}${dropdown.url}`}
+                        activeClassName={classes.activeDropdown}
+                      >
+                        {dropdown.title}
+                      </NavLink>
+                    ))}
+                  </StyledGridDropdown>
+                </StyledGridHover>
+              ))}
+            </StyledGridNavLinks>
+            <StyledNavLinkLogin
+              to="/login"
+              className={classes.loginNav}
+              activeClassName={classes.active}
+            >
+              Login
+            </StyledNavLinkLogin>
+            <StyledButtonCollapsedMenu onClick={handleClickShowMenu}>
+              <FontAwesomeIcon icon={faBars} />
+            </StyledButtonCollapsedMenu>
+          </StyledGridNav>
+        </StyledContainer>
+      </StyledAppBar>
+    </>
   );
 }
 

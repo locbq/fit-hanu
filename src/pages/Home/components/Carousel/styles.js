@@ -5,7 +5,7 @@ import {
 import Slider from 'react-slick';
 
 export const StyledGrid = styled(Grid)({
-  marginTop: '60px',
+  paddingTop: '60px',
 });
 
 export const StyledSlider = styled(Slider)({

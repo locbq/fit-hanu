@@ -19,6 +19,7 @@ export const StyledAppBar = styled(AppBar)({
 
 export const StyledContainer = styled(Container)({
   height: '100%',
+  zIndex: 10,
 });
 
 export const StyledGridNav = styled(Grid)({
