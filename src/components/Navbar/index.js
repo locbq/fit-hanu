@@ -37,6 +37,11 @@ function Navbar({ classes }) {
     setShowMenu(!showMenu);
   };
 
+  const handleClickCloseMenu = (event) => {
+    event.preventDefault();
+    setShowMenu(false);
+  };
+
   return (
     <StyledAppBar>
       {showMenu ? (
@@ -54,7 +59,10 @@ function Navbar({ classes }) {
       ) : null}
       <StyledContainer fixed>
         <StyledGridNav container>
-          <StyledNavBrand to="/">
+          <StyledNavBrand
+            to="/"
+            onMouseUp={handleClickCloseMenu}
+          >
             <span>FIT</span>
             {' '}
             HANU
