@@ -106,6 +106,14 @@ function CollapsedMenu({
       </StyledHeading4>
 
       {showStudents ? <StudentsDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
+      <StyledNavLink
+        exact
+        to="/login"
+        activeClassName={classes.active}
+        onMouseUp={handleClickShowMenu}
+      >
+        <StyledHeading4>Login</StyledHeading4>
+      </StyledNavLink>
 
     </StyledGridMenu>
   );
