@@ -30,7 +30,16 @@ function CarouselView() {
         }}
       />
     ),
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
   };
+
   return (
     <StyledGrid>
       <StyledSlider {...settings}>

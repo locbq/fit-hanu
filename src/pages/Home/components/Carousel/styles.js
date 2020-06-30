@@ -31,10 +31,14 @@ export const StyledSlider = styled(Slider)({
   },
 });
 
-export const StyledGridCaption = styled(Grid)({
+export const StyledGridCaption = styled(Grid)(({ theme }) => ({
   position: 'absolute',
   marginTop: '-138px',
   width: '100%',
   padding: '20px',
   background: 'rgba(0,0,0,0.2)',
-});
+  [theme.breakpoints.down('sm')]: {
+    padding: '0px',
+    marginTop: '-140px',
+  },
+}));
