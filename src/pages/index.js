@@ -6,6 +6,6 @@ export { default as OurStaff } from './FacultyIT/OurStaff';
 export { default as WhyFIT } from './Admission/WhyFIT';
 export { default as AdmissionInformation } from './Admission/AdmissionInformation';
 export { default as AnnualStatistics } from './Admission/AnnualStatistics';
-export { default as Graduation } from './Graduation';
+export { default as GraduationPlan } from './Graduation/GraduationPlan';
 export { default as Student } from './Student';
 export { default as Login } from './Login';
