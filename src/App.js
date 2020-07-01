@@ -23,7 +23,6 @@ import {
   WhyFIT,
   AdmissionInformation,
   AnnualStatistics,
-  Graduation,
   GraduationPlan,
   Student,
   Login,
