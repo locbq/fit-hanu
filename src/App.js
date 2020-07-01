@@ -24,6 +24,7 @@ import {
   AdmissionInformation,
   AnnualStatistics,
   Graduation,
+  GraduationPlan,
   Student,
   Login,
 } from './pages';
@@ -91,7 +92,15 @@ function App() {
             component={AnnualStatistics}
           />
 
-          <Route path="/graduation" component={Graduation} />
+          <Route
+            path="/graduation"
+            component={GraduationPlan}
+          />
+          <Route
+            path="/graduation/graduation-plan"
+            component={GraduationPlan}
+          />
+
           <Route path="/student" component={Student} />
           <Route path="/login" component={Login} />
         </Switch>
