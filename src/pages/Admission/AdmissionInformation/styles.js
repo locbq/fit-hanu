@@ -1,6 +1,7 @@
 import {
   styled,
   Grid,
+  Link,
 } from '@material-ui/core';
 
 export const StyledGridContent = styled(Grid)({
@@ -16,4 +17,12 @@ export const Divider = styled(Grid)({
 
 export const StyledGridHeader = styled(Grid)({
   marginBottom: '15px',
+});
+
+export const StyledLink = styled(Link)({
+  color: '#fd8b4b',
+  transition: '0.25s ease-in-out',
+  '&:hover': {
+    color: '#231d1f',
+  },
 });
