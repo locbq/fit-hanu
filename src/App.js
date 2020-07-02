@@ -24,7 +24,7 @@ import {
   AdmissionInformation,
   AnnualStatistics,
   GraduationPlan,
-  Student,
+  StudentActivities,
   Login,
 } from './pages';
 
@@ -99,8 +99,11 @@ function App() {
             path="/graduation/graduation-plan"
             component={GraduationPlan}
           />
+          <Route
+            path="/student/student-activities"
+            component={StudentActivities}
+          />
 
-          <Route path="/student" component={Student} />
           <Route path="/login" component={Login} />
         </Switch>
       </StyledContent>
