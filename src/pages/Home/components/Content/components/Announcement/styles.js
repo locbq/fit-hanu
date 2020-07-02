@@ -5,7 +5,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const StyledGridAnnouncement = styled(Grid)({
-  border: '1px solid rgba(0,0,0,.125)',
+  boxShadow: '0 0 30px rgba(0, 0, 0, 0.1)',
   background: '#ffffff',
 });
 

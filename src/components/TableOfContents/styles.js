@@ -13,6 +13,7 @@ export const StyledGridHeader = styled(Grid)({
 export const StyledGrid = styled(Grid)({
   background: '#ffffff',
   padding: '20px',
+  boxShadow: '0 0 30px rgba(0, 0, 0, 0.1)',
 });
 
 export const Divider = styled(Grid)({
