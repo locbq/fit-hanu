@@ -4,8 +4,8 @@ import {
   Grid,
 } from '@material-ui/core';
 import {
-  BrowserRouter as Router,
   Route,
+  Switch,
 } from 'react-router-dom';
 
 import {
@@ -20,50 +20,78 @@ import {
   Divider,
   StyledGridHeader,
 } from './styles';
-// import {
-//   FITClosedCup,
-//   HANUOpenCup,
-//   HelloWorld,
-// } from './components';
+import {
+  FITClosedCup,
+  HANUOpenCup,
+  HelloWorld,
+} from './components';
 
 function StudentActivities() {
   return (
-    <Router>
-      <Section backgroundcolor="#fafafa">
-        <BreadCrumb />
-        <Container fixed>
-          <Grid
-            container
-            spacing={3}
-          >
-            <Grid
-              item
-              lg={8}
-              md={8}
-              sm={12}
-              xs={12}
-            >
-              <StyledGridContent>
-                <StyledGridHeader>
-                  <Heading2 margin="0px 0px 15px 0px">Student Activities</Heading2>
-                  <Divider />
-                </StyledGridHeader>
 
-              </StyledGridContent>
-            </Grid>
-            <Grid
-              item
-              lg={4}
-              md={4}
-              sm={12}
-              xs={12}
-            >
-              <TableOfContents links={contentList} />
-            </Grid>
+    <Section backgroundcolor="#fafafa">
+      <BreadCrumb />
+      <Container fixed>
+        <Grid
+          container
+          spacing={3}
+        >
+          <Grid
+            item
+            lg={8}
+            md={8}
+            sm={12}
+            xs={12}
+          >
+            <StyledGridContent>
+              <StyledGridHeader>
+                <Heading2 margin="0px 0px 15px 0px">Student Activities</Heading2>
+                <Divider />
+              </StyledGridHeader>
+
+              <Switch>
+                <Route
+                  exact
+                  path="/student"
+                  component={FITClosedCup}
+                />
+                <Route
+                  exact
+                  path="/student/student-activities"
+                  component={FITClosedCup}
+                />
+                <Route
+                  exact
+                  path="/student/student-activities/FIT-closed-cup"
+                  component={FITClosedCup}
+                />
+                <Route
+                  exact
+                  path="/student/student-activities/HANU-open-cup"
+                  component={HANUOpenCup}
+                />
+                <Route
+                  exact
+                  path="/student/student-activities/hello-world"
+                  component={HelloWorld}
+                />
+              </Switch>
+
+            </StyledGridContent>
           </Grid>
-        </Container>
-      </Section>
-    </Router>
+          <Grid
+            item
+            lg={4}
+            md={4}
+            sm={12}
+            xs={12}
+          >
+            <TableOfContents links={contentList} />
+          </Grid>
+        </Grid>
+      </Container>
+    </Section>
+
   );
 }
 

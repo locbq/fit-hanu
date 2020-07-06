@@ -5,7 +5,7 @@ export const contentList = [
   },
   {
     title: 'HANU Open Cup',
-    url: '/student/student-activities/HANU-Open-Cup',
+    url: '/student/student-activities/HANU-open-cup',
   },
   {
     title: 'Hello World',

@@ -100,6 +100,11 @@ function App() {
             component={GraduationPlan}
           />
           <Route
+            exact
+            path="/student"
+            component={StudentActivities}
+          />
+          <Route
             path="/student/student-activities"
             component={StudentActivities}
           />
