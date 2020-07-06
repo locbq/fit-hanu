@@ -51,10 +51,7 @@ function LoginForm() {
         </StyledGridField>
 
         <StyledGridForgotLink>
-          <StyledLink
-            href="!#"
-            underline="none"
-          >
+          <StyledLink to="/forgot-login-info">
             Forgot your username or password?
           </StyledLink>
         </StyledGridForgotLink>
