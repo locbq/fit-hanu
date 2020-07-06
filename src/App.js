@@ -81,6 +81,10 @@ function App() {
             path="/forgot-login-info"
             component={ForgotLoginInfo}
           />
+          <Route
+            path="/forgot-login-info/:id"
+            component={ForgotLoginInfo}
+          />
 
           <Route path="/login" component={Login} />
         </Switch>
