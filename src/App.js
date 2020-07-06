@@ -17,9 +17,7 @@ import {
 import {
   Home,
   FacultyIT,
-  WhyFIT,
-  AdmissionInformation,
-  AnnualStatistics,
+  Admission,
   GraduationPlan,
   StudentActivities,
   Login,
@@ -53,22 +51,12 @@ function App() {
           <Route
             exact
             path="/admission"
-            component={WhyFIT}
+            component={Admission}
           />
           <Route
             exact
-            path="/admission/why-FIT"
-            component={WhyFIT}
-          />
-          <Route
-            exact
-            path="/admission/admission-information"
-            component={AdmissionInformation}
-          />
-          <Route
-            exact
-            path="/admission/annual-statistics"
-            component={AnnualStatistics}
+            path="/admission/:id"
+            component={Admission}
           />
 
           <Route
