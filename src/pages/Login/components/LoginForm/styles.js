@@ -2,8 +2,8 @@ import {
   styled,
   Grid,
   InputBase,
-  Link,
 } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 import { Heading2 } from 'components/Headings';
 
@@ -30,6 +30,7 @@ export const StyledLink = styled(Link)({
   color: '#fd8b4b',
   textAlign: 'center',
   transition: '0.25s ease-in-out',
+  textDecoration: 'none',
   '&:hover': {
     color: '#231d1f',
   },
