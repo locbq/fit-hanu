@@ -7,5 +7,6 @@ export { default as WhyFIT } from './Admission/WhyFIT';
 export { default as AdmissionInformation } from './Admission/AdmissionInformation';
 export { default as AnnualStatistics } from './Admission/AnnualStatistics';
 export { default as GraduationPlan } from './Graduation/GraduationPlan';
-export { default as Student } from './Student';
+export { default as StudentActivities } from './Student/StudentActivities';
+export { default as FITClosedCup } from './Student/StudentActivities/components/FITClosedCup';
 export { default as Login } from './Login';

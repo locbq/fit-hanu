@@ -54,7 +54,7 @@ const navList = [
     dropdownList: [
       {
         title: 'Student activities',
-        url: '/student-activites',
+        url: '/student-activities',
       },
       {
         title: 'Honorary students',

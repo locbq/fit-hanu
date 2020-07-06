@@ -1,8 +1,10 @@
 import React from 'react';
 
+import StudentActivities from './StudentActivities';
+
 function Student() {
   return (
-    <h1>Student</h1>
+    <StudentActivities />
   );
 }
 

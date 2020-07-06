@@ -67,11 +67,8 @@ export const StyledNavLink = styled(NavLink)({
   textTransform: 'uppercase',
   padding: '0px 5px',
   fontFamily: '"Open Sans", sans-serif',
-  '&:hover': {
-    background: '#fd8b4b',
-    color: '#ffffff',
-    transition: '0.25s ease-in-out',
-  },
+  pointerEvents: 'none',
+  transition: '0.25s ease-in-out',
 });
 
 export const StyledNavLinkLogin = styled(NavLink)(({ theme }) => ({
@@ -101,6 +98,11 @@ export const StyledFAIcon = styled(FontAwesomeIcon)({
 
 export const StyledGridHover = styled(Grid)({
   height: '100%',
+  transition: '0.25s ease-in-out',
+  '&:hover > a': {
+    background: '#fd8b4b',
+    color: '#ffffff',
+  },
   '&:hover > div': {
     display: 'flex',
   },

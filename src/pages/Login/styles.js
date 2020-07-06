@@ -20,7 +20,6 @@ export const StyledGridBanner = styled(Grid)(({ theme }) => ({
 }));
 
 export const StyledGridForm = styled(Grid)(({ theme }) => ({
-  padding: '100px',
   [theme.breakpoints.down('sm')]: {
     padding: '0px 15px',
   },
