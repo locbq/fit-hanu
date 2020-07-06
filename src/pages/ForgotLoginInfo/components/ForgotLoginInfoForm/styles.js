@@ -4,7 +4,16 @@ import {
   Button,
 } from '@material-ui/core';
 
-import { Paragraph } from 'components/Headings';
+import {
+  Heading4,
+  Paragraph,
+} from 'components/Headings';
+
+export const StyledHeading4 = styled(Heading4)({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+});
 
 export const StyledParagraph = styled(Paragraph)({
   fontStyle: 'italic',
@@ -29,5 +38,11 @@ export const StyledButtonSearch = styled(Button)({
   transition: '0.25s ease-in-out',
   '&:hover': {
     background: '#231d1f',
+  },
+});
+
+export const styles = () => ({
+  inputError: {
+    border: '2px solid #fd4b64',
   },
 });
