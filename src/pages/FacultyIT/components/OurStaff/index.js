@@ -4,7 +4,6 @@ import { Grid } from '@material-ui/core';
 import {
   Heading2,
   Heading3,
-  // Paragraph,
 } from 'components/Headings';
 import avatarImage from 'assets/img/our-staff/avatar.png';
 import {

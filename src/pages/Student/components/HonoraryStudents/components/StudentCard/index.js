@@ -24,10 +24,10 @@ const Image = styled('img')({
 
 function StudentCard({
   image = '',
-  title = '',
   name = '',
-  office = '',
-  phone = '',
+  year = '',
+  classRoom = '',
+  company = '',
 }) {
   return (
     <StyledGridCard
@@ -44,16 +44,40 @@ function StudentCard({
         <Image src={image} alt="avatar" />
       </Grid>
       <Grid
+        container
+        direction="column"
+        justify="center"
         item
         lg={8}
         md={8}
         sm={8}
         xs={8}
       >
-        <Heading4 margin="0px 0px 10px 0px">{title}</Heading4>
-        <Paragraph margin="0px 0px 5px 0px">{name}</Paragraph>
-        <Paragraph margin="0px 0px 5px 0px">{office}</Paragraph>
-        <Paragraph margin="0px 0px 5px 0px">{phone}</Paragraph>
+        <Heading4 margin="0px 0px 10px 0px">{name}</Heading4>
+        <Grid container>
+          <Grid item lg={5}>
+            <Paragraph margin="0px 0px 5px 0px">Class:</Paragraph>
+          </Grid>
+          <Grid item lg={7}>
+            <Paragraph margin="0px 0px 5px 0px">
+              {year}
+              {' '}
+              -
+              {' '}
+              {classRoom}
+            </Paragraph>
+          </Grid>
+        </Grid>
+        <Grid container>
+          <Grid item lg={5}>
+            <Paragraph margin="0px 0px 5px 0px">Company:</Paragraph>
+          </Grid>
+          <Grid item lg={7}>
+            <Paragraph margin="0px 0px 5px 0px">
+              {company}
+            </Paragraph>
+          </Grid>
+        </Grid>
       </Grid>
     </StyledGridCard>
   );
