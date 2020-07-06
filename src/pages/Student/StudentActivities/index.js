@@ -20,13 +20,13 @@ import {
   Divider,
   StyledGridHeader,
 } from './styles';
-import {
-  FITClosedCup,
-  HANUOpenCup,
-  HelloWorld,
-} from './components';
+// import {
+//   FITClosedCup,
+//   HANUOpenCup,
+//   HelloWorld,
+// } from './components';
 
-function StudentActivities({ match }) {
+function StudentActivities() {
   return (
     <Router>
       <Section backgroundcolor="#fafafa">
@@ -48,23 +48,6 @@ function StudentActivities({ match }) {
                   <Heading2 margin="0px 0px 15px 0px">Student Activities</Heading2>
                   <Divider />
                 </StyledGridHeader>
-                <Route
-                  exact
-                  path={`${match.path}`}
-                  component={FITClosedCup}
-                />
-                <Route
-                  path={`${match.path}/FIT-closed-cup`}
-                  component={FITClosedCup}
-                />
-                <Route
-                  path={`${match.path}/HANU-open-cup`}
-                  component={HANUOpenCup}
-                />
-                <Route
-                  path={`${match.path}/hello-world`}
-                  component={HelloWorld}
-                />
 
               </StyledGridContent>
             </Grid>
