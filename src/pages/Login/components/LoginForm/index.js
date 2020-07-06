@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
+import { withStyles } from '@material-ui/core';
 
 import { Paragraph } from 'components/Headings';
 import { Button } from 'components';
 import {
+  styles,
   StyledHeading2,
   StyledGrid,
   StyledInput,
@@ -12,7 +14,10 @@ import {
   StyledGridForgotLink,
 } from './styles';
 
-function LoginForm({ history }) {
+function LoginForm({
+  history,
+  classes,
+}) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -64,6 +69,7 @@ function LoginForm({ history }) {
             type="text"
             value={username}
             onChange={handleChangeUsername}
+            className={errorMessage && !username ? classes.inputError : null}
           />
         </StyledGridField>
 
@@ -74,6 +80,7 @@ function LoginForm({ history }) {
             type="password"
             value={password}
             onChange={handleChangePassword}
+            className={errorMessage && !password ? classes.inputError : null}
           />
         </StyledGridField>
 
@@ -108,4 +115,4 @@ function LoginForm({ history }) {
   );
 }
 
-export default withRouter(LoginForm);
+export default withStyles(styles)(withRouter(LoginForm));
