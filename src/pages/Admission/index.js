@@ -16,16 +16,16 @@ import {
 import { StyledGridContent } from './styles';
 import { contentList } from './const';
 import {
-  HelloWorld,
-  FITClosedCup,
-  HANUOpenCup,
-  HonoraryStudents,
+  AdmissionInformation,
+  AnnualStatistics,
+  WhyFIT,
 } from './components';
 
-function Student() {
+function Admission() {
   return (
     <Section backgroundcolor="#fafafa">
       <BreadCrumb />
+
       <Container fixed>
         <Grid
           container
@@ -42,24 +42,20 @@ function Student() {
               <Switch>
                 <Route
                   exact
-                  path="/student"
-                  component={HelloWorld}
+                  path="/admission"
+                  component={WhyFIT}
                 />
                 <Route
-                  path="/student/hello-world"
-                  component={HelloWorld}
+                  path="/admission/why-FIT"
+                  component={WhyFIT}
                 />
                 <Route
-                  path="/student/FIT-closed-cup"
-                  component={FITClosedCup}
+                  path="/admission/admission-information"
+                  component={AdmissionInformation}
                 />
                 <Route
-                  path="/student/HANU-open-cup"
-                  component={HANUOpenCup}
-                />
-                <Route
-                  path="/student/honorary-students"
-                  component={HonoraryStudents}
+                  path="/admission/annual-statistics"
+                  component={AnnualStatistics}
                 />
               </Switch>
             </StyledGridContent>
@@ -79,4 +75,4 @@ function Student() {
   );
 }
 
-export default Student;
+export default Admission;

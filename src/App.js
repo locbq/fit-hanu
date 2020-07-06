@@ -16,15 +16,10 @@ import {
 
 import {
   Home,
-  AboutUs,
-  OurObjectives,
-  OurVisions,
-  OurStaff,
-  WhyFIT,
-  AdmissionInformation,
-  AnnualStatistics,
-  GraduationPlan,
-  StudentActivities,
+  FacultyIT,
+  Admission,
+  Graduation,
+  Student,
   Login,
 } from './pages';
 
@@ -45,69 +40,41 @@ function App() {
             component={Home}
           />
           <Route
-            exact
             path="/faculty-of-IT"
-            component={AboutUs}
+            component={FacultyIT}
           />
           <Route
-            exact
-            path="/faculty-of-IT/about-us"
-            component={AboutUs}
-          />
-          <Route
-            exact
-            path="/faculty-of-IT/our-objectives"
-            component={OurObjectives}
-          />
-          <Route
-            exact
-            path="/faculty-of-IT/our-visions"
-            component={OurVisions}
-          />
-          <Route
-            exact
-            path="/faculty-of-IT/our-staff"
-            component={OurStaff}
+            path="/faculty-of-IT/:id"
+            component={FacultyIT}
           />
 
           <Route
             exact
             path="/admission"
-            component={WhyFIT}
+            component={Admission}
           />
           <Route
             exact
-            path="/admission/why-FIT"
-            component={WhyFIT}
-          />
-          <Route
-            exact
-            path="/admission/admission-information"
-            component={AdmissionInformation}
-          />
-          <Route
-            exact
-            path="/admission/annual-statistics"
-            component={AnnualStatistics}
+            path="/admission/:id"
+            component={Admission}
           />
 
           <Route
             path="/graduation"
-            component={GraduationPlan}
+            component={Graduation}
           />
           <Route
-            path="/graduation/graduation-plan"
-            component={GraduationPlan}
+            path="/graduation/:id"
+            component={Graduation}
           />
           <Route
-            exact
             path="/student"
-            component={StudentActivities}
+            component={Student}
           />
-          <Route
-            path="/student/student-activities"
-            component={StudentActivities}
-          />
+          {/* <Route
+            path="/student/:id"
+            component={Student}
+          /> */}
 
           <Route path="/login" component={Login} />
         </Switch>

@@ -1,12 +1,6 @@
 export { default as Home } from './Home';
-export { default as AboutUs } from './FacultyIT/AboutUs';
-export { default as OurObjectives } from './FacultyIT/OurObjectives';
-export { default as OurVisions } from './FacultyIT/OurVisions';
-export { default as OurStaff } from './FacultyIT/OurStaff';
-export { default as WhyFIT } from './Admission/WhyFIT';
-export { default as AdmissionInformation } from './Admission/AdmissionInformation';
-export { default as AnnualStatistics } from './Admission/AnnualStatistics';
-export { default as GraduationPlan } from './Graduation/GraduationPlan';
-export { default as StudentActivities } from './Student/StudentActivities';
-export { default as FITClosedCup } from './Student/StudentActivities/components/FITClosedCup';
+export { default as FacultyIT } from './FacultyIT';
+export { default as Admission } from './Admission';
+export { default as Graduation } from './Graduation';
+export { default as Student } from './Student';
 export { default as Login } from './Login';

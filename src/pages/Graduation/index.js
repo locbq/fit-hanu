@@ -15,14 +15,9 @@ import {
 } from 'components';
 import { StyledGridContent } from './styles';
 import { contentList } from './const';
-import {
-  HelloWorld,
-  FITClosedCup,
-  HANUOpenCup,
-  HonoraryStudents,
-} from './components';
+import { GraduationPlan } from './components';
 
-function Student() {
+function Graduation() {
   return (
     <Section backgroundcolor="#fafafa">
       <BreadCrumb />
@@ -42,24 +37,12 @@ function Student() {
               <Switch>
                 <Route
                   exact
-                  path="/student"
-                  component={HelloWorld}
+                  path="/graduation"
+                  component={GraduationPlan}
                 />
                 <Route
-                  path="/student/hello-world"
-                  component={HelloWorld}
-                />
-                <Route
-                  path="/student/FIT-closed-cup"
-                  component={FITClosedCup}
-                />
-                <Route
-                  path="/student/HANU-open-cup"
-                  component={HANUOpenCup}
-                />
-                <Route
-                  path="/student/honorary-students"
-                  component={HonoraryStudents}
+                  path="/graduation/graduation-plan"
+                  component={GraduationPlan}
                 />
               </Switch>
             </StyledGridContent>
@@ -79,4 +62,4 @@ function Student() {
   );
 }
 
-export default Student;
+export default Graduation;
