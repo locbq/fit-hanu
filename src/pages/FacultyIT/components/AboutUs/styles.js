@@ -1,8 +1,6 @@
 import {
   styled,
   Grid,
-  List,
-  ListItem,
 } from '@material-ui/core';
 
 export const StyledGridContent = styled(Grid)({
@@ -19,13 +17,4 @@ export const Divider = styled(Grid)({
 
 export const StyledGridHeader = styled(Grid)({
   marginBottom: '15px',
-});
-
-export const StyledList = styled(List)({
-  paddingLeft: '10px',
-  listStyle: '"-"',
-});
-
-export const StyledListItem = styled(ListItem)({
-  display: 'list-item',
 });

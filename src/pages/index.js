@@ -1,8 +1,5 @@
 export { default as Home } from './Home';
-export { default as AboutUs } from './FacultyIT/AboutUs';
-export { default as OurObjectives } from './FacultyIT/OurObjectives';
-export { default as OurVisions } from './FacultyIT/OurVisions';
-export { default as OurStaff } from './FacultyIT/OurStaff';
+export { default as FacultyIT } from './FacultyIT';
 export { default as WhyFIT } from './Admission/WhyFIT';
 export { default as AdmissionInformation } from './Admission/AdmissionInformation';
 export { default as AnnualStatistics } from './Admission/AnnualStatistics';

@@ -16,10 +16,7 @@ import {
 
 import {
   Home,
-  AboutUs,
-  OurObjectives,
-  OurVisions,
-  OurStaff,
+  FacultyIT,
   WhyFIT,
   AdmissionInformation,
   AnnualStatistics,
@@ -45,29 +42,12 @@ function App() {
             component={Home}
           />
           <Route
-            exact
             path="/faculty-of-IT"
-            component={AboutUs}
+            component={FacultyIT}
           />
           <Route
-            exact
-            path="/faculty-of-IT/about-us"
-            component={AboutUs}
-          />
-          <Route
-            exact
-            path="/faculty-of-IT/our-objectives"
-            component={OurObjectives}
-          />
-          <Route
-            exact
-            path="/faculty-of-IT/our-visions"
-            component={OurVisions}
-          />
-          <Route
-            exact
-            path="/faculty-of-IT/our-staff"
-            component={OurStaff}
+            path="/faculty-of-IT/:id"
+            component={FacultyIT}
           />
 
           <Route
