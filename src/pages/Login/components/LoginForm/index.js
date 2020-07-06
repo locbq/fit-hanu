@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import { Paragraph } from 'components/Headings';
 import { Button } from 'components';
@@ -11,19 +12,58 @@ import {
   StyledGridForgotLink,
 } from './styles';
 
-function LoginForm() {
+function LoginForm({ history }) {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleChangeUsername = (event) => {
+    event.preventDefault();
+    const { value } = event.target;
+    setUsername(value);
+  };
+
+  const handleChangePassword = (event) => {
+    event.preventDefault();
+    const { value } = event.target;
+    setPassword(value);
+  };
+
+  const handleClickLogin = (event) => {
+    event.preventDefault();
+    if (username === '' || password === '') {
+      setErrorMessage('Please enter username and password');
+    } else {
+      history.push('/');
+    }
+  };
+
   return (
     <StyledGrid
       container
       direction="column"
     >
       <StyledHeading2 margin="0px 0px 30px 0px">Login</StyledHeading2>
+      {errorMessage
+        ? (
+          <Paragraph
+            color="#fd4b64"
+            margin="10px 0px"
+            align="center"
+          >
+            {errorMessage}
+          </Paragraph>
+        )
+        : null}
       <form>
         <StyledGridField>
           <Paragraph margin="0px 0px 5px 0px">Username</Paragraph>
           <StyledInput
             fullWidth
             type="text"
+            value={username}
+            onChange={handleChangeUsername}
           />
         </StyledGridField>
 
@@ -32,6 +72,8 @@ function LoginForm() {
           <StyledInput
             fullWidth
             type="password"
+            value={password}
+            onChange={handleChangePassword}
           />
         </StyledGridField>
 
@@ -47,7 +89,12 @@ function LoginForm() {
           container
           justify="flex-end"
         >
-          <Button type="button">Login</Button>
+          <Button
+            type="button"
+            onClick={handleClickLogin}
+          >
+            Login
+          </Button>
         </StyledGridField>
 
         <StyledGridForgotLink>
@@ -61,4 +108,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);
