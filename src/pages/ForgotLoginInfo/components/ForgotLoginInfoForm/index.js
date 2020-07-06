@@ -1,24 +1,57 @@
-import React from 'react';
-import { Grid } from '@material-ui/core';
+import React, { useState } from 'react';
+import {
+  withStyles,
+  Grid,
+} from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-import { Heading4 } from 'components/Headings';
+import { Paragraph } from 'components/Headings';
 import {
+  styles,
+  StyledHeading4,
   StyledParagraph,
   StyledInput,
   StyledButtonSearch,
 } from './styles';
 
-function ForgotLoginInfoForm({ history }) {
+function ForgotLoginInfoForm({
+  history,
+  classes,
+}) {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+
+  const [errorMessageUsername, setErrorMessageUsername] = useState('');
+  const [errorMessageEmail, setErrorMessageEmail] = useState('');
+
+  const handleChangeUsername = (event) => {
+    event.preventDefault();
+    const { value } = event.target;
+    setUsername(value);
+  };
+  const handleChangeEmail = (event) => {
+    event.preventDefault();
+    const { value } = event.target;
+    setEmail(value);
+  };
+
   const handleClickSearchUsername = (event) => {
     event.preventDefault();
-    history.push('/forgot-login-info/confirmation-message');
+    if (username === '') {
+      setErrorMessageUsername('Please enter username');
+    } else {
+      history.push('/forgot-login-info/confirmation-message');
+    }
   };
 
   const handleClickSearchUsernameEmail = (event) => {
     event.preventDefault();
-    history.push('/forgot-login-info/confirmation-message');
+    if (email === '') {
+      setErrorMessageEmail('Please enter email');
+    } else {
+      history.push('/forgot-login-info/confirmation-message');
+    }
   };
 
   return (
@@ -38,7 +71,11 @@ function ForgotLoginInfoForm({ history }) {
           sm={12}
           xs={12}
         >
-          <Heading4 margin="20px 0px 10px 0px">Search By Username</Heading4>
+          <StyledHeading4 margin="20px 0px 10px 0px">
+            Search By Username
+            {' '}
+            {errorMessageUsername ? <Paragraph color="#fd4b64">{errorMessageUsername}</Paragraph> : null}
+          </StyledHeading4>
           <Grid
             container
             wrap="nowrap"
@@ -46,13 +83,20 @@ function ForgotLoginInfoForm({ history }) {
             <StyledInput
               fullWidth
               placeholder="123456789"
+              value={username}
+              onChange={handleChangeUsername}
+              className={errorMessageUsername && !username ? classes.inputError : null}
             />
             <StyledButtonSearch onClick={handleClickSearchUsername}>
               <FontAwesomeIcon icon={faSearch} />
             </StyledButtonSearch>
           </Grid>
 
-          <Heading4 margin="20px 0px 10px 0px">Search By Email</Heading4>
+          <StyledHeading4 margin="20px 0px 10px 0px">
+            Search By Email
+            {' '}
+            {errorMessageEmail ? <Paragraph color="#fd4b64">{errorMessageEmail}</Paragraph> : null}
+          </StyledHeading4>
           <Grid
             container
             wrap="nowrap"
@@ -60,6 +104,9 @@ function ForgotLoginInfoForm({ history }) {
             <StyledInput
               fullWidth
               placeholder="emailaddress@mail.com"
+              value={email}
+              onChange={handleChangeEmail}
+              className={errorMessageEmail && !email ? classes.inputError : null}
             />
             <StyledButtonSearch onClick={handleClickSearchUsernameEmail}>
               <FontAwesomeIcon icon={faSearch} />
@@ -71,4 +118,4 @@ function ForgotLoginInfoForm({ history }) {
   );
 }
 
-export default ForgotLoginInfoForm;
+export default withStyles(styles)(ForgotLoginInfoForm);

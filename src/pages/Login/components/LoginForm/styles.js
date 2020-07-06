@@ -39,3 +39,9 @@ export const StyledLink = styled(Link)({
 export const StyledGridForgotLink = styled(Grid)({
   textAlign: 'center',
 });
+
+export const styles = () => ({
+  inputError: {
+    border: '2px solid #fd4b64',
+  },
+});
