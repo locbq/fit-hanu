@@ -18,7 +18,7 @@ import {
   Home,
   FacultyIT,
   Admission,
-  GraduationPlan,
+  Graduation,
   StudentActivities,
   Login,
 } from './pages';
@@ -61,11 +61,11 @@ function App() {
 
           <Route
             path="/graduation"
-            component={GraduationPlan}
+            component={Graduation}
           />
           <Route
-            path="/graduation/graduation-plan"
-            component={GraduationPlan}
+            path="/graduation/:id"
+            component={Graduation}
           />
           <Route
             exact
