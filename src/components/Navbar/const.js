@@ -53,8 +53,16 @@ const navList = [
     navItem: 'Students',
     dropdownList: [
       {
-        title: 'Student activities',
-        url: '/student-activities',
+        title: 'Hello World',
+        url: '/hello-world',
+      },
+      {
+        title: 'FIT Closed Cup',
+        url: '/FIT-closed-cup',
+      },
+      {
+        title: 'HANU Open Cup',
+        url: '/HANU-open-cup',
       },
       {
         title: 'Honorary students',

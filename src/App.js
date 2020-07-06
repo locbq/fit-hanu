@@ -19,7 +19,7 @@ import {
   FacultyIT,
   Admission,
   Graduation,
-  StudentActivities,
+  Student,
   Login,
 } from './pages';
 
@@ -68,14 +68,13 @@ function App() {
             component={Graduation}
           />
           <Route
-            exact
             path="/student"
-            component={StudentActivities}
+            component={Student}
           />
-          <Route
-            path="/student/student-activities"
-            component={StudentActivities}
-          />
+          {/* <Route
+            path="/student/:id"
+            component={Student}
+          /> */}
 
           <Route path="/login" component={Login} />
         </Switch>
