@@ -45,7 +45,7 @@ function ForgotLoginInfoForm({
     }
   };
 
-  const handleClickSearchUsernameEmail = (event) => {
+  const handleClickSearchEmail = (event) => {
     event.preventDefault();
     if (email === '') {
       setErrorMessageEmail('Please enter email');
@@ -108,7 +108,7 @@ function ForgotLoginInfoForm({
               onChange={handleChangeEmail}
               className={errorMessageEmail && !email ? classes.inputError : null}
             />
-            <StyledButtonSearch onClick={handleClickSearchUsernameEmail}>
+            <StyledButtonSearch onClick={handleClickSearchEmail}>
               <FontAwesomeIcon icon={faSearch} />
             </StyledButtonSearch>
           </Grid>
