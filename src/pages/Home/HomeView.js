@@ -2,6 +2,7 @@ import React, {
   lazy,
   Suspense,
 } from 'react';
+
 import Spinner from 'components/Spinner';
 
 const Carousel = lazy(() => import('./components/Carousel'));
