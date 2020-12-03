@@ -11,35 +11,34 @@ import { Link } from 'react-router-dom';
 
 import { Paragraph } from 'components/Headings';
 
-const StyledGrid = styled(Grid)(({ theme }) => ({
+const StyledGrid = styled(Grid)(() => ({
   margin: '30px 0px',
 }));
 
-const StyledParagraphLast = withStyles(() => ({
+const StyledParagraphLast = withStyles((theme) => ({
   root: {
-    color: '#fd8b4b',
+    color: theme.palette.mainColor,
     textTransform: 'capitalize',
     fontWeight: 'bold',
   },
 }))(Paragraph);
 
-const StyledParagraph = withStyles(() => ({
+const StyledParagraph = withStyles((theme) => ({
   root: {
-    color: '#333333',
+    color: theme.palette.paragraphColor,
   },
-
 }))(Paragraph);
 
-const StyledLink = styled(Link)({
+const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
   textTransform: 'capitalize',
   fontFamily: '"Montserrat", sans-serif',
-  color: '#333333',
-  '&:hover': {
-    color: '#fd8b4b',
+  color: theme.palette.paragraphColor,
+  '& :hover': {
+    color: theme.palette.mainColor,
     transition: '0.25s ease-in-out',
   },
-});
+}));
 
 const StyledBreadcrumbs = withStyles({
   separator: {

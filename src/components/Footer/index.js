@@ -10,7 +10,7 @@ function Footer() {
   return (
     <StyledFooter>
       <Container fixed>
-        <StyledParagraph color="#ffffff">
+        <StyledParagraph>
           ©2020 Redesign by Loc Bui
         </StyledParagraph>
       </Container>

@@ -10,26 +10,26 @@ export const StyledGridHeader = styled(Grid)({
   marginBottom: '15px',
 });
 
-export const StyledGrid = styled(Grid)({
-  background: '#ffffff',
+export const StyledGrid = styled(Grid)(({ theme }) => ({
+  background: theme.palette.white,
   padding: '20px',
   boxShadow: '0 0 30px rgba(0, 0, 0, 0.1)',
-});
+}));
 
-export const Divider = styled(Grid)({
+export const Divider = styled(Grid)(({ theme }) => ({
   width: '70%',
   height: '3px',
-  background: '#fd8b4b',
-});
+  background: theme.palette.mainColor,
+}));
 
-export const StyledNavLink = styled(NavLink)({
+export const StyledNavLink = styled(NavLink)(({ theme }) => ({
   textDecoration: 'none',
   transition: '0.25s ease-in-out',
-  color: '#000',
+  color: theme.palette.paragraphColor,
   '&:hover': {
-    color: '#fd8b4b',
+    color: theme.palette.mainColor,
   },
-});
+}));
 
 export const StyledList = styled(List)({
   paddingLeft: '20px',
@@ -39,8 +39,8 @@ export const StyledListItem = styled(ListItem)({
   display: 'list-item',
 });
 
-export const styles = () => ({
+export const styles = (theme) => ({
   active: {
-    color: '#fd8b4b',
+    color: theme.palette.mainColor,
   },
 });

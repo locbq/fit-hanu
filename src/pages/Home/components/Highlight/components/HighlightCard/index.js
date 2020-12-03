@@ -35,6 +35,10 @@ const StyledGridDescription = styled(Grid)({
   padding: '20px',
 });
 
+const StyledButton = styled(Button)({
+  margin: '0px 20px 20px auto',
+});
+
 const styles = () => ({
   image: {
     width: '100%',
@@ -62,7 +66,7 @@ function HighlightCard({
       <StyledGridDescription>
         <Paragraph>{description}</Paragraph>
       </StyledGridDescription>
-      <Button margin="0px 20px 20px auto">Read more</Button>
+      <StyledButton>Read more</StyledButton>
     </StyledGridCard>
   );
 }

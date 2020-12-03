@@ -5,13 +5,18 @@ import {
   styled,
   withStyles,
 } from '@material-ui/core';
+
 import { Heading4 } from 'components/Headings';
 
-const StyledCircularProgress = withStyles({
+const StyledCircularProgress = withStyles((theme) => ({
   svg: {
-    color: '#fd8b4b',
+    color: theme.palette.mainColor,
   },
-})(CircularProgress);
+}))(CircularProgress);
+
+const StyledHeading4 = styled(Heading4)(() => ({
+  margin: '10px 0px 0px 0px',
+}));
 
 const StyledGrid = styled(Grid)({
   position: 'absolute',
@@ -25,7 +30,7 @@ function Spinner() {
   return (
     <StyledGrid>
       <StyledCircularProgress />
-      <Heading4 margin="10px 0px 0px 0px">Loading</Heading4>
+      <StyledHeading4>Loading</StyledHeading4>
     </StyledGrid>
   );
 }
