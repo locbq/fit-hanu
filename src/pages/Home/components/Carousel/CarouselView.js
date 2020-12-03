@@ -1,15 +1,24 @@
 import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { Grid, Container } from '@material-ui/core';
-import { Heading3, Paragraph } from 'components/Headings';
+import {
+  Grid,
+  Container,
+} from '@material-ui/core';
+
 import slides from './const';
 import {
   StyledSlider,
   StyledGrid,
   StyledGridCaption,
+  StyledDivDots,
+  StyledHeading3,
+  StyledParagraph,
 } from './styles';
-import { LeftArrow, RightArrow } from './components';
+import {
+  LeftArrow,
+  RightArrow,
+} from './components';
 
 function CarouselView() {
   const settings = {
@@ -22,14 +31,7 @@ function CarouselView() {
     prevArrow: <LeftArrow />,
     nextArrow: <RightArrow />,
     autoplay: true,
-    customPaging: () => (
-      <div
-        style={{
-          width: '10px',
-          height: '10px',
-        }}
-      />
-    ),
+    customPaging: () => <StyledDivDots />,
     responsive: [
       {
         breakpoint: 600,
@@ -51,8 +53,8 @@ function CarouselView() {
             />
             <StyledGridCaption>
               <Container fixed>
-                <Heading3 color="#ffffff" margin="20px 0px">{slide.title}</Heading3>
-                <Paragraph color="#ffffff" margin="12px 0px">{slide.caption}</Paragraph>
+                <StyledHeading3>{slide.title}</StyledHeading3>
+                <StyledParagraph>{slide.caption}</StyledParagraph>
               </Container>
             </StyledGridCaption>
           </Grid>

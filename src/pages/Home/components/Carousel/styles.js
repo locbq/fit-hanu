@@ -4,6 +4,11 @@ import {
 } from '@material-ui/core';
 import Slider from 'react-slick';
 
+import {
+  Heading3,
+  Paragraph,
+} from 'components/Headings';
+
 export const StyledGrid = styled(Grid)({
   paddingTop: '60px',
 });
@@ -41,4 +46,19 @@ export const StyledGridCaption = styled(Grid)(({ theme }) => ({
     padding: '0px',
     marginTop: '-140px',
   },
+}));
+
+export const StyledDivDots = styled('div')(() => ({
+  width: '10px',
+  height: '10px',
+}));
+
+export const StyledHeading3 = styled(Heading3)(({ theme }) => ({
+  margin: '20px 0px',
+  color: theme.palette.white,
+}));
+
+export const StyledParagraph = styled(Paragraph)(({ theme }) => ({
+  margin: '12px 0px',
+  color: theme.palette.white,
 }));

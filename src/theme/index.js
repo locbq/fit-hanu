@@ -8,6 +8,7 @@ const theme = createMuiTheme({
     black: '#000000',
     underlineGrey: '#a5a5a5',
     paragraphColor: '#333333',
+    arrowColor: 'rgba(255,255,255, 0.3)',
   },
 });
 
