@@ -3,7 +3,7 @@ import React, {
   Suspense,
 } from 'react';
 
-import Spinner from 'components/Spinner';
+import { Spinner } from 'components';
 
 const Carousel = lazy(() => import('./components/Carousel'));
 const Highlight = lazy(() => import('./components/Highlight'));

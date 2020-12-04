@@ -1,22 +1,30 @@
 import React from 'react';
-import { Grid, Link, styled } from '@material-ui/core';
+import {
+  Grid,
+  Link,
+  styled,
+} from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { Heading4, Paragraph } from 'components/Headings';
 
-const StyledGridCard = styled(Grid)({
-  border: '1px solid #eeeeee',
+import {
+  Heading4,
+  Paragraph,
+} from 'components/Headings';
+
+const StyledGridCard = styled(Grid)(({ theme }) => ({
+  border: `1px solid ${theme.palette.borderGrey}`,
   marginBottom: '20px',
-  background: '#ffffff',
-});
+  background: theme.palette.white,
+}));
 
-const StyledGridHeader = styled(Grid)({
+const StyledGridHeader = styled(Grid)(({ theme }) => ({
   padding: '20px',
-  borderBottom: '1px solid #eeeeee',
+  borderBottom: `1px solid ${theme.palette.borderGrey}`,
   '& a': {
-    color: '#fd8b4b',
+    color: theme.palette.mainColor,
   },
-});
+}));
 
 const StyledGridContent = styled(Grid)({
   padding: '20px',
@@ -25,7 +33,7 @@ const StyledGridContent = styled(Grid)({
 const StyledFAIcon = styled(FontAwesomeIcon)(({ theme }) => ({
   fontSize: '40px',
   marginRight: '15px',
-  color: '#231d1f',
+  color: theme.palette.secondaryColor,
   [theme.breakpoints.down('sm')]: {
     display: 'none',
   },

@@ -46,10 +46,7 @@ const StyledBreadcrumbs = withStyles({
   },
 })(Breadcrumbs);
 
-const BreadCrumb = ({
-  classes,
-  ...props
-}) => {
+const BreadCrumb = ({ classes, ...props }) => {
   const location = useLocation();
   let path = location.pathname;
   path = path.replace(/\/$/, '');
@@ -58,14 +55,9 @@ const BreadCrumb = ({
   return (
     <Container fixed>
       <StyledGrid {...props}>
-        <StyledBreadcrumbs
-          aria-label="breadcrumb"
-          separator="|"
-        >
+        <StyledBreadcrumbs aria-label="breadcrumb" separator="|">
           <StyledLink to="/">
-            <StyledParagraph margin="0px">
-              Home
-            </StyledParagraph>
+            <StyledParagraph margin="0px">Home</StyledParagraph>
           </StyledLink>
 
           {splitPath.splice(1).map((breadcrumb, index) => {
@@ -75,17 +67,10 @@ const BreadCrumb = ({
             const pageName = breadcrumb.replace(/[-]+/g, ' ');
 
             return last ? (
-              <StyledParagraphLast key={to}>
-                {pageName}
-              </StyledParagraphLast>
+              <StyledParagraphLast key={to}>{pageName}</StyledParagraphLast>
             ) : (
-              <StyledLink
-                to={to}
-                key={to}
-              >
-                <StyledParagraph>
-                  {pageName}
-                </StyledParagraph>
+              <StyledLink to={to} key={to}>
+                <StyledParagraph>{pageName}</StyledParagraph>
               </StyledLink>
             );
           })}

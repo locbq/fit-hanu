@@ -5,3 +5,4 @@ export { default as Button } from './Button';
 export { default as BreadCrumb } from './BreadCrumb';
 export { default as TableOfContents } from './TableOfContents';
 export { default as ScrollRestoration } from './ScrollRestoration';
+export { default as Spinner } from './Spinner';

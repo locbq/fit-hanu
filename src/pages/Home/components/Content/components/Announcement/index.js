@@ -1,4 +1,5 @@
 import React from 'react';
+
 import AnnouncementView from './AnnouncementView';
 
 function Announcement({ props }) {
