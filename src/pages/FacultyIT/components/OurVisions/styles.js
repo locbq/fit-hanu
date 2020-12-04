@@ -4,6 +4,7 @@ import {
   List,
   ListItem,
 } from '@material-ui/core';
+import { Heading2 } from 'components/Headings';
 
 export const StyledGridContent = styled(Grid)({
   background: '#ffffff',
@@ -29,3 +30,7 @@ export const StyledList = styled(List)({
 export const StyledListItem = styled(ListItem)({
   display: 'list-item',
 });
+
+export const StyledHeading2 = styled(Heading2)(() => ({
+  margin: '0px 0px 15px 0px',
+}));
