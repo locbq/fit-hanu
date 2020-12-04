@@ -7,9 +7,9 @@ import {
   Container,
 } from '@material-ui/core';
 import { useLocation } from 'react-router';
-import { Link } from 'react-router-dom';
 
 import { Paragraph } from 'components/Headings';
+import RouterLink from '../RouterLink';
 
 const StyledGrid = styled(Grid)(() => ({
   margin: '30px 0px',
@@ -29,15 +29,8 @@ const StyledParagraph = withStyles((theme) => ({
   },
 }))(Paragraph);
 
-const StyledLink = styled(Link)(({ theme }) => ({
-  textDecoration: 'none',
+const StyledLink = styled(RouterLink)(() => ({
   textTransform: 'capitalize',
-  fontFamily: '"Montserrat", sans-serif',
-  color: theme.palette.paragraphColor,
-  '& :hover': {
-    color: theme.palette.mainColor,
-    transition: '0.25s ease-in-out',
-  },
 }));
 
 const StyledBreadcrumbs = withStyles({

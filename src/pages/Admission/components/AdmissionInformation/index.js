@@ -5,10 +5,10 @@ import {
   Heading3,
   Paragraph,
 } from 'components/Headings';
+import { Link } from 'components';
 import {
   Divider,
   StyledGridHeader,
-  StyledLink,
 } from './styles';
 
 function AdmissionInformation() {
@@ -26,12 +26,12 @@ function AdmissionInformation() {
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in justo et arcu eleifend viverra porttitor sed purus. Fusce faucibus hendrerit massa vel commodo. Duis consequat tellus sit amet justo lobortis ultrices. Ut at semper mauris. Aenean efficitur velit ullamcorper, condimentum odio in, maximus odio.
         {' '}
-        <StyledLink
+        <Link
           href="http://hanu.vn/vn/chinh-quy.html"
           underline="none"
         >
           Click here to update about admission plan
-        </StyledLink>
+        </Link>
       </Paragraph>
 
       <Heading3>Admission Plan Class 2015 - 2016</Heading3>
@@ -41,12 +41,12 @@ function AdmissionInformation() {
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in justo et arcu eleifend viverra porttitor sed purus. Fusce faucibus hendrerit massa vel commodo. Duis consequat tellus sit amet justo lobortis ultrices. Ut at semper mauris. Aenean efficitur velit ullamcorper, condimentum odio in, maximus odio.
         {' '}
-        <StyledLink
+        <Link
           href="http://hanu.vn/vn/chinh-quy.html"
           underline="none"
         >
           Click here to see admission statistics of previous years
-        </StyledLink>
+        </Link>
       </Paragraph>
     </>
   );
