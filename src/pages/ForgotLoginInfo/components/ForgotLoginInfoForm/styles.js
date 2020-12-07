@@ -13,6 +13,7 @@ export const StyledHeading4 = styled(Heading4)({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
+  margin: '20px 0px 10px 0px',
 });
 
 export const StyledParagraph = styled(Paragraph)({

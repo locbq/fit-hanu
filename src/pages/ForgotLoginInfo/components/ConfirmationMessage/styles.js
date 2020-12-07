@@ -2,6 +2,7 @@ import { styled } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 import { Paragraph } from 'components/Headings';
+import { Button } from 'components';
 
 export const StyledParagraph = styled(Paragraph)({
   fontStyle: 'italic',
@@ -11,3 +12,7 @@ export const StyledParagraph = styled(Paragraph)({
 export const StyledLink = styled(Link)({
   textDecoration: 'none',
 });
+
+export const StyledButton = styled(Button)(() => ({
+  margin: '20px auto',
+}));

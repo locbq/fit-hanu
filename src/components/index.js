@@ -8,3 +8,4 @@ export { default as ScrollRestoration } from './ScrollRestoration';
 export { default as Spinner } from './Spinner';
 export { default as RouterLink } from './RouterLink';
 export { default as Link } from './Link';
+export { default as ErrorMessage } from './ErrorMessage';

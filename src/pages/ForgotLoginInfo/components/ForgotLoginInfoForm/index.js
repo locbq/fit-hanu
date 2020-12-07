@@ -6,7 +6,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-import { Paragraph } from 'components/Headings';
+import { ErrorMessage } from 'components';
 import {
   styles,
   StyledHeading4,
@@ -71,10 +71,10 @@ function ForgotLoginInfoForm({
           sm={12}
           xs={12}
         >
-          <StyledHeading4 margin="20px 0px 10px 0px">
+          <StyledHeading4>
             Search By Username
             {' '}
-            {errorMessageUsername ? <Paragraph color="#fd4b64">{errorMessageUsername}</Paragraph> : null}
+            {errorMessageUsername ? <ErrorMessage text={errorMessageUsername} /> : null}
           </StyledHeading4>
           <Grid
             container
@@ -92,10 +92,10 @@ function ForgotLoginInfoForm({
             </StyledButtonSearch>
           </Grid>
 
-          <StyledHeading4 margin="20px 0px 10px 0px">
+          <StyledHeading4>
             Search By Email
             {' '}
-            {errorMessageEmail ? <Paragraph color="#fd4b64">{errorMessageEmail}</Paragraph> : null}
+            {errorMessageEmail ? <ErrorMessage text={errorMessageEmail} /> : null}
           </StyledHeading4>
           <Grid
             container
