@@ -6,11 +6,13 @@ import {
 import { useLocation } from 'react-router-dom';
 
 import {
-  Section,
   BreadCrumb,
   TableOfContents,
 } from 'components';
-import { StyledGridContent } from './styles';
+import {
+  StyledGridContent,
+  StyledSection,
+} from './styles';
 import { contentList } from './const';
 import {
   AboutUs,
@@ -41,7 +43,7 @@ function FacultyIT() {
   };
 
   return (
-    <Section backgroundcolor="#fafafa">
+    <StyledSection>
       <BreadCrumb />
       <Container fixed>
         <Grid
@@ -70,7 +72,7 @@ function FacultyIT() {
           </Grid>
         </Grid>
       </Container>
-    </Section>
+    </StyledSection>
   );
 }
 

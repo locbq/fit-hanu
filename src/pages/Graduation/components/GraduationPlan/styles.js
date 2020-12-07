@@ -3,6 +3,10 @@ import {
   Grid,
 } from '@material-ui/core';
 
+import {
+  Heading2, Paragraph,
+} from 'components/Headings';
+
 export const StyledGridContent = styled(Grid)({
   background: '#ffffff',
   padding: '20px',
@@ -18,3 +22,11 @@ export const Divider = styled(Grid)({
 export const StyledGridHeader = styled(Grid)({
   marginBottom: '15px',
 });
+
+export const StyledHeading2 = styled(Heading2)(() => ({
+  margin: '0px 0px 15px 0px',
+}));
+
+export const StyledParagraph = styled(Paragraph)(() => ({
+  margin: '12px 0px',
+}));

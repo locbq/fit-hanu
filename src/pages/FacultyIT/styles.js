@@ -3,6 +3,12 @@ import {
   Grid,
 } from '@material-ui/core';
 
+import { Section } from 'components';
+
+export const StyledSection = styled(Section)(() => ({
+  background: '#fafafa',
+}));
+
 export const StyledGridContent = styled(Grid)({
   background: '#ffffff',
   padding: '20px',
