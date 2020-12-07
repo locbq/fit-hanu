@@ -1,15 +1,14 @@
 import React from 'react';
 
-import {
-  Heading3,
-  Paragraph,
-} from 'components/Headings';
+import { Paragraph } from 'components/Headings';
 import {
   Divider,
   StyledGridHeader,
   StyledList,
   StyledListItem,
   StyledHeading2,
+  StyledHeading3,
+  StyledParagraph,
 } from './styles';
 
 function OurVisions() {
@@ -20,18 +19,12 @@ function OurVisions() {
         <Divider />
       </StyledGridHeader>
 
-      <Heading3
-        margin="12px 0px"
-        transform="capitalize"
-      >
+      <StyledHeading3 transform="capitalize">
         Core values
-      </Heading3>
-      <Paragraph
-        margin="12px 0px"
-        align="justify"
-      >
+      </StyledHeading3>
+      <StyledParagraph align="justify">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum tempus maximus. Suspendisse facilisis interdum enim eget hendrerit. Fusce rhoncus feugiat dui, eu pharetra nulla pulvinar non. Morbi sagittis blandit lorem.
-      </Paragraph>
+      </StyledParagraph>
       <StyledList>
         <StyledListItem>
           <Paragraph>Vestibulum venenatis, mauris in dictum congue</Paragraph>
@@ -47,12 +40,9 @@ function OurVisions() {
         </StyledListItem>
       </StyledList>
 
-      <Heading3
-        margin="24px 0px 12px 0px"
-        transform="capitalize"
-      >
+      <StyledHeading3 transform="capitalize">
         Visions
-      </Heading3>
+      </StyledHeading3>
 
       <StyledList>
         <StyledListItem>
