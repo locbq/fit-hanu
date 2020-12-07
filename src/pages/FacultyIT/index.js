@@ -22,7 +22,6 @@ import {
 function FacultyIT() {
   const location = useLocation();
   const currentLocation = location.pathname.split('/')[2];
-  console.log('🚀 ~ file: index.js ~ line 29 ~ FacultyIT ~ currentLocation', currentLocation);
 
   const currentContent = (currLocation) => {
     switch (currLocation) {
