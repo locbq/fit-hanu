@@ -7,16 +7,16 @@ import {
 } from '@material-ui/core';
 
 import { Heading3 } from 'components/Headings';
-import { Link } from 'components';
+import {
+  Link,
+  ContentHeader,
+} from 'components';
 import { tablData2015 } from './const';
 import {
-  Divider,
-  StyledGridHeader,
   StyledList,
   StyledListItem,
   StyledTableCellHead,
   StyledTableCellData,
-  StyledHeading2,
   StyledHeading3,
   StyledHeading4,
 } from './styles';
@@ -24,10 +24,7 @@ import {
 function AnnualStatistics() {
   return (
     <>
-      <StyledGridHeader>
-        <StyledHeading2>Annual Statistics</StyledHeading2>
-        <Divider />
-      </StyledGridHeader>
+      <ContentHeader title="Annual Statistics" />
 
       <Heading3>Annual Statistics and Admission Information (From 2017)</Heading3>
       <StyledList component="ol">

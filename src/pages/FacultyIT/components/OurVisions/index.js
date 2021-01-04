@@ -1,12 +1,10 @@
 import React from 'react';
 
 import { Paragraph } from 'components/Headings';
+import { ContentHeader } from 'components';
 import {
-  Divider,
-  StyledGridHeader,
   StyledList,
   StyledListItem,
-  StyledHeading2,
   StyledHeading3,
   StyledParagraph,
 } from './styles';
@@ -14,10 +12,7 @@ import {
 function OurVisions() {
   return (
     <>
-      <StyledGridHeader>
-        <StyledHeading2>Our Visions</StyledHeading2>
-        <Divider />
-      </StyledGridHeader>
+      <ContentHeader title="Our Visions" />
 
       <StyledHeading3 transform="capitalize">
         Core values

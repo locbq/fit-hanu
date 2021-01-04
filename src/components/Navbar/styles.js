@@ -146,7 +146,7 @@ export const styles = (theme) => ({
     color: theme.palette.white,
   },
   activeDropdown: {
-    background: theme.palette.secondaryColor,
+    background: theme.palette.mainColor,
     color: `${theme.palette.white} !important`,
   },
 });

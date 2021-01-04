@@ -1,23 +1,18 @@
 import React from 'react';
 
 import { Paragraph } from 'components/Headings';
+import { ContentHeader } from 'components';
 import {
-  Divider,
-  StyledGridHeader,
   StyledNumberedList,
   StyledList,
   StyledListItem,
-  StyledHeading2,
   StyledParagraph,
 } from './styles';
 
 function WhyFIT() {
   return (
     <>
-      <StyledGridHeader>
-        <StyledHeading2>Why FIT</StyledHeading2>
-        <Divider />
-      </StyledGridHeader>
+      <ContentHeader title="Why FIT" />
 
       <StyledParagraph align="justify">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum tempus maximus. Suspendisse facilisis interdum enim eget hendrerit. Fusce rhoncus feugiat dui, eu pharetra nulla pulvinar non. Morbi sagittis blandit lorem. Integer vitae ullamcorper felis. Vivamus vel elit euismod, bibendum massa et, finibus ante. Fusce eget magna scelerisque tortor congue vehicula. Aliquam diam tortor, luctus a auctor et, bibendum et nisi.
@@ -32,7 +27,9 @@ function WhyFIT() {
 
       <StyledNumberedList component="ol">
         <StyledListItem>
-          <Paragraph>Donec rutrum, quam nec egestas posuere, diam sapien tristique odio, et molestie libero diam sit amet enim.</Paragraph>
+          <Paragraph>
+            Donec rutrum, quam nec egestas posuere, diam sapien tristique odio, et molestie libero diam sit amet enim.
+          </Paragraph>
         </StyledListItem>
         <StyledListItem>
           <Paragraph>Vestibulum ut lacus mattis, volutpat libero et, rhoncus sem.</Paragraph>

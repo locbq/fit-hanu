@@ -2,21 +2,14 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 
 import avatarImage from 'assets/img/our-staff/avatar.png';
-import {
-  Divider,
-  StyledGridHeader,
-  StyledHeading2,
-  StyledHeading3,
-} from './styles';
+import { ContentHeader } from 'components';
+import { StyledHeading3 } from './styles';
 import { StaffCard } from './components';
 
 function OurStaff() {
   return (
     <>
-      <StyledGridHeader>
-        <StyledHeading2>Our Staff</StyledHeading2>
-        <Divider />
-      </StyledGridHeader>
+      <ContentHeader title="Our Staff" />
 
       <StyledHeading3 transform="capitalize">
         Management board

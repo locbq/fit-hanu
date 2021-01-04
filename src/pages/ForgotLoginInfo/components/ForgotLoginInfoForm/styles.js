@@ -16,31 +16,31 @@ export const StyledHeading4 = styled(Heading4)({
   margin: '20px 0px 10px 0px',
 });
 
-export const StyledParagraph = styled(Paragraph)({
+export const StyledParagraph = styled(Paragraph)(({ theme }) => ({
   fontStyle: 'italic',
-  borderBottom: '1px solid #fd8b4b',
+  borderBottom: `1px solid ${theme.palette.mainColor}`,
   paddingBottom: '20px',
-});
+}));
 
-export const StyledInput = styled(InputBase)({
+export const StyledInput = styled(InputBase)(({ theme }) => ({
   fontFamily: '"Open Sans", sans-serif',
   padding: '12px 14px',
-  border: '2px solid #cccccc',
+  border: `2px solid ${theme.palette.borderInput}`,
   marginRight: '20px',
-});
+}));
 
-export const StyledButtonSearch = styled(Button)({
-  background: '#fd8b4b',
-  color: '#ffffff',
+export const StyledButtonSearch = styled(Button)(({ theme }) => ({
+  background: theme.palette.mainColor,
+  color: theme.palette.white,
   fontWeight: 'bold',
   fontFamily: '"Montserrat", sans-serif',
   fontSize: '16px',
   borderRadius: '0px',
   transition: '0.25s ease-in-out',
   '&:hover': {
-    background: '#231d1f',
+    background: theme.palette.secondaryColor,
   },
-});
+}));
 
 export const styles = () => ({
   inputError: {
