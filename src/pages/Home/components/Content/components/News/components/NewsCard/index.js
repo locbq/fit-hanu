@@ -1,35 +1,35 @@
 import React from 'react';
-import { Grid, styled, withStyles } from '@material-ui/core';
+import {
+  Grid,
+  styled,
+  withStyles,
+} from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faListUl } from '@fortawesome/free-solid-svg-icons';
 
-const StyledGridCard = styled(Grid)({
+import { Heading4 } from 'components/Headings';
+
+const StyledGridCard = styled(Grid)(({ theme }) => ({
   boxShadow: '0 0 30px rgba(0, 0, 0, 0.1)',
-  background: '#ffffff',
+  background: theme.palette.white,
   marginBottom: '30px',
   '& a': {
-    color: '#fd8b4b',
+    color: theme.palette.mainColor,
     display: 'inline-block',
     margin: '5px 0px',
   },
-});
+}));
 
-const StyledGridHeader = styled(Grid)({
-  background: '#231d1f',
+const StyledGridHeader = styled(Grid)(({ theme }) => ({
+  background: theme.palette.secondaryColor,
   padding: '20px',
-  '& > h4': {
-    margin: '0px',
-    textTransform: 'uppercase',
-    color: '#ffffff',
-    fontFamily: '"Montserrat", sans-serif',
-  },
-});
+}));
 
-const StyledFAIcon = styled(FontAwesomeIcon)({
+const StyledFAIcon = styled(FontAwesomeIcon)(({ theme }) => ({
   fontSize: '18px',
   marginRight: '10px',
-  color: '#fd8b4b',
-});
+  color: theme.palette.mainColor,
+}));
 
 const StyledGridDescription = styled(Grid)({
   padding: '20px',
@@ -51,7 +51,7 @@ function NewsCard({
     <StyledGridCard>
       <StyledGridHeader container>
         <StyledFAIcon icon={faListUl} />
-        <h4>{title}</h4>
+        <Heading4>{title}</Heading4>
       </StyledGridHeader>
       {image !== '' ? <img src={image} alt="pic" className={classes.image} /> : null}
       <StyledGridDescription>

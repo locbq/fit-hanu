@@ -5,7 +5,10 @@ import {
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
-import { Heading2, Paragraph } from 'components/Headings';
+import { 
+  Heading2, 
+  Paragraph 
+} from 'components/Headings';
 
 export const StyledGrid = styled(Grid)({
   width: '350px',

@@ -17,29 +17,28 @@ const StyledGridCard = styled(Grid)(({ theme }) => ({
   height: '100%',
   background: theme.palette.white,
 }));
-
 const StyledGridHeader = styled(Grid)(({ theme }) => ({
   background: theme.palette.secondaryColor,
   padding: '20px',
 }));
-
 const StyledFAIcon = styled(FontAwesomeIcon)(({ theme }) => ({
   fontSize: '22px',
   marginRight: '10px',
   color: theme.palette.mainColor,
 }));
-
 const StyledGridDescription = styled(Grid)({
   height: '100px',
   padding: '20px',
 });
-
 const StyledButton = styled(Button)({
   margin: '0px 20px 20px auto',
 });
-
 const StyledImage = styled('img')(() => ({
   width: '100%',
+}));
+const StyledHeading3 = styled(Heading3)(({ theme }) => ({
+  color: theme.palette.white,
+  textTransform: 'uppercase',
 }));
 
 function HighlightCard({
@@ -51,12 +50,9 @@ function HighlightCard({
     <StyledGridCard>
       <StyledGridHeader container>
         <StyledFAIcon icon={faStar} />
-        <Heading3
-          transform="uppercase"
-          color="#ffffff"
-        >
+        <StyledHeading3>
           {title}
-        </Heading3>
+        </StyledHeading3>
       </StyledGridHeader>
       <StyledImage
         src={image}

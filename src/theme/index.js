@@ -13,6 +13,7 @@ const theme = createMuiTheme({
     paragraphColor: '#333333',
     backgroundGrey: '#fafafa',
     arrowColor: 'rgba(255,255,255, 0.3)',
+    timestampGrey: '#5b5b5b',
   },
 });
 

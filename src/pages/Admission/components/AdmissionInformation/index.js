@@ -1,21 +1,16 @@
 import React from 'react';
 
 import { Heading3 } from 'components/Headings';
-import { Link } from 'components';
 import {
-  Divider,
-  StyledGridHeader,
-  StyledParagraph,
-  StyledHeading2,
-} from './styles';
+  Link,
+  ContentHeader,
+} from 'components';
+import { StyledParagraph } from './styles';
 
 function AdmissionInformation() {
   return (
     <>
-      <StyledGridHeader>
-        <StyledHeading2>Admission Information</StyledHeading2>
-        <Divider />
-      </StyledGridHeader>
+      <ContentHeader title="Admission Information" />
 
       <Heading3>Admission Plan</Heading3>
       <StyledParagraph align="justify">
