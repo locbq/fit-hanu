@@ -6,16 +6,22 @@ import {
   StyledParagraph,
 } from './styles';
 
-function Footer() {
+const Footer = () => {
+  const date = new Date();
+  const currentYear = date.getFullYear();
+
   return (
     <StyledFooter>
       <Container fixed>
         <StyledParagraph>
-          ©2020 Redesign by Loc Bui
+          ©
+          {currentYear}
+          {' '}
+          Redesign by Loc Bui
         </StyledParagraph>
       </Container>
     </StyledFooter>
   );
-}
+};
 
 export default Footer;
