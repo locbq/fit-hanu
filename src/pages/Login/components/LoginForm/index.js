@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core';
 
 import { Paragraph } from 'components/Headings';
 import { Button } from 'components';
+import { encrypt } from 'helpers/encrypt';
+import { authen } from 'helpers/authen';
 import {
   styles,
   StyledHeading2,
@@ -14,14 +16,13 @@ import {
   StyledGridForgotLink,
   StyledParagraphErrorMessage,
   StyledParagraphLabel,
+  StyledCircularProgress,
 } from './styles';
 
-function LoginForm({
-  history,
-  classes,
-}) {
+function LoginForm({ classes }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -39,10 +40,24 @@ function LoginForm({
 
   const handleClickLogin = (event) => {
     event.preventDefault();
+    setIsLoading(true);
+
+    const isUser = authen(username, password);
+
     if (username === '' || password === '') {
       setErrorMessage('Please enter username and password');
+    } else if (isUser) {
+      const token = encrypt(username, password);
+      localStorage.setItem('token', token);
+      setTimeout(() => {
+        setIsLoading(false);
+        window.location.href = '/';
+      }, 2000);
     } else {
-      history.push('/');
+      setTimeout(() => {
+        setIsLoading(false);
+        setErrorMessage('Incorrect username or password');
+      }, 1000);
     }
   };
 
@@ -94,10 +109,11 @@ function LoginForm({
           justify="flex-end"
         >
           <Button
+            disabled={isLoading}
             type="button"
             onClick={handleClickLogin}
           >
-            Login
+            {isLoading ? <StyledCircularProgress /> : 'Login'}
           </Button>
         </StyledGridField>
 
@@ -106,7 +122,6 @@ function LoginForm({
             Forgot your username or password?
           </StyledLink>
         </StyledGridForgotLink>
-
       </form>
     </StyledGrid>
   );

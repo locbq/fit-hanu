@@ -6,7 +6,7 @@ import {
 
 const StyledButton = styled(MuiButton)(({ theme }) => ({
   margin: (props) => props.margin,
-  display: 'block',
+  display: 'flex',
   width: '140px',
   height: '45px',
   background: theme.palette.mainColor,
