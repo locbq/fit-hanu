@@ -3,25 +3,27 @@ import {
   Grid,
   List,
   ListItem,
-  Link,
   TableCell,
 } from '@material-ui/core';
 
-export const StyledGridContent = styled(Grid)({
-  background: '#ffffff',
+import {
+  Heading3,
+  Heading4,
+} from 'components/Headings';
+
+export const StyledGridContent = styled(Grid)(({ theme }) => ({
+  background: theme.palette.white,
   padding: '20px',
   boxShadow: '0 0 30px rgba(0, 0, 0, 0.1)',
-});
+}));
 
-export const Divider = styled(Grid)({
-  width: '70%',
-  height: '3px',
-  background: '#fd8b4b',
-});
+export const StyledHeading3 = styled(Heading3)(() => ({
+  margin: '20px 0px 12px 0px',
+}));
 
-export const StyledGridHeader = styled(Grid)({
-  marginBottom: '15px',
-});
+export const StyledHeading4 = styled(Heading4)(() => ({
+  margin: '0px 0px 20px 0px',
+}));
 
 export const StyledList = styled(List)({
   paddingLeft: '20px',
@@ -29,15 +31,6 @@ export const StyledList = styled(List)({
 
 export const StyledListItem = styled(ListItem)({
   display: 'list-item',
-});
-
-export const StyledLink = styled(Link)({
-  color: '#fd8b4b',
-  transition: '0.25s ease-in-out',
-  fontFamily: '"Open Sans", sans-serif',
-  '&:hover': {
-    color: '#231d1f',
-  },
 });
 
 export const StyledTableCellHead = styled(TableCell)({

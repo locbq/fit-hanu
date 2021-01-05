@@ -12,6 +12,8 @@ import {
   StyledGridField,
   StyledLink,
   StyledGridForgotLink,
+  StyledParagraphErrorMessage,
+  StyledParagraphLabel,
 } from './styles';
 
 function LoginForm({
@@ -49,21 +51,16 @@ function LoginForm({
       container
       direction="column"
     >
-      <StyledHeading2 margin="0px 0px 30px 0px">Login</StyledHeading2>
+      <StyledHeading2>Login</StyledHeading2>
       {errorMessage
         ? (
-          <Paragraph
-            color="#fd4b64"
-            margin="10px 0px"
-            align="center"
-          >
+          <StyledParagraphErrorMessage>
             {errorMessage}
-          </Paragraph>
-        )
-        : null}
+          </StyledParagraphErrorMessage>
+        ) : null}
       <form>
         <StyledGridField>
-          <Paragraph margin="0px 0px 5px 0px">Username</Paragraph>
+          <StyledParagraphLabel>Username</StyledParagraphLabel>
           <StyledInput
             fullWidth
             type="text"
@@ -74,7 +71,7 @@ function LoginForm({
         </StyledGridField>
 
         <StyledGridField>
-          <Paragraph margin="0px 0px 5px 0px">Password</Paragraph>
+          <StyledParagraphLabel>Password</StyledParagraphLabel>
           <StyledInput
             fullWidth
             type="password"

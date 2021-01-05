@@ -4,13 +4,13 @@ import {
   Container,
 } from '@material-ui/core';
 
-import { Section } from 'components';
 import { HighlightCard } from './components';
+import { StyledSection } from './styles';
 import highlights from './const';
 
 function HighlightView() {
   return (
-    <Section backgroundcolor="#fafafa">
+    <StyledSection>
       <Container fixed>
         <Grid
           container
@@ -30,11 +30,10 @@ function HighlightView() {
                 description={highlight.description}
               />
             </Grid>
-
           ))}
         </Grid>
       </Container>
-    </Section>
+    </StyledSection>
   );
 }
 

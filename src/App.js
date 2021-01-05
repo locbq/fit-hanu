@@ -12,8 +12,10 @@ import {
 import {
   styled,
   Grid,
+  ThemeProvider,
 } from '@material-ui/core';
 
+import theme from 'theme';
 import {
   Home,
   FacultyIT,
@@ -31,66 +33,68 @@ const StyledContent = styled(Grid)({
 
 function App() {
   return (
-    <Router>
-      <ScrollRestoration />
-      <Navbar />
-      <StyledContent>
-        <Switch>
-          <Route
-            exact
-            path="/"
-            component={Home}
-          />
-          <Route
-            path="/faculty-of-IT"
-            component={FacultyIT}
-          />
-          <Route
-            path="/faculty-of-IT/:id"
-            component={FacultyIT}
-          />
-
-          <Route
-            exact
-            path="/admission"
-            component={Admission}
-          />
-          <Route
-            exact
-            path="/admission/:id"
-            component={Admission}
-          />
-
-          <Route
-            path="/graduation"
-            component={Graduation}
-          />
-          <Route
-            path="/graduation/:id"
-            component={Graduation}
-          />
-          <Route
-            path="/student"
-            component={Student}
-          />
-          <Route
-            path="/student/:id"
-            component={Student}
-          />
-          <Route
-            path="/forgot-login-info"
-            component={ForgotLoginInfo}
-          />
-          <Route
-            path="/forgot-login-info/:id"
-            component={ForgotLoginInfo}
-          />
-
-          <Route path="/login" component={Login} />
-        </Switch>
-      </StyledContent>
-      <Footer />
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <ScrollRestoration />
+        <Navbar />
+        <StyledContent>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              component={Home}
+            />
+            <Route
+              path="/faculty-of-IT"
+              component={FacultyIT}
+            />
+            <Route
+              path="/faculty-of-IT/:id"
+              component={FacultyIT}
+            />
+            <Route
+              exact
+              path="/admission"
+              component={Admission}
+            />
+            <Route
+              exact
+              path="/admission/:id"
+              component={Admission}
+            />
+            <Route
+              path="/graduation"
+              component={Graduation}
+            />
+            <Route
+              path="/graduation/:id"
+              component={Graduation}
+            />
+            <Route
+              path="/student"
+              component={Student}
+            />
+            <Route
+              path="/student/:id"
+              component={Student}
+            />
+            <Route
+              path="/forgot-login-info"
+              component={ForgotLoginInfo}
+            />
+            <Route
+              path="/forgot-login-info/:id"
+              component={ForgotLoginInfo}
+            />
+            <Route
+              path="/login"
+              component={Login}
+            />
+          </Switch>
+        </StyledContent>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 

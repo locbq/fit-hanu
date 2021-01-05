@@ -1,33 +1,24 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 
-import {
-  Heading2,
-  Heading3,
-} from 'components/Headings';
 import avatarImage from 'assets/img/our-staff/avatar.png';
-import {
-  Divider,
-  StyledGridHeader,
-} from './styles';
+import { ContentHeader } from 'components';
+import { StyledHeading3 } from './styles';
 import { StaffCard } from './components';
 
 function OurStaff() {
   return (
     <>
-      <StyledGridHeader>
-        <Heading2 margin="0px 0px 15px 0px">Our Staff</Heading2>
-        <Divider />
-      </StyledGridHeader>
+      <ContentHeader title="Our Staff" />
 
-      <Heading3
-        margin="24px 0px"
-        transform="capitalize"
-      >
-        Management Board
-      </Heading3>
+      <StyledHeading3 transform="capitalize">
+        Management board
+      </StyledHeading3>
       <Grid container>
-        <Grid item lg={6}>
+        <Grid
+          item
+          lg={6}
+        >
           <StaffCard
             image={avatarImage}
             title="Dean"
@@ -45,14 +36,14 @@ function OurStaff() {
         </Grid>
       </Grid>
 
-      <Heading3
-        margin="24px 0px"
-        transform="capitalize"
-      >
+      <StyledHeading3 transform="capitalize">
         Administrative board
-      </Heading3>
+      </StyledHeading3>
       <Grid container>
-        <Grid item lg={6}>
+        <Grid
+          item
+          lg={6}
+        >
           <StaffCard
             image={avatarImage}
             title="Administrative Assistant"

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Heading2 } from 'components/Headings';
 import { faBullhorn } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -7,6 +6,7 @@ import {
   StyledFAIcon,
   StyledGridAnnouncement,
   StyledGridAnnouncementList,
+  StyledHeading2,
 } from './styles';
 import AnnouncementCard from './components/AnnouncementCard';
 import announcementList from './const';
@@ -14,11 +14,14 @@ import announcementList from './const';
 function AnnouncementView() {
   return (
     <StyledGridAnnouncement>
-      <StyledGridHeader container alignItems="center">
+      <StyledGridHeader
+        container
+        alignItems="center"
+      >
         <StyledFAIcon icon={faBullhorn} />
-        <Heading2 color="#ffffff" transform="uppercase">
+        <StyledHeading2>
           Announcements
-        </Heading2>
+        </StyledHeading2>
       </StyledGridHeader>
 
       <StyledGridAnnouncementList>

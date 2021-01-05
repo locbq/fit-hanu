@@ -1,21 +1,13 @@
 import React from 'react';
 
-import {
-  Heading2,
-  Paragraph,
-} from 'components/Headings';
-import {
-  StyledGridHeader,
-  Divider,
-} from './styles';
+import { Paragraph } from 'components/Headings';
+import { ContentHeader } from 'components';
 
 function FITClosedCup() {
   return (
     <>
-      <StyledGridHeader>
-        <Heading2 margin="0px 0px 15px 0px">HANU Open Cup</Heading2>
-        <Divider />
-      </StyledGridHeader>
+      <ContentHeader title="HANU Open Cup" />
+
       <Paragraph
         margin="12px 0px"
         align="justify"

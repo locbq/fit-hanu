@@ -9,17 +9,19 @@ import {
 } from 'react-router-dom';
 
 import {
-  Section,
   BreadCrumb,
   TableOfContents,
 } from 'components';
-import { StyledGridContent } from './styles';
+import {
+  StyledGridContent,
+  StyledSection,
+} from './styles';
 import { contentList } from './const';
 import { GraduationPlan } from './components';
 
 function Graduation() {
   return (
-    <Section backgroundcolor="#fafafa">
+    <StyledSection>
       <BreadCrumb />
       <Container fixed>
         <Grid
@@ -58,7 +60,7 @@ function Graduation() {
           </Grid>
         </Grid>
       </Container>
-    </Section>
+    </StyledSection>
   );
 }
 

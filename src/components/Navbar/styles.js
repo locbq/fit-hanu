@@ -5,17 +5,16 @@ import {
   Grid,
   Button,
 } from '@material-ui/core';
-
 import {
   NavLink,
   Link,
 } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const StyledAppBar = styled(AppBar)({
+export const StyledAppBar = styled(AppBar)(({ theme }) => ({
   height: '60px',
-  background: '#231d1f',
-});
+  background: theme.palette.secondaryColor,
+}));
 
 export const StyledContainer = styled(Container)({
   height: '100%',
@@ -26,9 +25,9 @@ export const StyledGridNav = styled(Grid)({
   height: '100%',
 });
 
-export const StyledNavBrand = styled(Link)({
+export const StyledNavBrand = styled(Link)(({ theme }) => ({
   fontFamily: '"Montserrat", sans-serif',
-  color: '#ffffff',
+  color: theme.palette.white,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -37,17 +36,17 @@ export const StyledNavBrand = styled(Link)({
   fontWeight: 'bold',
   padding: '0px 15px 0px 0px',
   '& span': {
-    color: '#fd8b4b',
+    color: theme.palette.mainColor,
     transition: '0.25s ease-in-out',
   },
   transition: '0.25s ease-in-out',
   '&:hover': {
-    color: '#fd8b4b',
+    color: theme.palette.mainColor,
     '& span': {
-      color: '#ffffff',
+      color: theme.palette.white,
     },
   },
-});
+}));
 
 export const StyledGridNavLinks = styled(Grid)(({ theme }) => ({
   display: 'flex',
@@ -56,20 +55,20 @@ export const StyledGridNavLinks = styled(Grid)(({ theme }) => ({
   },
 }));
 
-export const StyledNavLink = styled(NavLink)({
+export const StyledNavLink = styled(NavLink)(({ theme }) => ({
   height: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   width: '125px',
   textDecoration: 'none',
-  color: '#fd8b4b',
+  color: theme.palette.mainColor,
   textTransform: 'uppercase',
   padding: '0px 5px',
   fontFamily: '"Open Sans", sans-serif',
   pointerEvents: 'none',
   transition: '0.25s ease-in-out',
-});
+}));
 
 export const StyledNavLinkLogin = styled(NavLink)(({ theme }) => ({
   height: '100%',
@@ -78,13 +77,13 @@ export const StyledNavLinkLogin = styled(NavLink)(({ theme }) => ({
   justifyContent: 'center',
   width: '125px',
   textDecoration: 'none',
-  color: '#fd8b4b',
+  color: theme.palette.mainColor,
   textTransform: 'uppercase',
   padding: '0px 5px',
   fontFamily: '"Open Sans", sans-serif',
   '&:hover': {
-    background: '#fd8b4b',
-    color: '#ffffff',
+    background: theme.palette.mainColor,
+    color: theme.palette.white,
     transition: '0.25s ease-in-out',
   },
   [theme.breakpoints.down('sm')]: {
@@ -96,36 +95,36 @@ export const StyledFAIcon = styled(FontAwesomeIcon)({
   marginLeft: '5px',
 });
 
-export const StyledGridHover = styled(Grid)({
+export const StyledGridHover = styled(Grid)(({ theme }) => ({
   height: '100%',
   transition: '0.25s ease-in-out',
   '&:hover > a': {
-    background: '#fd8b4b',
-    color: '#ffffff',
+    background: theme.palette.mainColor,
+    color: theme.palette.white,
   },
   '&:hover > div': {
     display: 'flex',
   },
-});
+}));
 
-export const StyledGridDropdown = styled(Grid)({
+export const StyledGridDropdown = styled(Grid)(({ theme }) => ({
   position: 'absolute',
   display: 'none',
   width: '250px',
-  background: '#231d1f',
+  background: theme.palette.secondaryColor,
   '& a': {
     padding: '10px',
-    color: '#fd8b4b',
+    color: theme.palette.mainColor,
     textDecoration: 'none',
     fontFamily: '"Open Sans", sans-serif',
     transition: '0.25s ease-in-out',
     '&:hover': {
-      background: '#fd8b4b',
-      color: '#ffffff',
+      background: theme.palette.mainColor,
+      color: theme.palette.white,
       textDecoration: 'none',
     },
   },
-});
+}));
 
 export const StyledButtonCollapsedMenu = styled(Button)(({ theme }) => ({
   display: 'none',
@@ -133,21 +132,21 @@ export const StyledButtonCollapsedMenu = styled(Button)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     display: 'block',
     marginLeft: 'auto',
-    color: '#ffffff',
+    color: theme.palette.white,
     fontSize: '20px',
   },
 }));
 
-export const styles = () => ({
+export const styles = (theme) => ({
   loginNav: {
     marginLeft: 'auto',
   },
   active: {
-    background: '#fd8b4b',
-    color: '#ffffff',
+    background: theme.palette.mainColor,
+    color: theme.palette.white,
   },
   activeDropdown: {
-    background: '#fd8b4b',
-    color: '#ffffff !important',
+    background: theme.palette.mainColor,
+    color: `${theme.palette.white} !important`,
   },
 });

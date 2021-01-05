@@ -1,22 +1,15 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 
-import { Heading2 } from 'components/Headings';
+import { ContentHeader } from 'components';
 import avatarImage from 'assets/img/our-staff/avatar.png';
-import {
-  Divider,
-  StyledGridHeader,
-} from './styles';
 import { StudentCard } from './components';
 import { honoraryStudentList } from './const';
 
 function HonoraryStudents() {
   return (
     <>
-      <StyledGridHeader>
-        <Heading2 margin="0px 0px 15px 0px">Honorary Students</Heading2>
-        <Divider />
-      </StyledGridHeader>
+      <ContentHeader title="Honorary Students" />
 
       <Grid
         container

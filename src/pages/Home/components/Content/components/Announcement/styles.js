@@ -4,6 +4,8 @@ import {
 } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { Heading2 } from 'components/Headings';
+
 export const StyledGridAnnouncement = styled(Grid)({
   boxShadow: '0 0 30px rgba(0, 0, 0, 0.1)',
   background: '#ffffff',
@@ -23,3 +25,8 @@ export const StyledFAIcon = styled(FontAwesomeIcon)({
   marginRight: '10px',
   color: '#fd8b4b',
 });
+
+export const StyledHeading2 = styled(Heading2)(({ theme }) => ({
+  textTransform: 'uppercase',
+  color: theme.palette.white,
+}));

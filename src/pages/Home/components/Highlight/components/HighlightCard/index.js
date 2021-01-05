@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Grid,
-  withStyles,
   styled,
 } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,36 +12,36 @@ import {
 } from 'components/Headings';
 import { Button } from 'components';
 
-const StyledGridCard = styled(Grid)({
+const StyledGridCard = styled(Grid)(({ theme }) => ({
   boxShadow: '0 0 30px rgba(0, 0, 0, 0.1)',
   height: '100%',
-  background: '#ffffff',
-});
-
-const StyledGridHeader = styled(Grid)({
-  background: '#231d1f',
+  background: theme.palette.white,
+}));
+const StyledGridHeader = styled(Grid)(({ theme }) => ({
+  background: theme.palette.secondaryColor,
   padding: '20px',
-});
-
-const StyledFAIcon = styled(FontAwesomeIcon)({
+}));
+const StyledFAIcon = styled(FontAwesomeIcon)(({ theme }) => ({
   fontSize: '22px',
   marginRight: '10px',
-  color: '#fd8b4b',
-});
-
+  color: theme.palette.mainColor,
+}));
 const StyledGridDescription = styled(Grid)({
   height: '100px',
   padding: '20px',
 });
-
-const styles = () => ({
-  image: {
-    width: '100%',
-  },
+const StyledButton = styled(Button)({
+  margin: '0px 20px 20px auto',
 });
+const StyledImage = styled('img')(() => ({
+  width: '100%',
+}));
+const StyledHeading3 = styled(Heading3)(({ theme }) => ({
+  color: theme.palette.white,
+  textTransform: 'uppercase',
+}));
 
 function HighlightCard({
-  classes,
   title = '',
   image = '',
   description = '',
@@ -51,20 +50,21 @@ function HighlightCard({
     <StyledGridCard>
       <StyledGridHeader container>
         <StyledFAIcon icon={faStar} />
-        <Heading3
-          transform="uppercase"
-          color="#ffffff"
-        >
+        <StyledHeading3>
           {title}
-        </Heading3>
+        </StyledHeading3>
       </StyledGridHeader>
-      <img className={classes.image} src={image} alt="card" />
+      <StyledImage
+        src={image}
+        alt="card"
+
+      />
       <StyledGridDescription>
         <Paragraph>{description}</Paragraph>
       </StyledGridDescription>
-      <Button margin="0px 20px 20px auto">Read more</Button>
+      <StyledButton>Read more</StyledButton>
     </StyledGridCard>
   );
 }
 
-export default withStyles(styles)(HighlightCard);
+export default HighlightCard;

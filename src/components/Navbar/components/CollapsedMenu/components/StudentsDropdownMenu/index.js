@@ -1,13 +1,15 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { withStyles } from '@material-ui/core';
+import {
+  withStyles,
+  Grid,
+} from '@material-ui/core';
 
 import {
   styles,
-  StyledGridMenu,
   StyledNavLink,
   StyledHeading4,
-} from './styles';
+} from '../styles';
 import { menuList } from './const';
 
 function StudentsDropdownMenu({
@@ -16,7 +18,7 @@ function StudentsDropdownMenu({
   ...props
 }) {
   return (
-    <StyledGridMenu {...props}>
+    <Grid {...props}>
       {menuList.map((item, index) => (
         <StyledNavLink
           key={index}
@@ -31,7 +33,7 @@ function StudentsDropdownMenu({
           </StyledHeading4>
         </StyledNavLink>
       ))}
-    </StyledGridMenu>
+    </Grid>
   );
 }
 

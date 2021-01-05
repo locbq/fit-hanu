@@ -3,17 +3,16 @@ import {
   Container,
   Grid,
 } from '@material-ui/core';
-import {
-  Switch,
-  Route,
-} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import {
-  Section,
   BreadCrumb,
   TableOfContents,
 } from 'components';
-import { StyledGridContent } from './styles';
+import {
+  StyledGridContent,
+  StyledSection,
+} from './styles';
 import { contentList } from './const';
 import {
   AboutUs,
@@ -23,8 +22,28 @@ import {
 } from './components';
 
 function FacultyIT() {
+  const location = useLocation();
+  const currentLocation = location.pathname.split('/')[2];
+
+  const currentContent = (currLocation) => {
+    switch (currLocation) {
+      case undefined:
+        return <AboutUs />;
+      case 'about-us':
+        return <AboutUs />;
+      case 'our-objectives':
+        return <OurObjectives />;
+      case 'our-staff':
+        return <OurStaff />;
+      case 'our-visions':
+        return <OurVisions />;
+      default:
+        return <></>;
+    }
+  };
+
   return (
-    <Section backgroundcolor="#fafafa">
+    <StyledSection>
       <BreadCrumb />
       <Container fixed>
         <Grid
@@ -39,29 +58,7 @@ function FacultyIT() {
             xs={12}
           >
             <StyledGridContent>
-              <Switch>
-                <Route
-                  exact
-                  path="/faculty-of-IT"
-                  component={AboutUs}
-                />
-                <Route
-                  path="/faculty-of-IT/about-us"
-                  component={AboutUs}
-                />
-                <Route
-                  path="/faculty-of-IT/our-objectives"
-                  component={OurObjectives}
-                />
-                <Route
-                  path="/faculty-of-IT/our-staff"
-                  component={OurStaff}
-                />
-                <Route
-                  path="/faculty-of-IT/our-visions"
-                  component={OurVisions}
-                />
-              </Switch>
+              {currentContent(currentLocation)}
             </StyledGridContent>
           </Grid>
           <Grid
@@ -75,7 +72,7 @@ function FacultyIT() {
           </Grid>
         </Grid>
       </Container>
-    </Section>
+    </StyledSection>
   );
 }
 

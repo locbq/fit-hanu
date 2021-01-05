@@ -22,6 +22,14 @@ const Image = styled('img')({
   objectFit: 'cover',
 });
 
+const StyledHeading4 = styled(Heading4)(() => ({
+  margin: '0px 0px 10px 0px',
+}));
+
+const StyledParagraph = styled(Paragraph)(() => ({
+  margin: '0px 0px 5px 0px',
+}));
+
 function StaffCard({
   image = '',
   title = '',
@@ -41,7 +49,10 @@ function StaffCard({
         sm={4}
         xs={4}
       >
-        <Image src={image} alt="avatar" />
+        <Image
+          src={image}
+          alt="avatar"
+        />
       </Grid>
       <Grid
         item
@@ -50,10 +61,10 @@ function StaffCard({
         sm={8}
         xs={8}
       >
-        <Heading4 margin="0px 0px 10px 0px">{title}</Heading4>
-        <Paragraph margin="0px 0px 5px 0px">{name}</Paragraph>
-        <Paragraph margin="0px 0px 5px 0px">{office}</Paragraph>
-        <Paragraph margin="0px 0px 5px 0px">{phone}</Paragraph>
+        <StyledHeading4>{title}</StyledHeading4>
+        <StyledParagraph>{name}</StyledParagraph>
+        <StyledParagraph>{office}</StyledParagraph>
+        <StyledParagraph>{phone}</StyledParagraph>
       </Grid>
     </StyledGridCard>
   );

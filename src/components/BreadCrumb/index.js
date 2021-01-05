@@ -7,39 +7,31 @@ import {
   Container,
 } from '@material-ui/core';
 import { useLocation } from 'react-router';
-import { Link } from 'react-router-dom';
 
 import { Paragraph } from 'components/Headings';
+import RouterLink from '../RouterLink';
 
-const StyledGrid = styled(Grid)(({ theme }) => ({
+const StyledGrid = styled(Grid)(() => ({
   margin: '30px 0px',
 }));
 
-const StyledParagraphLast = withStyles(() => ({
+const StyledParagraphLast = withStyles((theme) => ({
   root: {
-    color: '#fd8b4b',
+    color: theme.palette.mainColor,
     textTransform: 'capitalize',
     fontWeight: 'bold',
   },
 }))(Paragraph);
 
-const StyledParagraph = withStyles(() => ({
+const StyledParagraph = withStyles((theme) => ({
   root: {
-    color: '#333333',
+    color: theme.palette.paragraphColor,
   },
-
 }))(Paragraph);
 
-const StyledLink = styled(Link)({
-  textDecoration: 'none',
+const StyledLink = styled(RouterLink)(() => ({
   textTransform: 'capitalize',
-  fontFamily: '"Montserrat", sans-serif',
-  color: '#333333',
-  '&:hover': {
-    color: '#fd8b4b',
-    transition: '0.25s ease-in-out',
-  },
-});
+}));
 
 const StyledBreadcrumbs = withStyles({
   separator: {
@@ -47,10 +39,7 @@ const StyledBreadcrumbs = withStyles({
   },
 })(Breadcrumbs);
 
-const BreadCrumb = ({
-  classes,
-  ...props
-}) => {
+const BreadCrumb = ({ classes, ...props }) => {
   const location = useLocation();
   let path = location.pathname;
   path = path.replace(/\/$/, '');
@@ -59,14 +48,9 @@ const BreadCrumb = ({
   return (
     <Container fixed>
       <StyledGrid {...props}>
-        <StyledBreadcrumbs
-          aria-label="breadcrumb"
-          separator="|"
-        >
+        <StyledBreadcrumbs aria-label="breadcrumb" separator="|">
           <StyledLink to="/">
-            <StyledParagraph margin="0px">
-              Home
-            </StyledParagraph>
+            <StyledParagraph margin="0px">Home</StyledParagraph>
           </StyledLink>
 
           {splitPath.splice(1).map((breadcrumb, index) => {
@@ -76,17 +60,10 @@ const BreadCrumb = ({
             const pageName = breadcrumb.replace(/[-]+/g, ' ');
 
             return last ? (
-              <StyledParagraphLast key={to}>
-                {pageName}
-              </StyledParagraphLast>
+              <StyledParagraphLast key={to}>{pageName}</StyledParagraphLast>
             ) : (
-              <StyledLink
-                to={to}
-                key={to}
-              >
-                <StyledParagraph>
-                  {pageName}
-                </StyledParagraph>
+              <StyledLink to={to} key={to}>
+                <StyledParagraph>{pageName}</StyledParagraph>
               </StyledLink>
             );
           })}

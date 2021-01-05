@@ -1,23 +1,26 @@
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
-import { IconButton, styled } from '@material-ui/core';
+import {
+  IconButton,
+  styled,
+} from '@material-ui/core';
 
-const StyledIconButton = styled(IconButton)({
+const StyledIconButton = styled(IconButton)(({ theme }) => ({
   position: 'absolute',
   fontSize: '36px',
   right: '0',
   top: '45%',
   cursor: 'pointer',
-  color: 'rgba(255,255,255, 0.3)',
+  color: theme.palette.arrowColor,
   transition: '0.25s ease-in-out',
   background: 'transparent',
   zIndex: '1',
   '&:hover': {
-    color: '#FFFFFF',
+    color: theme.palette.white,
     background: 'transparent',
   },
-});
+}));
 
 function RightArrow(props) {
   const { onClick } = props;

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Button } from 'components';
 import {
   StyledParagraph,
   StyledLink,
+  StyledButton,
 } from './styles';
 
 function ConfirmationMessage() {
@@ -17,7 +17,7 @@ function ConfirmationMessage() {
       </StyledParagraph>
 
       <StyledLink to="/">
-        <Button margin="20px auto">Continue</Button>
+        <StyledButton>Continue</StyledButton>
       </StyledLink>
     </>
   );
