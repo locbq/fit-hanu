@@ -7,4 +7,8 @@ export const accounts = [
     username: 'admin',
     password: '123456',
   },
+  {
+    username: '1301040118',
+    password: '123456',
+  },
 ];
