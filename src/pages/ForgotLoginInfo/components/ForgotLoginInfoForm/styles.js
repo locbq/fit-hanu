@@ -42,8 +42,8 @@ export const StyledButtonSearch = styled(Button)(({ theme }) => ({
   },
 }));
 
-export const styles = () => ({
+export const styles = (theme) => ({
   inputError: {
-    border: '2px solid #fd4b64',
+    border: `2px solid ${theme.palette.dangerColor}`,
   },
 });

@@ -1,20 +1,13 @@
 import React from 'react';
 
 import { Heading3 } from 'components/Headings';
-import {
-  Divider,
-  StyledGridHeader,
-  StyledHeading2,
-  StyledParagraph,
-} from './styles';
+import { ContentHeader } from 'components';
+import { StyledParagraph } from './styles';
 
 function GraduationPlan() {
   return (
     <>
-      <StyledGridHeader>
-        <StyledHeading2>Graduation Plan</StyledHeading2>
-        <Divider />
-      </StyledGridHeader>
+      <ContentHeader title="Graduation Plan" />
 
       <Heading3>Graduation Plan for class 2015 - 2016</Heading3>
 
