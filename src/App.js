@@ -1,9 +1,4 @@
-import React from 'react';
-import {
-  Navbar,
-  Footer,
-  ScrollRestoration,
-} from 'components';
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +10,12 @@ import {
   ThemeProvider,
 } from '@material-ui/core';
 
+import {
+  Navbar,
+  NavbarLoggedIn,
+  Footer,
+  ScrollRestoration,
+} from 'components';
 import theme from 'theme';
 import { decrypt } from 'helpers/encrypt';
 import {
@@ -34,14 +35,21 @@ const StyledContent = styled(Grid)({
 
 function App() {
   const token = localStorage.getItem('token');
-  const decryptToken = decrypt(token);
-  const { username, password } = decryptToken;
+  const [user, setUser] = useState('');
+
+  useEffect(() => {
+    if (token) {
+      const decryptToken = decrypt(token);
+      const { username } = decryptToken;
+      setUser(username);
+    }
+  }, [token]);
 
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <ScrollRestoration />
-        <Navbar />
+        {token ? <NavbarLoggedIn username={user} /> : <Navbar />}
         <StyledContent>
           <Switch>
             <Route

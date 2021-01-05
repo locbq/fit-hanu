@@ -19,10 +19,7 @@ import {
   StyledCircularProgress,
 } from './styles';
 
-function LoginForm({
-  history,
-  classes,
-}) {
+function LoginForm({ classes }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -54,7 +51,7 @@ function LoginForm({
       localStorage.setItem('token', token);
       setTimeout(() => {
         setIsLoading(false);
-        history.push('/');
+        window.location.href = '/';
       }, 2000);
     } else {
       setTimeout(() => {
