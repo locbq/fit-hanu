@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core';
 
 import { Paragraph } from 'components/Headings';
 import { Button } from 'components';
+import { encrypt } from 'helpers/encrypt';
 import {
   styles,
   StyledHeading2,
@@ -42,6 +43,8 @@ function LoginForm({
     if (username === '' || password === '') {
       setErrorMessage('Please enter username and password');
     } else {
+      const token = encrypt(username, password);
+      localStorage.setItem('token', token);
       history.push('/');
     }
   };
