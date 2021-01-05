@@ -2,12 +2,14 @@ import {
   styled,
   Grid,
   InputBase,
+  withStyles,
+  CircularProgress,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
-import { 
-  Heading2, 
-  Paragraph 
+import {
+  Heading2,
+  Paragraph,
 } from 'components/Headings';
 
 export const StyledGrid = styled(Grid)({
@@ -53,6 +55,12 @@ export const StyledParagraphErrorMessage = styled(Paragraph)(({ theme }) => ({
 export const StyledParagraphLabel = styled(Paragraph)(() => ({
   margin: '0px 0px 5px 0px',
 }));
+
+export const StyledCircularProgress = withStyles((theme) => ({
+  svg: {
+    color: theme.palette.white,
+  },
+}))(CircularProgress);
 
 export const styles = (theme) => ({
   inputError: {
