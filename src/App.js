@@ -16,6 +16,7 @@ import {
 } from '@material-ui/core';
 
 import theme from 'theme';
+import { decrypt } from 'helpers/encrypt';
 import {
   Home,
   FacultyIT,
@@ -32,6 +33,10 @@ const StyledContent = styled(Grid)({
 });
 
 function App() {
+  const token = localStorage.getItem('token');
+  const decryptToken = decrypt(token);
+  const { username, password } = decryptToken;
+
   return (
     <ThemeProvider theme={theme}>
       <Router>

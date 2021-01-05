@@ -11,3 +11,5 @@ export const encrypt = (username, password) => {
   const encryptedLoginInfo = CryptoJS.AES.encrypt(JSON.stringify(loginInfo), ENCRYPT_KEY).toString();
   return encryptedLoginInfo;
 };
+
+export const decrypt = (str) => JSON.parse(CryptoJS.AES.decrypt(str, ENCRYPT_KEY).toString(CryptoJS.enc.Utf8));

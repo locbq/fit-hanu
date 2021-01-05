@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core';
 import { Paragraph } from 'components/Headings';
 import { Button } from 'components';
 import { encrypt } from 'helpers/encrypt';
+import { authen } from 'helpers/authen';
 import {
   styles,
   StyledHeading2,
@@ -43,20 +44,23 @@ function LoginForm({
   const handleClickLogin = (event) => {
     event.preventDefault();
     setIsLoading(true);
+
+    const isUser = authen(username, password);
+
     if (username === '' || password === '') {
       setErrorMessage('Please enter username and password');
-    } else if (username !== 'admin' || password !== '123456') {
-      setTimeout(() => {
-        setErrorMessage('Incorrect username or password');
-        setIsLoading(false);
-      }, 1000);
-    } else {
+    } else if (isUser) {
       const token = encrypt(username, password);
       localStorage.setItem('token', token);
       setTimeout(() => {
         setIsLoading(false);
         history.push('/');
       }, 2000);
+    } else {
+      setTimeout(() => {
+        setIsLoading(false);
+        setErrorMessage('Incorrect username or password');
+      }, 1000);
     }
   };
 
