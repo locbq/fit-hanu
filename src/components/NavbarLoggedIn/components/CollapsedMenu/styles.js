@@ -35,6 +35,7 @@ export const StyledHeading4 = styled(Heading4)(({ theme }) => ({
   padding: '15px 25px 15px 15px',
   display: 'flex',
   justifyContent: 'space-between',
+  color: theme.palette.white,
   borderBottom: `1px solid ${theme.palette.underlineGrey}`,
   '& svg': {
     color: theme.palette.white,

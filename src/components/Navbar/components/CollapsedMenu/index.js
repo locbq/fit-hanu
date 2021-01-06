@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
@@ -20,45 +20,52 @@ import {
 
 function CollapsedMenu({
   classes,
-  showFaculty,
-  showAdmisson,
-  showPrograms,
-  showStudents,
-  setShowFaculty,
-  setShowAdmission,
-  setShowPrograms,
-  setShowStudents,
   handleClickShowMenu,
   ...props
 }) {
+  const [showDropdownMenu, setShowDropdownMenu] = useState({
+    faculty: false,
+    admission: false,
+    programs: false,
+    students: false,
+    user: false,
+  });
+
   const handleClickShowFaculty = (event) => {
     event.preventDefault();
-    setShowFaculty(!showFaculty);
-    setShowAdmission(false);
-    setShowPrograms(false);
-    setShowStudents(false);
+    setShowDropdownMenu({
+      faculty: !showDropdownMenu.faculty,
+      admission: false,
+      programs: false,
+      students: false,
+    });
   };
-
   const handleClickShowAdmission = (event) => {
     event.preventDefault();
-    setShowAdmission(!showAdmisson);
-    setShowFaculty(false);
-    setShowPrograms(false);
-    setShowStudents(false);
+    setShowDropdownMenu({
+      faculty: false,
+      admission: !showDropdownMenu.admission,
+      programs: false,
+      students: false,
+    });
   };
   const handleClickShowPrograms = (event) => {
     event.preventDefault();
-    setShowPrograms(!showPrograms);
-    setShowFaculty(false);
-    setShowAdmission(false);
-    setShowStudents(false);
+    setShowDropdownMenu({
+      faculty: false,
+      admission: false,
+      programs: !showDropdownMenu.programs,
+      students: false,
+    });
   };
   const handleClickShowStudents = (event) => {
     event.preventDefault();
-    setShowStudents(!showStudents);
-    setShowFaculty(false);
-    setShowAdmission(false);
-    setShowPrograms(false);
+    setShowDropdownMenu({
+      faculty: false,
+      admission: false,
+      programs: false,
+      students: !showDropdownMenu.students,
+    });
   };
 
   return (
@@ -83,7 +90,7 @@ function CollapsedMenu({
           <FontAwesomeIcon icon={faCaretDown} />
         </StyledHeading4>
 
-        {showFaculty ? <FacultyDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
+        {showDropdownMenu.faculty ? <FacultyDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
 
         <StyledHeading4 onClick={handleClickShowAdmission}>
           <StyledNavLinkDropdown
@@ -95,7 +102,7 @@ function CollapsedMenu({
           <FontAwesomeIcon icon={faCaretDown} />
         </StyledHeading4>
 
-        {showAdmisson ? <AdmissionDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
+        {showDropdownMenu.admission ? <AdmissionDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
 
         <StyledHeading4 onClick={handleClickShowPrograms}>
           <StyledNavLinkDropdown
@@ -107,7 +114,7 @@ function CollapsedMenu({
           <FontAwesomeIcon icon={faCaretDown} />
         </StyledHeading4>
 
-        {showPrograms ? <ProgramsDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
+        {showDropdownMenu.programs ? <ProgramsDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
 
         <StyledHeading4 onClick={handleClickShowStudents}>
           <StyledNavLinkDropdown
@@ -119,7 +126,7 @@ function CollapsedMenu({
           <FontAwesomeIcon icon={faCaretDown} />
         </StyledHeading4>
 
-        {showStudents ? <StudentsDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
+        {showDropdownMenu.students ? <StudentsDropdownMenu handleClickShowMenu={handleClickShowMenu} /> : null}
         <StyledNavLink
           exact
           to="/login"

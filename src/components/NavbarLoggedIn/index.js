@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core';
 import {
   faCaretDown,
   faBars,
+  faUserCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,11 +30,6 @@ import ConfirmModal from './components/ConfirmModal';
 
 function Navbar({ classes, username }) {
   const [showMenu, setShowMenu] = useState(false);
-
-  const [showFaculty, setShowFaculty] = useState(false);
-  const [showAdmisson, setShowAdmission] = useState(false);
-  const [showPrograms, setShowPrograms] = useState(false);
-  const [showStudents, setShowStudents] = useState(false);
   const [showConfirmModal, setConfirmModal] = useState(false);
 
   const handleClickShowMenu = (event) => {
@@ -61,14 +57,7 @@ function Navbar({ classes, username }) {
     <>
       {showMenu ? (
         <CollapsedMenu
-          showFaculty={showFaculty}
-          showAdmisson={showAdmisson}
-          showPrograms={showPrograms}
-          showStudents={showStudents}
-          setShowFaculty={setShowFaculty}
-          setShowAdmission={setShowAdmission}
-          setShowPrograms={setShowPrograms}
-          setShowStudents={setShowStudents}
+          username={username}
           handleClickShowMenu={handleClickShowMenu}
         />
       ) : null}
@@ -112,13 +101,19 @@ function Navbar({ classes, username }) {
               ))}
             </StyledGridNavLinks>
             <StyledGridHoverUser className={classes.loginNav}>
-              <StyledParagraph>{username}</StyledParagraph>
+              <StyledParagraph>
+                {' '}
+                <FontAwesomeIcon icon={faUserCircle} />
+                {username}
+              </StyledParagraph>
               <StyledGridDropdown
                 container
                 direction="column"
               >
                 <NavLink to="/">Profile</NavLink>
-                <Paragraph onClick={handleClickLogout}>Logout</Paragraph>
+                <Paragraph onClick={handleClickLogout}>
+                  Logout
+                </Paragraph>
               </StyledGridDropdown>
             </StyledGridHoverUser>
             <StyledButtonCollapsedMenu onClick={handleClickShowMenu}>

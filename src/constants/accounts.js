@@ -1,11 +1,11 @@
 export const accounts = [
   {
     username: 'lobu',
-    password: '123456',
+    password: '230219',
   },
   {
     username: 'trixi',
-    password: '123456',
+    password: '230219',
   },
   {
     username: 'admin',
