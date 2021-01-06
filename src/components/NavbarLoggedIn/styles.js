@@ -158,6 +158,9 @@ export const StyledGridHoverUser = styled(Grid)(({ theme }) => ({
   '&:hover > div': {
     display: 'flex',
   },
+  [theme.breakpoints.down('sm')]: {
+    display: 'none',
+  },
 }));
 
 export const StyledParagraph = styled(Paragraph)(({ theme }) => ({
@@ -173,6 +176,10 @@ export const StyledParagraph = styled(Paragraph)(({ theme }) => ({
   '&:hover': {
     background: theme.palette.mainColor,
     color: theme.palette.white,
+  },
+  '& svg': {
+    marginRight: '10px',
+    fontSize: '24px',
   },
 }));
 

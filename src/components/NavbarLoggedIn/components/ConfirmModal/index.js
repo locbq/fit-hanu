@@ -4,16 +4,12 @@ import {
   DialogActions,
   DialogContent,
   DialogContentText,
-  DialogTitle,
 } from '@material-ui/core';
 
 import {
-  Heading3,
-  Heading4,
-} from 'components/Headings';
-import {
   StyledButtonConfirm,
   StyledButtonCancel,
+  StyledHeading3,
 } from './styles';
 
 export default function ConfirmModal({
@@ -36,14 +32,11 @@ export default function ConfirmModal({
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle id="alert-dialog-title">
-        <Heading4>Warning</Heading4>
-      </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          <Heading3>
+          <StyledHeading3>
             Are you sure you want to logout?
-          </Heading3>
+          </StyledHeading3>
         </DialogContentText>
       </DialogContent>
       <DialogActions>
