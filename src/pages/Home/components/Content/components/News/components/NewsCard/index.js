@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Grid,
   styled,
-  withStyles,
 } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faListUl } from '@fortawesome/free-solid-svg-icons';
@@ -35,14 +34,16 @@ const StyledGridDescription = styled(Grid)({
   padding: '20px',
 });
 
-const styles = () => ({
-  image: {
-    width: '100%',
-  },
-});
+const StyledHeading4 = styled(Heading4)(({ theme }) => ({
+  color: theme.palette.white,
+  textTransform: 'uppercase',
+}));
+
+const StyledImage = styled('img')(() => ({
+  width: '100%',
+}));
 
 function NewsCard({
-  classes,
   children,
   title = '',
   image = '',
@@ -51,9 +52,9 @@ function NewsCard({
     <StyledGridCard>
       <StyledGridHeader container>
         <StyledFAIcon icon={faListUl} />
-        <Heading4>{title}</Heading4>
+        <StyledHeading4>{title}</StyledHeading4>
       </StyledGridHeader>
-      {image !== '' ? <img src={image} alt="pic" className={classes.image} /> : null}
+      {image !== '' ? <StyledImage src={image} alt="pic" /> : null}
       <StyledGridDescription>
         {children}
       </StyledGridDescription>
@@ -61,4 +62,4 @@ function NewsCard({
   );
 }
 
-export default withStyles(styles)(NewsCard);
+export default NewsCard;
