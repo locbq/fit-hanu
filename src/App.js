@@ -26,6 +26,7 @@ import {
   Student,
   Login,
   ForgotLoginInfo,
+  Profile,
 } from './pages';
 
 const StyledContent = styled(Grid)({
@@ -102,6 +103,10 @@ function App() {
             <Route
               path="/login"
               component={Login}
+            />
+            <Route
+              path="/profile"
+              component={Profile}
             />
           </Switch>
         </StyledContent>
