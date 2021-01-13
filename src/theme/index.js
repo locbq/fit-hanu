@@ -10,6 +10,7 @@ const theme = createMuiTheme({
     underlineGrey: '#a5a5a5',
     borderGrey: '#eeeeee',
     borderInput: '#cccccc',
+    greyAAA: '#aaaaaa',
     paragraphColor: '#333333',
     backgroundGrey: '#fafafa',
     arrowColor: 'rgba(255,255,255, 0.3)',

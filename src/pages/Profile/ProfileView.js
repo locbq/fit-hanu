@@ -38,12 +38,7 @@ export default function ProfileView() {
     <Section>
       <Container fixed>
         <StyledGridContent>
-          <BasicInformation
-            fullName={userDetail.fullName}
-            studentId={userDetail.studentId}
-            dateOfBirth={userDetail.dateOfBirth}
-            classRoom={userDetail.class}
-          />
+          <BasicInformation user={userDetail} />
         </StyledGridContent>
         <ProfileNavbar />
         <StyledGridContent>
