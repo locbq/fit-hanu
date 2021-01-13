@@ -10,7 +10,7 @@ import { getUserDetail } from 'helpers/user/getUserDetail';
 import { Route, Switch } from 'react-router';
 import {
   BasicInformation,
-  Course,
+  Timetable,
   Finance,
   Grades,
   Graduation,
@@ -57,8 +57,8 @@ export default function ProfileView() {
             />
             <Route
               exact
-              path="/profile/course"
-              component={Course}
+              path="/profile/timetable"
+              component={Timetable}
             />
             <Route
               exact

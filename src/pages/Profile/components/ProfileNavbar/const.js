@@ -4,8 +4,8 @@ export const profileNavbar = [
     url: '/profile/grades',
   },
   {
-    navItem: 'Course',
-    url: '/profile/course',
+    navItem: 'Timetable',
+    url: '/profile/timetable',
   },
   {
     navItem: 'Finance',
