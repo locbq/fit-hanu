@@ -7,17 +7,23 @@ import {
   Table,
   TableRow,
 } from '@material-ui/core';
+import { faCamera } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import moment from 'moment';
 
 import avatarImage from 'assets/img/our-staff/avatar.png';
 import { Heading3 } from 'components/Headings';
+import { Button } from 'components';
 import {
   StyledImageAvatar,
   StyledGridInfo,
   StyledTableCell,
   StyledButtonEdit,
 } from './styles';
-import { EditModal } from './components';
+import {
+  EditModal,
+  AvatarModal,
+} from './components';
 
 export default function BasicInformation({ user }) {
   const [userInfo, setUserInfo] = useState({
@@ -27,11 +33,8 @@ export default function BasicInformation({ user }) {
     class: '',
   });
   const [showEditModal, setShowEditModal] = useState(false);
-  const [testLink, setTestLink] = useState('');
-
-  const handleChangeTesst = (event) => {
-    setTestLink(event.target.value);
-  };
+  const [showEditAvatar, setShowEditAvatar] = useState(false);
+  const [avatarLink, setAvatarLink] = useState('');
 
   useEffect(() => {
     setUserInfo({ ...user });
@@ -48,19 +51,37 @@ export default function BasicInformation({ user }) {
     setShowEditModal(false);
     setUserInfo({ ...userDetail });
   };
+  const hanldeClickShowEditAvatar = () => {
+    setShowEditAvatar(true);
+  };
+  const handleClickCancleEditAvatar = () => {
+    setShowEditAvatar(false);
+    setAvatarLink('');
+  };
+  const hanldeClickConfirmEditAvatar = (link) => {
+    setShowEditAvatar(false);
+    setAvatarLink(link);
+  };
 
   return (
     <>
       <Grid container>
         <Grid
           item
+          container
           lg={3}
           md={3}
           sm={12}
           xs={12}
+          justify="center"
         >
-          <StyledImageAvatar src={testLink || avatarImage} alt="avatar" />
-          <input value={testLink} onChange={handleChangeTesst} />
+          <StyledImageAvatar src={avatarLink || avatarImage} alt="avatar" />
+          <Button onClick={hanldeClickShowEditAvatar}>
+            <FontAwesomeIcon
+              size="2x"
+              icon={faCamera}
+            />
+          </Button>
         </Grid>
         <StyledGridInfo
           item
@@ -128,6 +149,12 @@ export default function BasicInformation({ user }) {
         userInfo={userInfo}
         onConfirm={hanldeClickConfirmEdit}
         onCancel={handleClickCancleEdit}
+      />
+      <AvatarModal
+        open={showEditAvatar}
+        avatarLink={avatarLink}
+        onConfirm={hanldeClickConfirmEditAvatar}
+        onCancel={handleClickCancleEditAvatar}
       />
     </>
   );

@@ -8,6 +8,7 @@ import { Button } from 'components';
 
 export const StyledImageAvatar = styled('img')(() => ({
   width: '100%',
+  marginBottom: ' 20px',
 }));
 
 export const StyledGridInfo = styled(Grid)(({ theme }) => ({
