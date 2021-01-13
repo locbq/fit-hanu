@@ -22,6 +22,7 @@ export const StyledGridInfo = styled(Grid)(({ theme }) => ({
 
 export const StyledTableCell = styled(TableCell)(({ theme }) => ({
   border: `2px solid ${theme.palette.secondaryColor}`,
+  width: '50%',
 }));
 
 export const StyledButtonEdit = styled(Button)(() => ({

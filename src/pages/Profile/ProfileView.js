@@ -51,7 +51,9 @@ export default function ProfileView() {
             <Route
               exact
               path="/profile/grades"
-              component={Grades}
+              render={(props) => (
+                <Grades {...props} user={userDetail} />
+              )}
             />
             <Route
               exact

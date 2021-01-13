@@ -26,18 +26,16 @@ import {
 } from './components';
 
 export default function BasicInformation({ user }) {
-  const [userInfo, setUserInfo] = useState({
-    fullName: '',
-    studentId: '',
-    dateOfBirth: '',
-    class: '',
-  });
+  const [userInfo, setUserInfo] = useState({});
+
   const [showEditModal, setShowEditModal] = useState(false);
   const [showEditAvatar, setShowEditAvatar] = useState(false);
   const [avatarLink, setAvatarLink] = useState('');
 
   useEffect(() => {
-    setUserInfo({ ...user });
+    if (user) {
+      setUserInfo({ ...user });
+    }
   }, [user]);
 
   const hanldeClickShowEdit = () => {
@@ -123,7 +121,7 @@ export default function BasicInformation({ user }) {
               </StyledTableCell>
               <StyledTableCell>
                 <Heading3>
-                  {moment(userInfo.dateOfBirth).format('DD/MM/YYYY')}
+                  {moment(userInfo?.dateOfBirth).format('DD/MM/YYYY')}
                 </Heading3>
               </StyledTableCell>
             </TableRow>
