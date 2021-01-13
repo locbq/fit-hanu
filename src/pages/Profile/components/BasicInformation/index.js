@@ -1,11 +1,16 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import {
+  Grid,
+  Table,
+  TableRow,
+} from '@material-ui/core';
 
 import avatarImage from 'assets/img/our-staff/avatar.png';
-import { Field } from './components';
+import { Heading3 } from 'components/Headings';
 import {
   StyledImageAvatar,
   StyledGridInfo,
+  StyledTableCell,
 } from './styles';
 
 export default function BasicInformation({
@@ -33,26 +38,68 @@ export default function BasicInformation({
         sm={12}
         xs={12}
       >
-        <Field
-          label="Fullname"
-          value={fullName}
-        />
-        <Field
-          label="Student ID"
-          value={studentId}
-        />
-        <Field
-          label="Date of Birth"
-          value={dateOfBirth}
-        />
-        <Field
-          label="Class"
-          value={classRoom}
-        />
-        <Field
-          label="GPA"
-          value={gpa}
-        />
+        <Table>
+          <TableRow>
+            <StyledTableCell>
+              <Heading3>
+                Fullname
+              </Heading3>
+            </StyledTableCell>
+            <StyledTableCell>
+              <Heading3>
+                {fullName}
+              </Heading3>
+            </StyledTableCell>
+          </TableRow>
+          <TableRow>
+            <StyledTableCell>
+              <Heading3>
+                Student ID
+              </Heading3>
+            </StyledTableCell>
+            <StyledTableCell>
+              <Heading3>
+                {studentId}
+              </Heading3>
+            </StyledTableCell>
+          </TableRow>
+          <TableRow>
+            <StyledTableCell>
+              <Heading3>
+                Date of Birth
+              </Heading3>
+            </StyledTableCell>
+            <StyledTableCell>
+              <Heading3>
+                {dateOfBirth}
+              </Heading3>
+            </StyledTableCell>
+          </TableRow>
+          <TableRow>
+            <StyledTableCell>
+              <Heading3>
+                Class
+              </Heading3>
+            </StyledTableCell>
+            <StyledTableCell>
+              <Heading3>
+                {classRoom}
+              </Heading3>
+            </StyledTableCell>
+          </TableRow>
+          <TableRow>
+            <StyledTableCell>
+              <Heading3>
+                GPA
+              </Heading3>
+            </StyledTableCell>
+            <StyledTableCell>
+              <Heading3>
+                {gpa}
+              </Heading3>
+            </StyledTableCell>
+          </TableRow>
+        </Table>
       </StyledGridInfo>
     </Grid>
   );
