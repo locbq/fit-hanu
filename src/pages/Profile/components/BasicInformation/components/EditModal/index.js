@@ -36,6 +36,8 @@ export default function EditModal({
   });
 
   const disableSave = updatedUserInfo.fullName === '' || updatedUserInfo.dateOfBirth === '';
+  const curDate = new Date();
+  const currentDate = curDate.toISOString().substr(0, 10);
 
   useEffect(() => {
     if (userInfo) {
@@ -100,6 +102,9 @@ export default function EditModal({
             type="date"
             fullWidth
             defaultValue={updatedUserInfo.dateOfBirth}
+            inputProps={{
+              max: currentDate,
+            }}
             onChange={handleChangeDateOfBirth}
           />
         </StyledGridField>
