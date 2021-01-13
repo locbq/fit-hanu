@@ -35,6 +35,8 @@ export default function EditModal({
     class: '',
   });
 
+  const disableSave = updatedUserInfo.fullName === '' || updatedUserInfo.dateOfBirth === '';
+
   useEffect(() => {
     if (userInfo) {
       setUpdatedUserInfo({
@@ -116,7 +118,10 @@ export default function EditModal({
         <StyledButtonCancel onClick={handleClose}>
           Cancel
         </StyledButtonCancel>
-        <Button onClick={handleConfirm}>
+        <Button
+          disabled={disableSave}
+          onClick={handleConfirm}
+        >
           Save
         </Button>
       </StyledDialogActions>

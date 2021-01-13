@@ -27,3 +27,7 @@ export const StyledTableCell = styled(TableCell)(({ theme }) => ({
 export const StyledButtonEdit = styled(Button)(() => ({
   margin: '20px 0px 0px auto',
 }));
+
+export const StyledButtonAvatar = styled(Button)(() => ({
+  width: 'auto',
+}));

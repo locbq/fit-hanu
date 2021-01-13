@@ -13,12 +13,12 @@ import moment from 'moment';
 
 import avatarImage from 'assets/img/our-staff/avatar.png';
 import { Heading3 } from 'components/Headings';
-import { Button } from 'components';
 import {
   StyledImageAvatar,
   StyledGridInfo,
   StyledTableCell,
   StyledButtonEdit,
+  StyledButtonAvatar,
 } from './styles';
 import {
   EditModal,
@@ -76,12 +76,12 @@ export default function BasicInformation({ user }) {
           justify="center"
         >
           <StyledImageAvatar src={avatarLink || avatarImage} alt="avatar" />
-          <Button onClick={hanldeClickShowEditAvatar}>
+          <StyledButtonAvatar onClick={hanldeClickShowEditAvatar}>
             <FontAwesomeIcon
               size="2x"
               icon={faCamera}
             />
-          </Button>
+          </StyledButtonAvatar>
         </Grid>
         <StyledGridInfo
           item

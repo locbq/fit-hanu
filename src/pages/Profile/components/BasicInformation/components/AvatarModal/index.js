@@ -72,7 +72,10 @@ export default function EditModal({
         <StyledButtonCancel onClick={handleClose}>
           Cancel
         </StyledButtonCancel>
-        <Button onClick={handleConfirm}>
+        <Button
+          disabled={link === ''}
+          onClick={handleConfirm}
+        >
           Save
         </Button>
       </StyledDialogActions>
