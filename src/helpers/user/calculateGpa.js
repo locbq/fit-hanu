@@ -7,11 +7,15 @@ export const calculateGpa = (grades) => {
     const totalGradePoints = [];
     const totalCredits = grades.map((grade) => grade.credits);
     const totalResults = grades.map((grade) => grade.grade);
-    const gpaValue = totalResults.map((point) => calculateGrade(point).value);
+    const gpaValue = totalResults.map((point) => {
+      const calculateResult = calculateGrade(point);
+      return calculateResult.value;
+    });
     for (let i = 0; i < totalCredits.length; i += 1) {
       totalGradePoints.push(totalCredits[i] * gpaValue[i]);
     }
-    return totalGradePoints.reduce(sum) / totalCredits.reduce(sum);
+    const gpa = Math.round((totalGradePoints.reduce(sum) / totalCredits.reduce(sum)) * 10) / 10;
+    return gpa;
   }
   return '';
 };

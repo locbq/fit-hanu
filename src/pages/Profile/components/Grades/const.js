@@ -2,15 +2,15 @@ export const currentSemesterGrade = [
   {
     subject: 'Object-Oriented Programming',
     credits: 12.5,
-    grade: 65,
+    grade: 75,
   },
   {
-    subject: 'Internship Project',
+    subject: 'Web Application Development',
     credits: 12.5,
     grade: 95,
   },
   {
-    subject: 'Technology Enquiry Project',
+    subject: 'Cloud Computing Architecture ',
     credits: 12.5,
     grade: 75,
   },
@@ -23,7 +23,7 @@ export const currentSemesterGrade = [
 
 export const previousSemesterGrade = [
   {
-    subject: 'Introduction to Programming',
+    subject: 'Big Data',
     credits: 12.5,
     grade: 60,
   },
