@@ -27,6 +27,11 @@ export default function BasicInformation({ user }) {
     class: '',
   });
   const [showEditModal, setShowEditModal] = useState(false);
+  const [testLink, setTestLink] = useState('');
+
+  const handleChangeTesst = (event) => {
+    setTestLink(event.target.value);
+  };
 
   useEffect(() => {
     setUserInfo({ ...user });
@@ -54,7 +59,8 @@ export default function BasicInformation({ user }) {
           sm={12}
           xs={12}
         >
-          <StyledImageAvatar src={avatarImage} alt="avatar" />
+          <StyledImageAvatar src={testLink || avatarImage} alt="avatar" />
+          <input value={testLink} onChange={handleChangeTesst} />
         </Grid>
         <StyledGridInfo
           item
