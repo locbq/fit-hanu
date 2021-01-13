@@ -18,7 +18,6 @@ export default function BasicInformation({
   studentId = '',
   dateOfBirth = '',
   classRoom = '',
-  gpa = '',
 }) {
   return (
     <Grid container>
@@ -84,18 +83,6 @@ export default function BasicInformation({
             <StyledTableCell>
               <Heading3>
                 {classRoom}
-              </Heading3>
-            </StyledTableCell>
-          </TableRow>
-          <TableRow>
-            <StyledTableCell>
-              <Heading3>
-                GPA
-              </Heading3>
-            </StyledTableCell>
-            <StyledTableCell>
-              <Heading3>
-                {gpa}
               </Heading3>
             </StyledTableCell>
           </TableRow>

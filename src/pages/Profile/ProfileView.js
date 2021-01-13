@@ -43,7 +43,6 @@ export default function ProfileView() {
             studentId={userDetail.studentId}
             dateOfBirth={userDetail.dateOfBirth}
             classRoom={userDetail.class}
-            gpa={userDetail.gpa}
           />
         </StyledGridContent>
         <ProfileNavbar />

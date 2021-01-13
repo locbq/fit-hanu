@@ -4,7 +4,7 @@ import {
   Grid,
 } from '@material-ui/core';
 
-import { Heading3 } from 'components/Headings';
+import { Paragraph } from 'components/Headings';
 
 const StyledGrid = styled(Grid)(() => ({
   marginBottom: '20px',
@@ -18,25 +18,25 @@ export default function Field({
     <StyledGrid container>
       <Grid
         item
-        lg={3}
-        md={3}
-        sm={6}
-        xs={6}
+        lg={9}
+        md={9}
+        sm={10}
+        xs={10}
       >
-        <Heading3>
+        <Paragraph>
           {label}
           :
           {' '}
-        </Heading3>
+        </Paragraph>
       </Grid>
       <Grid
         item
-        lg={9}
-        md={9}
-        sm={6}
-        xs={6}
+        lg={3}
+        md={3}
+        sm={2}
+        xs={2}
       >
-        <Heading3>{value}</Heading3>
+        <Paragraph>{value}</Paragraph>
       </Grid>
     </StyledGrid>
   );

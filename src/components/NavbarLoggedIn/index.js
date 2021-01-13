@@ -110,7 +110,7 @@ function Navbar({ classes, username }) {
                 container
                 direction="column"
               >
-                <NavLink to="/profile">Profile</NavLink>
+                <NavLink to="/profile/grades">Profile</NavLink>
                 <Paragraph onClick={handleClickLogout}>
                   Logout
                 </Paragraph>
