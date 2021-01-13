@@ -7,7 +7,15 @@ import { Container } from '@material-ui/core';
 import { Section } from 'components';
 import { decrypt } from 'helpers/encrypt';
 import { getUserDetail } from 'helpers/user/getUserDetail';
-import { BasicInformation } from './components';
+import { Route, Switch } from 'react-router';
+import {
+  BasicInformation,
+  Course,
+  Finance,
+  Grades,
+  Graduation,
+  ProfileNavbar,
+} from './components';
 import { StyledGridContent } from './styles';
 
 export default function ProfileView() {
@@ -37,6 +45,36 @@ export default function ProfileView() {
             classRoom={userDetail.class}
             gpa={userDetail.gpa}
           />
+        </StyledGridContent>
+        <ProfileNavbar />
+        <StyledGridContent>
+          <Switch>
+            <Route
+              exact
+              path="/profile"
+              component={Grades}
+            />
+            <Route
+              exact
+              path="/profile/grades"
+              component={Grades}
+            />
+            <Route
+              exact
+              path="/profile/course"
+              component={Course}
+            />
+            <Route
+              exact
+              path="/profile/finance"
+              component={Finance}
+            />
+            <Route
+              exact
+              path="/profile/graduation"
+              component={Graduation}
+            />
+          </Switch>
         </StyledGridContent>
       </Container>
     </Section>
