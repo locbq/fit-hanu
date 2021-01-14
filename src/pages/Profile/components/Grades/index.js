@@ -22,7 +22,7 @@ function Grades({ user }) {
           const calculatedGrade = calculateGrade(grade.grade);
           return (
             <Field
-              label={grade.subject}
+              label={`${grade.code}-${grade.subject}`}
               value={calculatedGrade.letter}
             />
           );
@@ -46,7 +46,7 @@ function Grades({ user }) {
           const calculatedGrade = calculateGrade(grade.grade);
           return (
             <Field
-              label={grade.subject}
+              label={`${grade.code}-${grade.subject}`}
               value={calculatedGrade.letter}
             />
           );

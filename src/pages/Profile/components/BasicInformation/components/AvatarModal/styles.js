@@ -10,12 +10,12 @@ import { Heading3 } from 'components/Headings';
 import { Button } from 'components';
 
 export const StyledButtonCancel = styled(Button)(({ theme }) => ({
-  color: theme.palette.greyAAA,
+  color: theme.palette.greyAA,
   background: theme.palette.borderGrey,
   '&:hover': {
-    background: theme.palette.borderInput,
+    background: theme.palette.greyCC,
     transition: '0.25s ease-in-out',
-    color: theme.palette.greyAAA,
+    color: theme.palette.greyAA,
   },
 }));
 
@@ -34,7 +34,7 @@ export const StyledInputDate = styled('input')(() => ({
 
 export const StyledInput = styled(OutlinedInput)(({ theme }) => ({
   '& .Mui-disabled': {
-    background: theme.palette.borderInput,
+    background: theme.palette.greyCC,
   },
 }));
 

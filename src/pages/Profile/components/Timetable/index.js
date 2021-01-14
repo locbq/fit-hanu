@@ -2,48 +2,109 @@ import React from 'react';
 import {
   Table,
   TableBody,
-  TableCell,
   TableHead,
   TableRow,
+  Grid,
 } from '@material-ui/core';
 
 import { Heading3 } from 'components/Headings';
+import theme from 'theme';
 import {
   StyledTableCellHead,
   StyledGrid,
+  StyledGridLabelContainer,
+  StyledLabelCell,
 } from './styles';
-import { weekDays } from './const';
+import {
+  weekDays,
+  timetableData,
+} from './const';
+import { Label } from './components';
 
 function Timetable() {
+  const renderTableCell = (array) => array.map((data) => (
+    data.type !== '' ? (
+      <StyledLabelCell background={
+        data.type === 'lecture' ? theme.palette.mainColor : theme.palette.blue
+        }
+      >
+        <Heading3>{data.code}</Heading3>
+      </StyledLabelCell>
+    ) : (
+      <StyledLabelCell>
+        <Heading3>{data.code}</Heading3>
+      </StyledLabelCell>
+    )
+  ));
+
   return (
-    <StyledGrid>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <StyledTableCellHead>
-              <Heading3>Time/Day</Heading3>
-            </StyledTableCellHead>
-            {weekDays.map((day) => (
-              <StyledTableCellHead><Heading3>{day}</Heading3></StyledTableCellHead>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          <TableRow>
-            <TableCell>7:30 - 9:00</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>9:30 - 11:00</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>1:30 - 3:00</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>3:30 - 5:00</TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
-    </StyledGrid>
+    <>
+      <StyledGridLabelContainer
+        container
+        justify="flex-end"
+      >
+        <Grid
+          item
+          container
+          lg={3}
+          md={3}
+          sm={5}
+          xs={5}
+        >
+          <Label
+            background={theme.palette.mainColor}
+            title="Lecture"
+
+          />
+          <Label
+            background={theme.palette.blue}
+            title="Tutorial"
+          />
+        </Grid>
+      </StyledGridLabelContainer>
+      <StyledGrid>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <StyledTableCellHead>
+                <Heading3>Time/Day</Heading3>
+              </StyledTableCellHead>
+              {weekDays.map((day) => (
+                <StyledTableCellHead>
+                  <Heading3>{day}</Heading3>
+                </StyledTableCellHead>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <StyledTableCellHead>
+                <Heading3>7:30 - 9:00</Heading3>
+              </StyledTableCellHead>
+              {renderTableCell(timetableData.firstShift)}
+            </TableRow>
+            <TableRow>
+              <StyledTableCellHead>
+                <Heading3>9:30 - 11:00</Heading3>
+              </StyledTableCellHead>
+              {renderTableCell(timetableData.secondShift)}
+            </TableRow>
+            <TableRow>
+              <StyledTableCellHead>
+                <Heading3>1:30 - 3:00</Heading3>
+              </StyledTableCellHead>
+              {renderTableCell(timetableData.thirdShift)}
+            </TableRow>
+            <TableRow>
+              <StyledTableCellHead>
+                <Heading3>3:30 - 5:00</Heading3>
+              </StyledTableCellHead>
+              {renderTableCell(timetableData.fourthShift)}
+            </TableRow>
+          </TableBody>
+        </Table>
+      </StyledGrid>
+    </>
   );
 }
 

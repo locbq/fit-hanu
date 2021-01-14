@@ -9,7 +9,7 @@ export const StyledNavLink = styled(NavLink)({
 
 export const StyledHeading4 = styled(Heading4)(({ theme }) => ({
   padding: '15px 15px 15px 30px',
-  borderBottom: `1px solid ${theme.palette.underlineGrey}`,
+  borderBottom: `1px solid ${theme.palette.greyA5}`,
   textTransform: 'uppercase',
   color: theme.palette.white,
 }));

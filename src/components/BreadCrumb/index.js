@@ -25,7 +25,7 @@ const StyledParagraphLast = withStyles((theme) => ({
 
 const StyledParagraph = withStyles((theme) => ({
   root: {
-    color: theme.palette.paragraphColor,
+    color: theme.palette.darkGrey33,
   },
 }))(Paragraph);
 

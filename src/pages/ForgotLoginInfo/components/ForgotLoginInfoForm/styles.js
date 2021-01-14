@@ -25,7 +25,7 @@ export const StyledParagraph = styled(Paragraph)(({ theme }) => ({
 export const StyledInput = styled(InputBase)(({ theme }) => ({
   fontFamily: '"Open Sans", sans-serif',
   padding: '12px 14px',
-  border: `2px solid ${theme.palette.borderInput}`,
+  border: `2px solid ${theme.palette.greyCC}`,
   marginRight: '20px',
 }));
 

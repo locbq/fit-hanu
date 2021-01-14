@@ -8,16 +8,19 @@ export const accounts = [
     class: '2C-13',
     currentSemesterGrade: [
       {
-        subject: 'Software Quality and Testingg',
+        code: 'COS80022',
+        subject: 'Software Quality and Testing',
         credits: 12.5,
         grade: 90,
       },
       {
+        code: 'COS60010',
         subject: 'Technology Enquiry Project',
         credits: 12.5,
         grade: 70,
       },
       {
+        code: 'COS70008',
         subject: 'Technology Innovation Project',
         credits: 25,
         grade: 82,
@@ -25,41 +28,49 @@ export const accounts = [
     ],
     previousSemesterGrade: [
       {
+        code: 'COS70006',
         subject: 'Object-Oriented Programming',
         credits: 12.5,
         grade: 75,
       },
       {
+        code: 'COS80021',
         subject: 'Web Application Development',
         credits: 12.5,
         grade: 95,
       },
       {
+        code: 'COS80001',
         subject: 'Cloud Computing Architecture ',
         credits: 12.5,
         grade: 75,
       },
       {
+        code: 'COS60011',
         subject: 'Technology Design Project',
         credits: 12.5,
         grade: 50,
       },
       {
+        code: 'COS80023',
         subject: 'Big Data',
         credits: 12.5,
         grade: 60,
       },
       {
+        code: 'COS60004',
         subject: 'Creating Web Applications',
         credits: 12.5,
         grade: 95,
       },
       {
+        code: 'COS70004',
         subject: 'User-Centred Design ',
         credits: 12.5,
         grade: 75,
       },
       {
+        code: 'COS60009',
         subject: 'Data Management for the Big Data Age',
         credits: 12.5,
         grade: 50,
