@@ -64,7 +64,7 @@ export default function BasicInformation({ user }) {
     setShowEditAvatar(false);
     setTimeout(() => {
       setAvatarLink(link);
-      setIsLoading(true);
+      setIsLoading(false);
     }, 1500);
   };
 
