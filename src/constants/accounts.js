@@ -26,6 +26,96 @@ export const accounts = [
         grade: 82,
       },
     ],
+    timetable: {
+      firstShift: [
+        {
+          code: 'COS80022',
+          type: 'tutorial',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: 'COS60010',
+          type: 'lecture',
+        },
+      ],
+      secondShift: [
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: 'COS80022',
+          type: 'lecture',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+      ],
+      thirdShift: [
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: 'COS60010',
+          type: 'tutorial',
+        },
+        {
+          code: 'COS70008',
+          type: 'lecture',
+        },
+        {
+          code: '',
+          type: '',
+        },
+      ],
+      fourthShift: [
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: 'COS70008',
+          type: 'tutorial',
+        },
+        {
+          code: '',
+          type: '',
+        },
+      ],
+    },
     previousSemesterGrade: [
       {
         code: 'COS70006',

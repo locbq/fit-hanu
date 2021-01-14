@@ -58,7 +58,9 @@ export default function ProfileView() {
             <Route
               exact
               path="/profile/timetable"
-              component={Timetable}
+              render={(props) => (
+                <Timetable {...props} user={userDetail} />
+              )}
             />
             <Route
               exact

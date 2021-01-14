@@ -15,14 +15,11 @@ import {
   StyledGridLabelContainer,
   StyledLabelCell,
 } from './styles';
-import {
-  weekDays,
-  timetableData,
-} from './const';
+import { weekDays } from './const';
 import { Label } from './components';
 
-function Timetable() {
-  const renderTableCell = (array) => array.map((data) => (
+function Timetable({ user }) {
+  const renderTableCell = (array) => array?.map((data) => (
     data.type !== '' ? (
       <StyledLabelCell background={
         data.type === 'lecture' ? theme.palette.mainColor : theme.palette.blue
@@ -81,25 +78,25 @@ function Timetable() {
               <StyledTableCellHead>
                 <Heading3>7:30 - 9:00</Heading3>
               </StyledTableCellHead>
-              {renderTableCell(timetableData.firstShift)}
+              {renderTableCell(user?.timetable?.firstShift)}
             </TableRow>
             <TableRow>
               <StyledTableCellHead>
                 <Heading3>9:30 - 11:00</Heading3>
               </StyledTableCellHead>
-              {renderTableCell(timetableData.secondShift)}
+              {renderTableCell(user?.timetable?.secondShift)}
             </TableRow>
             <TableRow>
               <StyledTableCellHead>
                 <Heading3>1:30 - 3:00</Heading3>
               </StyledTableCellHead>
-              {renderTableCell(timetableData.thirdShift)}
+              {renderTableCell(user?.timetable?.thirdShift)}
             </TableRow>
             <TableRow>
               <StyledTableCellHead>
                 <Heading3>3:30 - 5:00</Heading3>
               </StyledTableCellHead>
-              {renderTableCell(timetableData.fourthShift)}
+              {renderTableCell(user?.timetable?.fourthShift)}
             </TableRow>
           </TableBody>
         </Table>
