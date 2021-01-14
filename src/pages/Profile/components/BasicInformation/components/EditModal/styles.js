@@ -4,6 +4,7 @@ import {
   OutlinedInput,
   DialogActions,
   withStyles,
+  CircularProgress,
 } from '@material-ui/core';
 
 import { Heading3 } from 'components/Headings';
@@ -52,3 +53,9 @@ export const StyledGridHeading = styled(Grid)(({ theme }) => ({
     color: theme.palette.white,
   },
 }));
+
+export const StyledCircularProgress = withStyles((theme) => ({
+  svg: {
+    color: theme.palette.white,
+  },
+}))(CircularProgress);

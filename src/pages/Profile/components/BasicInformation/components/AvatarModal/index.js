@@ -12,12 +12,16 @@ import {
   Heading2,
   Heading3,
 } from 'components/Headings';
-import { Button } from 'components';
+import {
+  Button,
+  ErrorMessage,
+} from 'components';
 import {
   StyledGridField,
   StyledButtonCancel,
   StyledDialogActions,
   StyledGridHeading,
+  StyledImagePreview,
 } from './styles';
 
 export default function EditModal({
@@ -27,6 +31,7 @@ export default function EditModal({
   onCancel,
 }) {
   const [link, setLink] = useState('');
+  const [errorMessageImageUrl, setErrorMessageImageUrl] = useState('');
 
   useEffect(() => {
     if (avatarLink) {
@@ -34,14 +39,34 @@ export default function EditModal({
     }
   }, [avatarLink]);
 
+  const imageFound = () => {
+    setErrorMessageImageUrl('');
+  };
+  const imageNotFound = () => {
+    setErrorMessageImageUrl('Link chưa chính xác. Vui lòng thử lại');
+  };
+  const handleErrorImageUrl = (url) => {
+    if (url) {
+      const tester = new Image();
+      tester.onload = imageFound;
+      tester.onerror = imageNotFound;
+      tester.src = url;
+    } else {
+      setErrorMessageImageUrl('');
+    }
+  };
   const handleChangeLink = (event) => {
-    setLink(event.target.value);
+    const { value } = event.target;
+    handleErrorImageUrl(value.trim());
+    setLink(value.trim());
   };
   const handleConfirm = () => {
     onConfirm(link);
   };
   const handleClose = () => {
     onCancel();
+    setLink(avatarLink);
+    setErrorMessageImageUrl('');
   };
 
   return (
@@ -56,7 +81,9 @@ export default function EditModal({
         <Heading2>Edit</Heading2>
       </StyledGridHeading>
       <DialogContent>
-
+        {link && !errorMessageImageUrl ? (
+          <StyledImagePreview src={link} alt="avatar" />
+        ) : null}
         <StyledGridField>
           <Heading3>
             Link
@@ -66,6 +93,7 @@ export default function EditModal({
             defaultValue={link}
             onChange={handleChangeLink}
           />
+          <ErrorMessage text={errorMessageImageUrl} />
         </StyledGridField>
       </DialogContent>
       <StyledDialogActions>
@@ -73,7 +101,7 @@ export default function EditModal({
           Cancel
         </StyledButtonCancel>
         <Button
-          disabled={link === ''}
+          disabled={link === '' || errorMessageImageUrl !== ''}
           onClick={handleConfirm}
         >
           Save

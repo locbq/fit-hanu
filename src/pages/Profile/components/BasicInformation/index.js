@@ -19,6 +19,8 @@ import {
   StyledTableCell,
   StyledButtonEdit,
   StyledButtonAvatar,
+  StyledCircularProgress,
+  StyledGridSpinner,
 } from './styles';
 import {
   EditModal,
@@ -31,6 +33,7 @@ export default function BasicInformation({ user }) {
   const [showEditModal, setShowEditModal] = useState(false);
   const [showEditAvatar, setShowEditAvatar] = useState(false);
   const [avatarLink, setAvatarLink] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (user) {
@@ -54,11 +57,15 @@ export default function BasicInformation({ user }) {
   };
   const handleClickCancleEditAvatar = () => {
     setShowEditAvatar(false);
-    setAvatarLink('');
+    setAvatarLink(avatarLink);
   };
   const hanldeClickConfirmEditAvatar = (link) => {
+    setIsLoading(true);
     setShowEditAvatar(false);
-    setAvatarLink(link);
+    setTimeout(() => {
+      setAvatarLink(link);
+      setIsLoading(true);
+    }, 1500);
   };
 
   return (
@@ -73,8 +80,21 @@ export default function BasicInformation({ user }) {
           xs={12}
           justify="center"
         >
-          <StyledImageAvatar src={avatarLink || avatarImage} alt="avatar" />
-          <StyledButtonAvatar onClick={hanldeClickShowEditAvatar}>
+          {isLoading ? (
+            <StyledGridSpinner
+              container
+              justify="center"
+              alignItems="center"
+            >
+              <StyledCircularProgress />
+            </StyledGridSpinner>
+          ) : (
+            <StyledImageAvatar src={avatarLink || avatarImage} alt="avatar" />
+          )}
+          <StyledButtonAvatar
+            disabled={isLoading}
+            onClick={hanldeClickShowEditAvatar}
+          >
             <FontAwesomeIcon
               size="2x"
               icon={faCamera}

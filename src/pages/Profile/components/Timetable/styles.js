@@ -9,6 +9,7 @@ import {
 const useStyles = makeStyles((theme) => ({
   cellBg: {
     background: (props) => props.background,
+    textAlign: 'center',
     '& h3': {
       color: theme.palette.white,
     },
@@ -17,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const StyledTableCellHead = styled(TableCell)(({ theme }) => ({
   background: theme.palette.secondaryColor,
+  textAlign: 'center',
   '& h3': {
     color: theme.palette.mainColor,
   },

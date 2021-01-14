@@ -20,6 +20,7 @@ import {
   StyledInput,
   StyledDialogActions,
   StyledGridHeading,
+  StyledCircularProgress,
 } from './styles';
 
 export default function EditModal({
@@ -34,6 +35,7 @@ export default function EditModal({
     dateOfBirth: '',
     class: '',
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const disableSave = updatedUserInfo.fullName === '' || updatedUserInfo.dateOfBirth === '';
   const curDate = new Date();
@@ -55,7 +57,11 @@ export default function EditModal({
     setUpdatedUserInfo({ ...updatedUserInfo, dateOfBirth: event.target.value });
   };
   const handleConfirm = () => {
-    onConfirm(updatedUserInfo);
+    setIsLoading(true);
+    setTimeout(() => {
+      onConfirm(updatedUserInfo);
+      setIsLoading(false);
+    }, 1000);
   };
   const handleClose = () => {
     onCancel(userInfo);
@@ -127,7 +133,7 @@ export default function EditModal({
           disabled={disableSave}
           onClick={handleConfirm}
         >
-          Save
+          {isLoading ? <StyledCircularProgress /> : 'Save'}
         </Button>
       </StyledDialogActions>
     </Dialog>

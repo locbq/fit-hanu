@@ -11,7 +11,7 @@ import { Button } from 'components';
 
 export const StyledButtonCancel = styled(Button)(({ theme }) => ({
   color: theme.palette.greyAA,
-  background: theme.palette.borderGrey,
+  background: theme.palette.greyEE,
   '&:hover': {
     background: theme.palette.greyCC,
     transition: '0.25s ease-in-out',
@@ -51,4 +51,8 @@ export const StyledGridHeading = styled(Grid)(({ theme }) => ({
   '& h2': {
     color: theme.palette.white,
   },
+}));
+
+export const StyledImagePreview = styled('img')(() => ({
+  width: '100%',
 }));

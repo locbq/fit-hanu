@@ -1,7 +1,9 @@
 import {
+  CircularProgress,
   Grid,
   styled,
   TableCell,
+  withStyles,
 } from '@material-ui/core';
 
 import { Button } from 'components';
@@ -31,4 +33,25 @@ export const StyledButtonEdit = styled(Button)(() => ({
 
 export const StyledButtonAvatar = styled(Button)(() => ({
   width: 'auto',
+}));
+
+export const StyledCircularProgress = withStyles((theme) => ({
+  svg: {
+    color: theme.palette.mainColor,
+  },
+}))(CircularProgress);
+
+export const StyledGridSpinner = styled(Grid)(({ theme }) => ({
+  [theme.breakpoints.up('lg')]: {
+    height: '298px',
+  },
+  [theme.breakpoints.up('md')]: {
+    height: '218px',
+  },
+  [theme.breakpoints.up('sm')]: {
+    height: '512px',
+  },
+  [theme.breakpoints.up('xs')]: {
+    height: '303px',
+  },
 }));
