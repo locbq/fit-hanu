@@ -14,14 +14,13 @@ function ProfileNavbar({ classes }) {
   return (
     <StyledGrid
       container
-      justify="space-around"
       alignItems="center"
     >
       {profileNavbar.map((nav) => (
         <StyledGridNav
           item
-          lg={3}
-          md={3}
+          lg={4}
+          md={4}
         >
           <StyledNavLink
             to={nav.url}

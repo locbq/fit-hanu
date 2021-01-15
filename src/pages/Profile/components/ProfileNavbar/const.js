@@ -11,8 +11,8 @@ export const profileNavbar = [
     navItem: 'Finance',
     url: '/profile/finance',
   },
-  {
-    navItem: 'Graduation',
-    url: '/profile/graduation',
-  },
+  // {
+  //   navItem: 'Graduation',
+  //   url: '/profile/graduation',
+  // },
 ];
