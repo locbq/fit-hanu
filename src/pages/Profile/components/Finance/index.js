@@ -26,13 +26,13 @@ function Finance({ user }) {
         <Field
           currency
           label={semester.subject}
-          value={semester.fee}
+          value={semester.fee.toLocaleString()}
         />
       ))}
       <Field
         currency
         label="Total"
-        value={calculateFee(user?.currentSemesterGrade)}
+        value={calculateFee(user?.currentSemesterGrade)?.toLocaleString()}
       />
     </>
   );
