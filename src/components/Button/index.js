@@ -19,6 +19,9 @@ const StyledButton = styled(MuiButton)(({ theme }) => ({
     background: theme.palette.secondaryColor,
     transition: '0.25s ease-in-out',
   },
+  '&.Mui-disabled': {
+    background: theme.palette.greyAA,
+  },
 }));
 
 function Button({

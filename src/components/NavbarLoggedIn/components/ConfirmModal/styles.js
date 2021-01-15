@@ -17,7 +17,7 @@ export const StyledButtonConfirm = styled(Button)(({ theme }) => ({
 export const StyledButtonCancel = styled(Button)(({ theme }) => ({
   background: 'transparent',
   width: 'auto',
-  color: theme.palette.borderInput,
+  color: theme.palette.greyCC,
   '&:hover': {
     background: 'transparent',
     transition: '0.25s ease-in-out',

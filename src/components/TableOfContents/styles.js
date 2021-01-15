@@ -25,7 +25,7 @@ export const Divider = styled(Grid)(({ theme }) => ({
 export const StyledNavLink = styled(NavLink)(({ theme }) => ({
   textDecoration: 'none',
   transition: '0.25s ease-in-out',
-  color: theme.palette.paragraphColor,
+  color: theme.palette.darkGrey33,
   '&:hover': {
     color: theme.palette.mainColor,
   },

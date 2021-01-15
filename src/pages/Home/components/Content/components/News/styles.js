@@ -36,7 +36,7 @@ export const StyledParagraph = styled(Paragraph)({
 
 export const styles = (theme) => ({
   timestamp: {
-    color: theme.palette.timestampGrey,
+    color: theme.palette.darkGrey5B,
     fontFamily: '"Open Sans", sans-serif',
     fontSize: '12px',
     fontStyle: 'italic',
