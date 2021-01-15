@@ -4,7 +4,8 @@ const theme = createMuiTheme({
   palette: {
     mainColor: '#fd8b4b',
     secondaryColor: '#231d1f',
-    dangerColor: '#fd4b64',
+    dangerColor: '#f44336',
+    successColor: '#4caf50',
     white: '#ffffff',
     black: '#000000',
     blue: '#4bbdfd',

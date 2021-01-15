@@ -12,18 +12,21 @@ export const accounts = [
         subject: 'Software Quality and Testing',
         credits: 12.5,
         grade: 90,
+        fee: 2500000,
       },
       {
         code: 'COS60010',
         subject: 'Technology Enquiry Project',
         credits: 12.5,
         grade: 70,
+        fee: 2500000,
       },
       {
         code: 'COS70008',
         subject: 'Technology Innovation Project',
         credits: 25,
         grade: 82,
+        fee: 2500000,
       },
     ],
     timetable: {

@@ -70,7 +70,9 @@ export default function ProfileView() {
             <Route
               exact
               path="/profile/finance"
-              component={Finance}
+              render={(props) => (
+                <Finance {...props} user={userDetail} />
+              )}
             />
             <Route
               exact

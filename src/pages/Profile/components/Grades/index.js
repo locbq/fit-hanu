@@ -5,7 +5,7 @@ import {
   calculateGrade,
   calculateGpa,
 } from 'helpers';
-import { Field } from './components';
+import { Field } from '../components';
 import { StyledHeading2 } from './styles';
 
 function Grades({ user }) {
