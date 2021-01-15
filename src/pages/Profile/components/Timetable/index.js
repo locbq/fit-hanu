@@ -44,7 +44,7 @@ function Timetable({ user }) {
           item
           container
           lg={3}
-          md={3}
+          md={4}
           sm={5}
           xs={5}
         >

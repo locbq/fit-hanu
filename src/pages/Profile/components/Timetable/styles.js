@@ -47,7 +47,7 @@ export const StyledLabelCell = ({
 
 export const StyledGridLabelContainer = styled(Grid)(({ theme }) => ({
   marginBottom: '20px',
-  [theme.breakpoints.down('md')]: {
+  [theme.breakpoints.down('sm')]: {
     marginBottom: '0px',
   },
 }));

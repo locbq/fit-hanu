@@ -36,7 +36,7 @@ function Label({
       container
       item
       lg={4}
-      md={4}
+      md={5}
       sm={12}
       xs={12}
       {...props}
