@@ -4,8 +4,10 @@ import { withStyles } from '@material-ui/core';
 
 import { Paragraph } from 'components/Headings';
 import { Button } from 'components';
-import { encrypt } from 'helpers/encrypt';
-import { authen } from 'helpers/authen';
+import {
+  encrypt,
+  authen,
+} from 'helpers';
 import {
   styles,
   StyledHeading2,

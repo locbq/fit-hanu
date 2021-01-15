@@ -1,8 +1,10 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 
-import { calculateGrade } from 'helpers/user/calculateGrade';
-import { calculateGpa } from 'helpers/user/calculateGpa';
+import {
+  calculateGrade,
+  calculateGpa,
+} from 'helpers';
 import { Field } from './components';
 import { StyledHeading2 } from './styles';
 

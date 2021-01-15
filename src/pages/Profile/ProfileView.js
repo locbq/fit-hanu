@@ -5,9 +5,14 @@ import React, {
 import { Container } from '@material-ui/core';
 
 import { Section } from 'components';
-import { decrypt } from 'helpers/encrypt';
-import { getUserDetail } from 'helpers/user/getUserDetail';
-import { Route, Switch } from 'react-router';
+import {
+  decrypt,
+  getUserDetail,
+} from 'helpers';
+import {
+  Route,
+  Switch,
+} from 'react-router';
 import {
   BasicInformation,
   Timetable,

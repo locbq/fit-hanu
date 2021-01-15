@@ -17,7 +17,7 @@ import {
   ScrollRestoration,
 } from 'components';
 import theme from 'theme';
-import { decrypt } from 'helpers/encrypt';
+import { decrypt } from 'helpers';
 import {
   Home,
   FacultyIT,
