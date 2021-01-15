@@ -1,4 +1,4 @@
-import { calculateGrade } from './calculateGrade';
+import {calculateGrade} from './calculateGrade';
 
 const sum = (a, b) => a + b;
 
@@ -14,8 +14,7 @@ export const calculateGpa = (grades) => {
     for (let i = 0; i < totalCredits.length; i += 1) {
       totalGradePoints.push(totalCredits[i] * gpaValue[i]);
     }
-    const gpa = Math.round((totalGradePoints.reduce(sum) / totalCredits.reduce(sum)) * 10) / 10;
-    return gpa;
+    return Math.round((totalGradePoints.reduce(sum) / totalCredits.reduce(sum)) * 10) / 10;
   }
   return '';
 };

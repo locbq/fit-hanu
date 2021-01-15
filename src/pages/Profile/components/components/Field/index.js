@@ -17,6 +17,7 @@ const StyledParagraph = styled(Paragraph)(({ theme }) => ({
 }));
 
 export default function Field({
+  currency = false,
   label = '',
   value = '',
 }) {
@@ -42,7 +43,7 @@ export default function Field({
         sm={1}
         xs={1}
       >
-        <Paragraph>{value}</Paragraph>
+        <Paragraph>{currency ? `${value} VND` : value}</Paragraph>
       </Grid>
     </StyledGrid>
   );

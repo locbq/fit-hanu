@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 import theme from 'theme';
+import { calculateFee } from 'helpers';
 import {
   StyledChip,
   StyledHeading2,
@@ -10,7 +11,6 @@ import {
 import { Field } from '../components';
 
 function Finance({ user }) {
-  console.log(user);
   return (
     <>
       <StyledHeading2>
@@ -24,10 +24,16 @@ function Finance({ user }) {
       </StyledHeading2>
       {user?.currentSemesterGrade?.map((semester) => (
         <Field
+          currency
           label={semester.subject}
           value={semester.fee}
         />
       ))}
+      <Field
+        currency
+        label="Total"
+        value={calculateFee(user?.currentSemesterGrade)}
+      />
     </>
   );
 }
