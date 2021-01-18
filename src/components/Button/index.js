@@ -1,8 +1,15 @@
 import React from 'react';
 import {
   Button as MuiButton,
-  styled,
+  CircularProgress,
+  styled, withStyles,
 } from '@material-ui/core';
+
+const StyledCircularProgress = withStyles((theme) => ({
+  svg: {
+    color: theme.palette.white,
+  },
+}))(CircularProgress);
 
 const StyledButton = styled(MuiButton)(({ theme }) => ({
   margin: (props) => props.margin,
@@ -27,6 +34,7 @@ const StyledButton = styled(MuiButton)(({ theme }) => ({
 function Button({
   children,
   margin = '',
+  loading,
   ...props
 }) {
   return (
@@ -34,7 +42,7 @@ function Button({
       margin={margin}
       {...props}
     >
-      {children}
+      {loading ? <StyledCircularProgress/> : children}
     </StyledButton>
   );
 }
