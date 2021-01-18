@@ -18,7 +18,6 @@ import {
   StyledGridForgotLink,
   StyledParagraphErrorMessage,
   StyledParagraphLabel,
-  StyledCircularProgress,
 } from './styles';
 
 function LoginForm({ classes }) {
@@ -112,10 +111,11 @@ function LoginForm({ classes }) {
         >
           <Button
             disabled={isLoading}
+            loading={isLoading}
             type="button"
             onClick={handleClickLogin}
           >
-            {isLoading ? <StyledCircularProgress /> : 'Login'}
+            Login
           </Button>
         </StyledGridField>
 

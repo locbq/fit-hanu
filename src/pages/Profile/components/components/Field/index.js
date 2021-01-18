@@ -10,12 +10,6 @@ const StyledGrid = styled(Grid)(() => ({
   marginBottom: '20px',
 }));
 
-const StyledParagraph = styled(Paragraph)(({ theme }) => ({
-  [theme.breakpoints.down('sm')]: {
-    width: '250px',
-  },
-}));
-
 export default function Field({
   currency = false,
   label = '',
@@ -27,21 +21,21 @@ export default function Field({
         item
         lg={9}
         md={9}
-        sm={11}
-        xs={11}
+        sm={8}
+        xs={8}
       >
-        <StyledParagraph>
+        <Paragraph>
           {label}
           :
           {' '}
-        </StyledParagraph>
+        </Paragraph>
       </Grid>
       <Grid
         item
         lg={3}
         md={3}
-        sm={1}
-        xs={1}
+        sm={4}
+        xs={4}
       >
         <Paragraph>{currency ? `${value} VND` : value}</Paragraph>
       </Grid>
