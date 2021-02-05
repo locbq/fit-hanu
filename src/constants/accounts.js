@@ -234,23 +234,117 @@ export const accounts = [
         subject: 'Object-Oriented Programming',
         credits: 12.5,
         grade: 75,
+        fee: 2500000,
       },
       {
         subject: 'Web Application Development',
         credits: 12.5,
         grade: 95,
+        fee: 2500000,
       },
       {
         subject: 'Cloud Computing Architecture ',
         credits: 12.5,
         grade: 75,
+        fee: 2500000,
       },
       {
         subject: 'Technology Design Project',
         credits: 12.5,
         grade: 50,
+        fee: 2500000,
       },
     ],
+    timetable: {
+      firstShift: [
+        {
+          code: 'COS80022',
+          type: 'tutorial',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: 'COS60010',
+          type: 'lecture',
+        },
+      ],
+      secondShift: [
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: 'COS80022',
+          type: 'lecture',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+      ],
+      thirdShift: [
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: 'COS60010',
+          type: 'tutorial',
+        },
+        {
+          code: 'COS70008',
+          type: 'lecture',
+        },
+        {
+          code: '',
+          type: '',
+        },
+      ],
+      fourthShift: [
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: '',
+          type: '',
+        },
+        {
+          code: 'COS70008',
+          type: 'tutorial',
+        },
+        {
+          code: '',
+          type: '',
+        },
+      ],
+    },
     previousSemesterGrade: [
       {
         subject: 'Big Data',
