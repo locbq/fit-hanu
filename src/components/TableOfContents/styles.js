@@ -1,9 +1,7 @@
-import {
-  styled,
-  Grid,
-  List,
-  ListItem,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import Grid from '@material-ui/core/Grid';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 import { NavLink } from 'react-router-dom';
 
 export const StyledGridHeader = styled(Grid)({
