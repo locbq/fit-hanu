@@ -1,29 +1,19 @@
 import React from 'react';
-import {
-  Typography,
-  styled,
-} from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import styled from '@material-ui/core/styles/styled';
 
-const StyledTypo = styled(Typography)({
-  fontFamily: '"Montserrat", sans-serif',
-  textTransform: (props) => props.transform,
-  margin: (props) => props.margin,
-  color: (props) => props.color,
-});
+const StyledTypo = styled(Typography)(({ theme }) => ({
+  fontFamily: theme.typography.fontFamily.heading,
+  margin: '0px',
+}));
 
 function Heading5({
   children,
-  transform = '',
-  margin = '0px',
-  color = '',
   ...props
 }) {
   return (
     <StyledTypo
       component="h5"
-      margin={margin}
-      color={color}
-      transform={transform}
       {...props}
     >
       {children}

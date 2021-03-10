@@ -18,6 +18,12 @@ const theme = createMuiTheme({
     arrowColor: 'rgba(255,255,255, 0.3)',
     darkGrey5B: '#5b5b5b',
   },
+  typography: {
+    fontFamily: {
+      heading: '"Montserrat", sans-serif',
+      text: '"Open Sans", sans-serif',
+    },
+  },
 });
 
 export default theme;
