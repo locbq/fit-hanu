@@ -1,10 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import {
-  IconButton,
-  styled,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import IconButton from '@material-ui/core/IconButton';
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   position: 'absolute',

@@ -1,8 +1,6 @@
 import React from 'react';
-import {
-  Grid,
-  Container,
-} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 
 import { HighlightCard } from './components';
 import { StyledSection } from './styles';
