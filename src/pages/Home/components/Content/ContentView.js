@@ -4,7 +4,7 @@ import {
   Container,
 } from '@material-ui/core';
 
-import { Section } from 'components';
+import { StyledSection } from './styles';
 import {
   Announcement,
   News,
@@ -12,7 +12,7 @@ import {
 
 function ContentView() {
   return (
-    <Section backgroundcolor="#fafafa">
+    <StyledSection>
       <Container fixed>
         <Grid
           container
@@ -38,7 +38,7 @@ function ContentView() {
           </Grid>
         </Grid>
       </Container>
-    </Section>
+    </StyledSection>
   );
 }
 

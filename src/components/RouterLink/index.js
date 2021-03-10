@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { styled } from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
 
 const StyledLink = styled(Link)(({ theme }) => ({
   color: theme.palette.secondaryColor,
   transition: '0.25s ease-in-out',
-  fontFamily: '"Open Sans", sans-serif',
+  fontFamily: theme.typography.fontFamily.text,
   textDecoration: 'none',
   '&:hover': {
     color: theme.palette.mainColor,
