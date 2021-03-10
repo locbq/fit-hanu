@@ -1,8 +1,6 @@
-import {
-  styled,
-  Grid,
-  InputBase,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import Grid from '@material-ui/core/Grid';
+import InputBase from '@material-ui/core/InputBase';
 import { Link } from 'react-router-dom';
 
 import {
