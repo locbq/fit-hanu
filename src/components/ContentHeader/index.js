@@ -1,8 +1,6 @@
 import React from 'react';
-import {
-  styled,
-  Grid,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import Grid from '@material-ui/core/Grid';
 
 import { Heading2 } from 'components/Headings';
 
