@@ -1,11 +1,9 @@
-import {
-  styled,
-  Grid,
-  OutlinedInput,
-  DialogActions,
-  withStyles,
-  CircularProgress,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import Grid from '@material-ui/core/Grid';
+import DialogActions from '@material-ui/core/DialogActions';
+import OutlinedInput from '@material-ui/core/OutlinedInput';
+import withStyles from '@material-ui/core/styles/withStyles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import { Heading3 } from 'components/Headings';
 import { Button } from 'components';

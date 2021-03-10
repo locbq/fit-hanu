@@ -2,11 +2,9 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import {
-  Dialog,
-  DialogContent,
-  OutlinedInput,
-} from '@material-ui/core';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import OutlinedInput from '@material-ui/core/OutlinedInput';
 
 import {
   Heading2,

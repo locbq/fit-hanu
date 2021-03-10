@@ -1,7 +1,5 @@
-import {
-  styled,
-  Grid,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import Grid from '@material-ui/core/Grid';
 
 export const StyledGridContent = styled(Grid)(({ theme }) => ({
   background: theme.palette.white,
