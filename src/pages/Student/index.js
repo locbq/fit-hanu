@@ -1,8 +1,6 @@
 import React from 'react';
-import {
-  Container,
-  Grid,
-} from '@material-ui/core';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 import {
   Switch,
   Route,

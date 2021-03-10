@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 
 import { ContentHeader } from 'components';
 import avatarImage from 'assets/img/our-staff/avatar.png';
@@ -28,7 +28,6 @@ function HonoraryStudents() {
               company={student.company}
             />
           ))}
-
         </Grid>
       </Grid>
     </>
