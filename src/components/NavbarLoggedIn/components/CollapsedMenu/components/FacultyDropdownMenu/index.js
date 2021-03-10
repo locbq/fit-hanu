@@ -1,9 +1,6 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
-import {
-  withStyles,
-  Grid,
-} from '@material-ui/core';
+import withStyles from '@material-ui/core/styles/withStyles';
+import Grid from '@material-ui/core/Grid';
 
 import {
   styles,
@@ -19,9 +16,9 @@ function FacultyDropdownMenu({
 }) {
   return (
     <Grid {...props}>
-      {menuList.map((item, index) => (
+      {menuList.map((item) => (
         <StyledNavLink
-          key={index}
+          key={item.url}
           to={item.url}
           activeClassName={classes.active}
           onMouseUp={handleClickShowMenu}

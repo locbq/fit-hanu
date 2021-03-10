@@ -1,9 +1,6 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
-import {
-  withStyles,
-  Grid,
-} from '@material-ui/core';
+import withStyles from '@material-ui/core/styles/withStyles';
+import Grid from '@material-ui/core/Grid';
 
 import {
   styles,
@@ -24,16 +21,11 @@ function UserDropdownMenu({
         activeClassName={classes.active}
         onMouseUp={handleClickShowMenu}
       >
-        <StyledHeading4
-          color="#ffffff"
-        >
+        <StyledHeading4>
           Profile
         </StyledHeading4>
       </StyledNavLink>
-      <StyledHeading4
-        color="#ffffff"
-        onClick={handleClickLogout}
-      >
+      <StyledHeading4 onClick={handleClickLogout}>
         Logout
       </StyledHeading4>
     </Grid>
