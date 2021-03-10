@@ -1,10 +1,8 @@
-import {
-  styled,
-  Grid,
-  List,
-  ListItem,
-  TableCell,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import Grid from '@material-ui/core/Grid';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import TableCell from '@material-ui/core/TableCell';
 
 import {
   Heading3,
@@ -33,11 +31,11 @@ export const StyledListItem = styled(ListItem)({
   display: 'list-item',
 });
 
-export const StyledTableCellHead = styled(TableCell)({
+export const StyledTableCellHead = styled(TableCell)(({ theme }) => ({
   fontWeight: 'bold',
-  fontFamily: '"Open Sans", sans-serif',
-});
+  fontFamily: theme.typography.fontFamily.text,
+}));
 
-export const StyledTableCellData = styled(TableCell)({
-  fontFamily: '"Open Sans", sans-serif',
-});
+export const StyledTableCellData = styled(TableCell)(({ theme }) => ({
+  fontFamily: theme.typography.fontFamily.text,
+}));
