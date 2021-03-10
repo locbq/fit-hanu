@@ -1,4 +1,4 @@
-import {calculateGrade} from './calculateGrade';
+import { calculateGrade } from './calculateGrade';
 
 const sum = (a, b) => a + b;
 

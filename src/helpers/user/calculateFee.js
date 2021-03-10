@@ -5,4 +5,5 @@ export const calculateFee = (fee) => {
     const subjectFee = fee.map((item) => item.fee);
     return subjectFee.reduce(sum);
   }
+  return 0;
 };
