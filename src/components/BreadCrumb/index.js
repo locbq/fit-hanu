@@ -1,11 +1,9 @@
 import React from 'react';
-import {
-  Grid,
-  Breadcrumbs,
-  styled,
-  withStyles,
-  Container,
-} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+import Container from '@material-ui/core/Container';
+import styled from '@material-ui/core/styles/styled';
+import withStyles from '@material-ui/core/styles/withStyles';
 import { useLocation } from 'react-router';
 
 import { Paragraph } from 'components/Headings';

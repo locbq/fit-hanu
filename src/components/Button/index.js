@@ -1,9 +1,8 @@
 import React from 'react';
-import {
-  Button as MuiButton,
-  CircularProgress,
-  styled, withStyles,
-} from '@material-ui/core';
+import MuiButton from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import styled from '@material-ui/core/styles/styled';
+import withStyles from '@material-ui/core/styles/withStyles';
 
 const StyledCircularProgress = withStyles((theme) => ({
   svg: {
@@ -12,7 +11,6 @@ const StyledCircularProgress = withStyles((theme) => ({
 }))(CircularProgress);
 
 const StyledButton = styled(MuiButton)(({ theme }) => ({
-  margin: (props) => props.margin,
   display: 'flex',
   width: '140px',
   height: '45px',
@@ -33,16 +31,12 @@ const StyledButton = styled(MuiButton)(({ theme }) => ({
 
 function Button({
   children,
-  margin = '',
   loading,
   ...props
 }) {
   return (
-    <StyledButton
-      margin={margin}
-      {...props}
-    >
-      {loading ? <StyledCircularProgress/> : children}
+    <StyledButton {...props}>
+      {loading ? <StyledCircularProgress /> : children}
     </StyledButton>
   );
 }
