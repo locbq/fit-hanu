@@ -1,4 +1,4 @@
-import { styled } from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
 
 import { Heading3 } from 'components/Headings';
 

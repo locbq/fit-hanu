@@ -1,8 +1,6 @@
-import {
-  styled,
-  List,
-  ListItem,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import ListItem from '@material-ui/core/ListItem';
+import List from '@material-ui/core/List';
 
 import {
   Heading3,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 
 import avatarImage from 'assets/img/our-staff/avatar.png';
 import { ContentHeader } from 'components';
