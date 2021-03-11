@@ -1,10 +1,7 @@
 import React from 'react';
-
-import {
-  styled,
-  Grid,
-  makeStyles,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import Grid from '@material-ui/core/Grid';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import { Heading4 } from 'components/Headings';
 
 const useStyles = makeStyles(() => ({

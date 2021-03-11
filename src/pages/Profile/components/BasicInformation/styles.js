@@ -1,10 +1,8 @@
-import {
-  CircularProgress,
-  Grid,
-  styled,
-  TableCell,
-  withStyles,
-} from '@material-ui/core';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Grid from '@material-ui/core/Grid';
+import styled from '@material-ui/core/styles/styled';
+import TableCell from '@material-ui/core/TableCell';
+import withStyles from '@material-ui/core/styles/withStyles';
 
 import { Button } from 'components';
 

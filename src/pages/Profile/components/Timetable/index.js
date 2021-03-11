@@ -1,11 +1,9 @@
 import React from 'react';
-import {
-  Table,
-  TableBody,
-  TableHead,
-  TableRow,
-  Grid,
-} from '@material-ui/core';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Grid from '@material-ui/core/Grid';
 
 import { Heading3 } from 'components/Headings';
 import theme from 'theme';
