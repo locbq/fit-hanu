@@ -1,29 +1,19 @@
 import React from 'react';
-import {
-  Typography,
-  styled,
-} from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import styled from '@material-ui/core/styles/styled';
 
-const StyledTypo = styled(Typography)({
-  fontFamily: '"Open Sans", sans-serif',
-  margin: (props) => props.margin,
-  color: (props) => props.color,
-  textAlign: (props) => props.align,
-});
+const StyledTypo = styled(Typography)(({ theme }) => ({
+  fontFamily: theme.typography.fontFamily.text,
+  margin: '0px',
+}));
 
 function Paragraph({
   children,
-  align = '',
-  margin = '0px',
-  color = '',
   ...props
 }) {
   return (
     <StyledTypo
       component="p"
-      margin={margin}
-      color={color}
-      align={align}
       {...props}
     >
       {children}

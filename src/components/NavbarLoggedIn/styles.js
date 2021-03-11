@@ -1,10 +1,8 @@
-import {
-  styled,
-  Container,
-  AppBar,
-  Grid,
-  Button,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import Container from '@material-ui/core/Container';
+import AppBar from '@material-ui/core/AppBar';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import {
   NavLink,
   Link,

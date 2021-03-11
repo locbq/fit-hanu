@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
 
 import { Paragraph } from 'components/Headings';
 

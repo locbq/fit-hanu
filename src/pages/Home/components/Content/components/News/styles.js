@@ -1,7 +1,5 @@
-import {
-  Grid,
-  styled,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import Grid from '@material-ui/core/Grid';
 
 import { Paragraph } from 'components/Headings';
 

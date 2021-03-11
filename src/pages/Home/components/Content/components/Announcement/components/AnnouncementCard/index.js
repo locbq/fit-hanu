@@ -1,9 +1,7 @@
 import React from 'react';
-import {
-  Grid,
-  Link,
-  styled,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 

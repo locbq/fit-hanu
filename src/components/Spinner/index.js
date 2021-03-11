@@ -1,10 +1,8 @@
 import React from 'react';
-import {
-  CircularProgress,
-  Grid,
-  styled,
-  withStyles,
-} from '@material-ui/core';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Grid from '@material-ui/core/Grid';
+import styled from '@material-ui/core/styles/styled';
+import withStyles from '@material-ui/core/styles/withStyles';
 
 import { Heading4 } from 'components/Headings';
 

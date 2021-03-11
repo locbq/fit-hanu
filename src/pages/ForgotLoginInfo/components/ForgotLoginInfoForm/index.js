@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import {
-  withStyles,
-  Grid,
-} from '@material-ui/core';
+import withStyles from '@material-ui/core/styles/withStyles';
+import Grid from '@material-ui/core/Grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 

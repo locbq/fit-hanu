@@ -2,7 +2,7 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import { Container } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 
 import { Section } from 'components';
 import {

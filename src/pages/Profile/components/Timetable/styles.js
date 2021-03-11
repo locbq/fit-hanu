@@ -1,10 +1,8 @@
 import React from 'react';
-import {
-  styled,
-  TableCell,
-  Grid,
-  makeStyles,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import TableCell from '@material-ui/core/TableCell';
+import Grid from '@material-ui/core/Grid';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 
 const useStyles = makeStyles((theme) => ({
   cellBg: {

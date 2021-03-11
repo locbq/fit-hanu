@@ -1,10 +1,8 @@
 import React from 'react';
-import {
-  Grid,
-  Container,
-} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 
-import { Section } from 'components';
+import { StyledSection } from './styles';
 import {
   Announcement,
   News,
@@ -12,7 +10,7 @@ import {
 
 function ContentView() {
   return (
-    <Section backgroundcolor="#fafafa">
+    <StyledSection>
       <Container fixed>
         <Grid
           container
@@ -38,7 +36,7 @@ function ContentView() {
           </Grid>
         </Grid>
       </Container>
-    </Section>
+    </StyledSection>
   );
 }
 

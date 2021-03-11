@@ -1,13 +1,11 @@
 import React from 'react';
-import {
-  styled,
-  Link as MuiLink,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import MuiLink from '@material-ui/core/Link';
 
 const StyledLink = styled(MuiLink)(({ theme }) => ({
   color: theme.palette.mainColor,
   transition: '0.25s ease-in-out',
-  fontFamily: '"Open Sans", sans-serif',
+  fontFamily: theme.typography.fontFamily.text,
   '&:hover': {
     color: theme.palette.secondaryColor,
   },

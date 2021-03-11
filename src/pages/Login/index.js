@@ -4,8 +4,8 @@ import React, {
 } from 'react';
 
 import Spinner from 'components/Spinner';
-import { Section } from 'components';
 import {
+  StyledSection,
   StyledGrid,
   StyledGridForm,
 } from './styles';
@@ -16,7 +16,7 @@ const Banner = lazy(() => import('./components/Banner'));
 function Login() {
   return (
     <Suspense fallback={<Spinner />}>
-      <Section padding="60px 0px 0px 0px">
+      <StyledSection>
         <StyledGrid container>
           <Banner />
 
@@ -33,7 +33,7 @@ function Login() {
             <LoginForm />
           </StyledGridForm>
         </StyledGrid>
-      </Section>
+      </StyledSection>
     </Suspense>
   );
 }

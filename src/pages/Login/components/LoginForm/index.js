@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
-import { withStyles } from '@material-ui/core';
+import withStyles from '@material-ui/core/styles/withStyles';
 
 import { Paragraph } from 'components/Headings';
 import { Button } from 'components';
@@ -32,13 +32,11 @@ function LoginForm({ classes }) {
     const { value } = event.target;
     setUsername(value);
   };
-
   const handleChangePassword = (event) => {
     event.preventDefault();
     const { value } = event.target;
     setPassword(value);
   };
-
   const handleClickLogin = (event) => {
     event.preventDefault();
     setIsLoading(true);

@@ -1,10 +1,8 @@
 import React from 'react';
-import {
-  styled,
-  Chip,
-  makeStyles,
-} from '@material-ui/core';
-import { Alert } from '@material-ui/lab';
+import styled from '@material-ui/core/styles/styled';
+import Chip from '@material-ui/core/Chip';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Alert from '@material-ui/lab/Alert';
 
 import { Heading2 } from 'components/Headings';
 

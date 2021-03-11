@@ -1,8 +1,6 @@
-import {
-  styled,
-  InputBase,
-  Button,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import InputBase from '@material-ui/core/InputBase';
+import Button from '@material-ui/core/Button';
 
 import {
   Heading4,

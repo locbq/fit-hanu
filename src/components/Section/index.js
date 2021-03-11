@@ -1,24 +1,17 @@
 import React from 'react';
-import {
-  styled,
-  Grid,
-} from '@material-ui/core';
+import styled from '@material-ui/core/styles/styled';
+import Grid from '@material-ui/core/Grid';
 
 const StyledGrid = styled(Grid)({
-  padding: (props) => props.padding,
-  backgroundColor: (props) => props.backgroundcolor,
+  padding: '60px 0px',
 });
 
 function Section({
   children,
-  padding = '60px 0px',
-  backgroundcolor = '',
   ...props
 }) {
   return (
     <StyledGrid
-      padding={padding}
-      backgroundcolor={backgroundcolor}
       {...props}
     >
       {children}

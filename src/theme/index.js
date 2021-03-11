@@ -1,4 +1,4 @@
-import { createMuiTheme } from '@material-ui/core';
+import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 
 const theme = createMuiTheme({
   palette: {
@@ -17,6 +17,12 @@ const theme = createMuiTheme({
     greyFA: '#fafafa',
     arrowColor: 'rgba(255,255,255, 0.3)',
     darkGrey5B: '#5b5b5b',
+  },
+  typography: {
+    fontFamily: {
+      heading: '"Montserrat", sans-serif',
+      text: '"Open Sans", sans-serif',
+    },
   },
 });
 
